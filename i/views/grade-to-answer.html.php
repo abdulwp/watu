@@ -4,6 +4,10 @@
 	<option value="0"><?php _e('- please select -', 'watupro')?></option>
 	<?php foreach($grades as $grade):
 		$answer_grade_ids = explode('|', @$all_answers[$i-1]->grade_id); ?>
+<<<<<<< HEAD
 		<option value="<?php echo $grade->ID?>" <?php if( in_array($grade->ID, $answer_grade_ids)) echo 'selected'?>><?php echo $grade->gtitle?></option>
+=======
+		<option value="<?php echo $grade->ID?>" <?php if( in_array($grade->ID, $answer_grade_ids)) echo 'selected'?>><?php echo stripslashes($grade->gtitle)?></option>
+>>>>>>> branch/6.7.2
 	<?php endforeach;?>
 </select>

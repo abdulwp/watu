@@ -32,7 +32,11 @@ class WatuPracticeController {
 		// output the javascript
 		?>
 		<script type="text/javascript" >
+<<<<<<< HEAD
 		jQuery(function(){
+=======
+		document.addEventListener('DOMContentLoaded', function(event) {
+>>>>>>> branch/6.7.2
 			WatuPROPractice.curID=<?php echo $questions[0]->ID?>;
 			WatuPROPractice.allIDs=[<?php foreach($questions as $question): echo $question->ID.","; endforeach;?>];
 			WatuPROPractice.examID=<?php echo $exam->ID?>;

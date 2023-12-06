@@ -5,6 +5,12 @@ class WatuPROIntelligence {
 		add_action('watupro_completed_paid_exam', array('WatuPROPayment', 'completed_exam'), 10, 2);		
 		add_shortcode('watupro-quiz-bundle', array('WatuPROPayments', 'bundle_button'));
 		add_shortcode('watupro-coupon-field', array('WatuPROICoupons', 'coupon_field'));
+<<<<<<< HEAD
+=======
+		add_shortcode('watupro-my-bundles', array('WatuPROPayments', 'my_bundles_shortcode'));
+		add_shortcode('watupro-personality-chart', 'watuproi_personality_chart');
+		add_shortcode('watupro-bundle-list', array('WatuPROPayments', 'list_quizzes'));
+>>>>>>> branch/6.7.2
 	}	
 	
 	static function activate() {
@@ -16,7 +22,12 @@ class WatuPROIntelligence {
 		 watupro_add_db_fields( array( array("name" => "correct_gap_points", "type" => "DECIMAL(6,2) NOT NULL DEFAULT '0.00'"),
 		 	array("name" => "incorrect_gap_points", "type" => "DECIMAL(6,2) NOT NULL DEFAULT '0.00'"),
 		 	array("name" => "sorting_answers", "type" => "TEXT" ),
+<<<<<<< HEAD
 		 	array("name" => "gaps_as_dropdowns", "type" => "TINYINT UNSIGNED NOT NULL DEFAULT 0")),
+=======
+		 	array("name" => "gaps_as_dropdowns", "type" => "TINYINT UNSIGNED NOT NULL DEFAULT 0"),
+		 	array("name" => "slider_transfer_points", "type" => "TINYINT UNSIGNED NOT NULL DEFAULT 0")),
+>>>>>>> branch/6.7.2
 		 		WATUPRO_QUESTIONS);
 		 	
 		 // extra fields in exams - 3.1
@@ -26,6 +37,7 @@ class WatuPROIntelligence {
 		 	WATUPRO_EXAMS );	
 		 	
 		 // extra field - teacher comments in taking and taking details
+<<<<<<< HEAD
 		 watupro_add_db_fields(array(
     		array("name"=>"teacher_comments", "type"=>"TEXT"),
     		array("name"=>"personality_grade_ids", "type"=>"TEXT"), /* serialized. For personality quizzes */
@@ -39,6 +51,21 @@ class WatuPROIntelligence {
 		 // dependency mode - points or percentage	
 		 watupro_add_db_fields(array(
     		array("name"=>"mode", "type"=>"VARCHAR(100) NOT NULL DEFAULT 'points'")
+=======
+		 watupro_add_db_fields(array(
+    		array("name"=>"teacher_comments", "type"=>"TEXT"),
+    		array("name"=>"personality_grade_ids", "type"=>"TEXT"), /* serialized. For personality quizzes */
+    		array("name"=>"last_edited", "type"=>"DATE"), /* when teached last edited this taking */
+		 ), WATUPRO_TAKEN_EXAMS);	
+			
+		 watupro_add_db_fields(array(
+    		array("name"=>"teacher_comments", "type"=>"TEXT"),    		
+			), WATUPRO_STUDENT_ANSWERS);		
+			
+		 // dependency mode - points or percentage	
+		 watupro_add_db_fields(array(
+    		array("name"=>"mode", "type"=>"VARCHAR(100) NOT NULL DEFAULT 'points'")
+>>>>>>> branch/6.7.2
 			), WATUPRO_DEPENDENCIES);
 			
 		// in 4.1.2 change reuse_questions_from to varchar	
@@ -48,10 +75,25 @@ class WatuPROIntelligence {
 	}
 	
 	static function admin_menu() {
+<<<<<<< HEAD
 		add_submenu_page(NULL, __("Manually Grade Test Results", 'watupro'), __("Manually Grade Test Results", 'watupro'), WATUPRO_MANAGE_CAPS, 'watupro_edit_taking', array('WatuPROITeacherController', 'edit_taking'));
 		
 		// payments page
 		add_submenu_page(NULL, __("Exam Payments", 'watupro'), __("Exam Payments", 'watupro'), WATUPRO_MANAGE_CAPS, 'watupro_payments', array('WatuPROPayments', 'manage'));
+=======
+		$bundle_caps = $coupon_caps = WATUPRO_MANAGE_CAPS;
+		$student_caps = current_user_can(WATUPRO_MANAGE_CAPS) ? WATUPRO_MANAGE_CAPS:'read'; // used to be watupro_exams
+		if( !WatuPROIMultiUser :: check_access('bundles_access', true)) $bundle_caps = 'administrator';
+		if( !WatuPROIMultiUser :: check_access('coupons_access', true)) $coupon_caps = 'administrator';
+		
+		add_submenu_page(NULL, __("Manually Grade Test Results", 'watupro'), __("Manually Grade Test Results", 'watupro'), WATUPRO_MANAGE_CAPS, 'watupro_edit_taking', array('WatuPROITeacherController', 'edit_taking'));
+		
+		// payments page
+		add_submenu_page(NULL, sprintf(__("%s Payments", 'watupro'), ucfirst(WATUPRO_QUIZ_WORD)), sprintf(__("%s Payments", 'watupro'), ucfirst(WATUPRO_QUIZ_WORD)), WATUPRO_MANAGE_CAPS, 'watupro_payments', array('WatuPROPayments', 'manage'));
+		
+		// certificate payments page
+		add_submenu_page(NULL, __("Certificate Payments", 'watupro'), __("Certificate Payments", 'watupro'), WATUPRO_MANAGE_CAPS, 'watupro_certificate_payments', array('WatuPROPayments', 'certificate_payments'));
+>>>>>>> branch/6.7.2
 		
 		// advanced settings
 		 add_submenu_page(NULL, __('Advanced Quiz Settings', 'watupro'), __('Advanced Quiz Settings', 'watupro'), WATUPRO_MANAGE_CAPS, 'watupro_advanced', 'watupro_advanced_exam_settings');
@@ -60,10 +102,23 @@ class WatuPROIntelligence {
 		add_submenu_page(NULL, __('WatuPRO Multiuser Configurations', 'watupro'), __('WatuPRO Multiuser Configurations', 'watupro'), 'administrator', 'watupro_multiuser', array('WatuPROIMultiUser', 'manage')); 
 		
 		// payment bundles
+<<<<<<< HEAD
 		add_submenu_page(NULL, __('Payment Buttons for Quiz Bundles', 'watupro'), __('Payment Buttons for Quiz Bundles', 'watupro'), WATUPRO_MANAGE_CAPS, 'watupro_bundles', array('WatuPROPayments', 'bundles')); 
 		
 		// coupon codes
 		add_submenu_page(NULL, __('Coupon Codes for Paid Quizzes', 'watupro'), __('Coupon Codes for Paid Quizzes', 'watupro'), WATUPRO_MANAGE_CAPS, 'watupro_coupons', array('WatuPROICoupons', 'manage')); 
+=======
+		add_submenu_page('watupro_exams', sprintf(__('%s Bundles', 'watupro'), ucfirst(WATUPRO_QUIZ_WORD)), sprintf(__('%s Bundles', 'watupro'), ucfirst(WATUPRO_QUIZ_WORD)), $bundle_caps, 'watupro_bundles', array('WatuPROPayments', 'bundles')); 
+		
+		// my bundles
+		$enable_my_bundles = get_option('watupro_enable_my_bundles');
+		if($enable_my_bundles) {
+			add_submenu_page('my_watupro_exams', sprintf(__('My %s Bundles', 'watupro'), ucfirst(WATUPRO_QUIZ_WORD)), sprintf(__('My %s Bundles', 'watupro'), ucfirst(WATUPRO_QUIZ_WORD)), $student_caps, 'watupro_my_bundles', array('WatuPROPayments', 'my_bundles')); 
+		}
+		
+		// coupon codes
+		add_submenu_page('watupro_exams', __('Coupon Codes', 'watupro'), __('Coupon Codes', 'watupro'), $coupon_caps, 'watupro_coupons', array('WatuPROICoupons', 'manage')); 
+>>>>>>> branch/6.7.2
 	}
 	
 	// small helper to add extra DB fields if they don't exist

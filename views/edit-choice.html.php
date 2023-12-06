@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 <div class="wrap">
+=======
+<div class="wrap watupro-wrap">
+>>>>>>> branch/6.7.2
 	<h1><?php _e('Editing an answer to question', 'watupro')?></h1>
 	
 	<p><a href="admin.php?page=watupro_question&question=<?php echo $question->ID?>&action=edit&quiz=<?php echo $quiz->ID?>"><?php _e('Back to edit the whole question', 'watupro')?></a></p>

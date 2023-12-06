@@ -1,5 +1,9 @@
 <?php // deprecated file? ?>
+<<<<<<< HEAD
 <div class="wrap" style="width:500px;">
+=======
+<div class="wrap watupro-wrap" style="width:500px;">
+>>>>>>> branch/6.7.2
     <h2><?php _e(ucfirst($action) . " Student", 'watupro'); ?></h2>
     
     <form method="post" onsubmit="return validate(this);">

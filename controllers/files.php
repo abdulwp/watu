@@ -16,10 +16,20 @@ class WatuPROFileHandler {
 		// meets the requirements for type and size?
 		if(!self :: check_requirements($_FILES['file-answer-'.$question_id]['name'], $filesize, $filetype)) return false;
 		
+<<<<<<< HEAD
 		// now upload - store in BLOB
 		$exists = $wpdb->get_var($wpdb->prepare("SELECT ID FROM ".WATUPRO_USER_FILES." WHERE user_answer_id=%d", $detail_id));
 		
 		if($exists) {
+=======
+		// filter the file contents to allow third party plugins interact
+		$contents = apply_filters('watupro-user-file-uploaded', $contents, $question_id, $detail_id, $taking_id);
+		
+		// now upload - store in BLOB
+		$exists = $wpdb->get_var($wpdb->prepare("SELECT ID FROM ".WATUPRO_USER_FILES." WHERE user_answer_id=%d", $detail_id));
+		
+		if($exists) {			
+>>>>>>> branch/6.7.2
 			$result = $wpdb->query($wpdb->prepare("UPDATE ".WATUPRO_USER_FILES." SET 
 				filename=%s, filesize=%d, filetype=%s, filecontents=%s, user_id=%d, user_answer_id=%d, taking_id=%d
 				WHERE ID=%d", $_FILES['file-answer-'.$question_id]['name'], $filesize, $filetype, 
@@ -39,6 +49,15 @@ class WatuPROFileHandler {
 	static function check_requirements($filename, $filesize, $filetype) {
 		$max_upload = get_option('watupro_max_upload');
 		
+<<<<<<< HEAD
+=======
+		// don't upload files with 0 bytes size
+		if($filesize == 0) {
+			printf(__('Error uploading %s: The file is empty. Please try again.', 'watupro'), $filename)."<br>";
+			return false;
+		}
+		
+>>>>>>> branch/6.7.2
 		if($max_upload > 0  and $filesize > $max_upload) {
 			printf(__('Error uploading %s: The file is %dKB while the max. upload size is %dKB.', 'watupro'), $filename, $filesize, $max_upload)."<br>";
 			return false;
@@ -49,7 +68,11 @@ class WatuPROFileHandler {
 		$allowed_types = explode(',', $allowed_types);
 		
 		$parts = explode(".", $filename);
+<<<<<<< HEAD
 		$file_ext = array_pop($parts);
+=======
+		$file_ext = strtolower(array_pop($parts));
+>>>>>>> branch/6.7.2
 		
 		if(!in_array($file_ext, $allowed_types)) {
 			printf(__('Error uploading %s: only files of type: %s are allowed','watupro'), $filename, $orig_allowed_types);
@@ -95,6 +118,11 @@ class WatuPROFileHandler {
 		$content = $wpdb->get_var($wpdb->prepare("SELECT BINARY filecontents 
 			FROM ".WATUPRO_USER_FILES." WHERE ID=%d", $file->ID));	
 			
+<<<<<<< HEAD
+=======
+        $content = apply_filters('watupro-binary-file-content', $content, $file, $user_ID);
+			
+>>>>>>> branch/6.7.2
 		header("Content-Length: ".strlen($content)); 
 		header("Content-Description: File Transfer");
 		header("Content-type: application/octet-stream");
@@ -124,4 +152,8 @@ class WatuPROFileHandler {
 		
 		return $output;
 	}
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> branch/6.7.2

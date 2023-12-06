@@ -114,6 +114,26 @@ WatuPROPay.payWithPoints = function(id, url, isBundle, redirectURL) {
 	});
 }
 
+<<<<<<< HEAD
+=======
+WatuPROPay.payWithMoolaMojo = function(id, url, isBundle, redirectURL) {
+	isBundle = isBundle || 0; 
+	redirectURL = redirectURL || '';
+	
+	data = {"id" : id, "is_bundle" : isBundle};
+	jQuery.post(url, data, function(msg){
+		if(msg == 'SUCCESS') {			
+			if(redirectURL) window.location = redirectURL;
+			else {
+				window.location = window.location + "?paid=1";
+				window.location.reload(); // because of FireFox
+			}
+		}
+		else alert(msg);
+	});
+}
+
+>>>>>>> branch/6.7.2
 // matrix answers
 WatuPROIDroppable = {};
 WatuPROIDroppable.drop = function(event, ui) {
@@ -129,7 +149,13 @@ WatuPROIDroppable.drop = function(event, ui) {
 }
 
 // nmatrix answers
+<<<<<<< HEAD
 WatuPROINMatrix = {};
+=======
+WatuPROINMatrix = {
+	reservedNums : [],
+};
+>>>>>>> branch/6.7.2
 WatuPROINMatrix.sel = function(elt, dropID, ansNum) {
 	var questionTable = jQuery('#' + dropID).closest('table');	
 	
@@ -156,24 +182,55 @@ WatuPROINMatrix.sel = function(elt, dropID, ansNum) {
 		// remove class watupro-nmatrix-selected
 		jQuery(elt).removeClass('watupro-nmatrix-selected');	
 		
+<<<<<<< HEAD
 		// show back all elements from the cell		
 		jQuery('#' + dropID + ' div.question-choices div.watupro-matrix-right div.watupro-matrix-draggable:not(.watupro-nmatrix-selected)').show('slow');
 	
 		// show back this element in any cells that don't have a selection yet		
+=======
+		// remove from the reserved array
+		this.reservedNums = this.reservedNums.filter(function(e) { return e !== ansNum });		
+		
+		// show back all elements from the cell 
+		// but exclude these in this.reservedNums- NYI	
+		var notClasses = '';
+		for(i = 0; i < this.reservedNums.length; i++) {
+			notClasses += ':not(.watupro-nmatrix-answer-' + this.reservedNums[i] + ')';
+		}	
+		//console.log(notClasses);
+		jQuery('#' + dropID + ' div.question-choices div.watupro-matrix-right div.watupro-matrix-draggable:not(.watupro-nmatrix-selected)' + notClasses).show('slow');
+	
+		// show back this element in any cells that don't have a selection yet		
+		// and remove the watupro-nmatrix-hidden class if any
+>>>>>>> branch/6.7.2
 		jQuery(questionTable).find('.watupro-nmatrix-answer-field').each(function(cnt, fld) {
 			if(fld.value == '') {
 				var parentTD = jQuery(fld).parent();				
 				jQuery(parentTD).find('.watupro-nmatrix-answer-' + ansNum).show();
 			}
+<<<<<<< HEAD
+=======
+			jQuery(parentTD).find('.watupro-nmatrix-answer-' + ansNum).removeClass('watupro-nmatrix-hidden');
+>>>>>>> branch/6.7.2
 		});
 	
 		// remove the hidden field value
 		jQuery('#field-' + dropID).val('');
+<<<<<<< HEAD
 		return false;
 	}
 
 	// set answer
 	var ansVal = elt.innerHTML;
+=======
+		
+		return false;
+	}
+	
+	// set answer
+	var ansVal = elt.innerHTML;	
+	//console.log(ansVal);
+>>>>>>> branch/6.7.2
 	ansVal = ansVal.split('<!--WTPMD5');
 	ansValParts = ansVal[1].split('-->');
 	ansVal = ansValParts[0];
@@ -199,6 +256,13 @@ WatuPROINMatrix.sel = function(elt, dropID, ansNum) {
 	var table = jQuery('#' + dropID).closest('table');
 	var tableID = jQuery(table).attr('id');
 	jQuery('#' + tableID + ' .watupro-nmatrix-answer-' + ansNum + ':not(.watupro-nmatrix-selected)').hide('slow');
+<<<<<<< HEAD
+=======
+	
+	// put into reserved reservedNums so it cannot be revealed unless unselected
+	this.reservedNums.push(ansNum);	
+	//console.log(this.reservedNums);
+>>>>>>> branch/6.7.2
 }
 
 WatuPROIntel.runTimeLogic = function(msg) {

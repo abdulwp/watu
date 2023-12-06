@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 <div class="wrap">
+=======
+<div class="wrap watupro-wrap">
+>>>>>>> branch/6.7.2
 	<h1><?php _e('Watu PRO Modules', 'watupro')?></h1>
 	
 	<?php if(!empty($_POST['upload'])):?>

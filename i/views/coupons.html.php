@@ -16,10 +16,17 @@
 			</select>
 			<input type="checkbox" name="date_condition" value="1" onclick="this.checked ? jQuery('#dateCondition').show() : jQuery('#dateCondition').hide()"> <?php _e('Apply date condition', 'watupro');?>
 			<span id="dateCondition" style="display:none;">
+<<<<<<< HEAD
 				<input type="text" name="start_date" class="watuproDatePicker" id="watuproDateStart" value="<?php echo date_i18n($dateformat, strtotime($start_date))?>">
 				<input type="text" name="end_date" class="watuproDatePicker" id="watuproDateEnd" value="<?php echo date_i18n($dateformat, strtotime($end_date))?>">
 			</span>			
 			<input type="submit" name="add" value="<?php _e('Add Coupon', 'watupro')?>"></p>
+=======
+				<input type="text" class="watuproDatePicker" id="watuproDateStart" value="<?php echo date_i18n($dateformat, strtotime($start_date))?>">
+				<input type="text" class="watuproDatePicker" id="watuproDateEnd" value="<?php echo date_i18n($dateformat, strtotime($end_date))?>">
+			</span>			
+			<input type="submit" name="add" value="<?php _e('Add Coupon', 'watupro')?>" class="button button-primary"></p>
+>>>>>>> branch/6.7.2
 			<?php wp_nonce_field('watupro_coupons');?>
 			<input type="hidden" name="start_date" value="<?php echo $start_date?>" id="alt_watuproDateStart">
 			<input type="hidden" name="end_date" value="<?php echo $end_date?>" id="alt_watuproDateEnd">
@@ -42,6 +49,7 @@
 					<option value="<?php echo $quiz->ID?>" <?php if($coupon->quiz_id == $quiz->ID) echo "selected"?>><?php echo stripslashes($quiz->name);?></option>
 				<?php endforeach;?>
 			</select>
+<<<<<<< HEAD
 			<input type="checkbox" name="date_condition" value="1" <?php if(!empty($coupon->date_condition)) echo "checked";?> onclick="this.checked ? jQuery('#dateCondition<?php echo $coupon->ID?>').show() : jQuery('#dateCondition').hide()"> <?php _e('Apply date condition', 'watupro');?>
 			<span id="dateCondition<?php echo $coupon->ID?>" style="display:<?php echo empty($coupon->date_condition) ? 'none' : 'inline'?>;">
 				<input type="text" name="start_date" class="watuproDatePicker" id="watuproDateStart<?php echo $coupon->ID?>" value="<?php echo date_i18n($dateformat, strtotime(@$coupon->start_date))?>">
@@ -49,6 +57,16 @@
 			</span>			
 			<input type="submit" name="save" value="<?php _e('Save Coupon', 'watupro')?>"> <input type="button" value="<?php _e('Delete', 'watupro')?>" onclick="confirmDelCoupon(this.form);"> <br>
 		<i><?php printf(__('Used %d times', '  watupro'), $coupon->times_used);?></i></p>
+=======
+			<input type="checkbox" name="date_condition" value="1" <?php if(!empty($coupon->date_condition)) echo "checked";?> onclick="this.checked ? jQuery('#dateCondition<?php echo $coupon->ID?>').show() : jQuery('#dateCondition<?php echo $coupon->ID?>').hide()"> <?php _e('Apply date condition', 'watupro');?>
+			<span id="dateCondition<?php echo $coupon->ID?>" style='display:<?php echo empty($coupon->date_condition) ? 'none' : 'inline'?>;'>
+				<input type="text" class="watuproDatePicker" id="watuproDateStart<?php echo $coupon->ID?>" value="<?php echo date_i18n($dateformat, strtotime(@$coupon->start_date))?>">
+				<input type="text" class="watuproDatePicker" id="watuproDateEnd<?php echo $coupon->ID?>" value="<?php echo date_i18n($dateformat, strtotime(@$coupon->end_date))?>">
+			</span>			
+			<input type="submit" name="save" value="<?php _e('Save Coupon', 'watupro')?>" class="button button-primary"> 
+			<input type="button" value="<?php _e('Delete', 'watupro')?>" onclick="confirmDelCoupon(this.form);" class="button"> <br>
+		<i><?php printf(__('Used %d times', 'watupro'), $coupon->times_used);?></i></p>
+>>>>>>> branch/6.7.2
 			<input type="hidden" name="id" value="<?php echo $coupon->ID?>">
 			<input type="hidden" name="del" value="0">
 			<?php wp_nonce_field('watupro_coupons');?>

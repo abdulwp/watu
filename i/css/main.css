@@ -15,16 +15,28 @@
 	margin-bottom: 5px;
 }
 
+<<<<<<< HEAD
 .watupro-sortable-horizontal {
 	list-style-type: none;
 	width: 80%;
 	clear: both;
+=======
+.watupro-sortable-horizontal {	
+	list-style-type: none;
+	width: 80%;
+	clear: both;
+	display:inline-table !important;
+>>>>>>> branch/6.7.2
 }
 
 .watupro-sortable-horizontal li {
 	float:left;
 	margin: 3px 3px 3px 0; 
 	min-width: 100px; 
+<<<<<<< HEAD
+=======
+	display:inline-block !important;
+>>>>>>> branch/6.7.2
 }
 
 .watupro-matrix-right {
@@ -37,7 +49,11 @@
 	padding:5px;
 	border:1px dashed #999;
 	margin: 5px;
+<<<<<<< HEAD
 	cursor: move;
+=======
+	cursor: pointer;
+>>>>>>> branch/6.7.2
 }
 
 .watupro-matrix-left-cell, .watupro-matrix-right-cell {

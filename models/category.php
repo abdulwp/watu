@@ -8,12 +8,38 @@ class WTPCategory {
 		
 		if(empty($name)) return 0;
 		
+<<<<<<< HEAD
 		foreach($categories as $cat) {
 			if($cat->name==$name) return $cat->ID;
 		}
 		
 		// create
 		$wpdb->query($wpdb->prepare("INSERT INTO ".WATUPRO_QCATS." (name, description) VALUES (%s, %s)", $name, ''));
+=======
+		// has parent?
+		$has_parent = $parent_id = 0;
+		if(strstr($name, '>>>')) {
+			$has_parent = 1;
+			$parts = explode('>>>', $name);
+			$name = trim($parts[1]);
+			$parent_name = trim($parts[0]);
+			
+			foreach($categories as $cat) {
+				if($cat->name == $parent_name) $parent_id = $cat->ID;
+			}
+		}
+		
+		foreach($categories as $cat) {
+			if($has_parent) {
+				if($cat->name == $name and $parent_id == $cat->parent_id) return $cat->ID;
+			}
+			else if($cat->name == $name) return $cat->ID;
+		}
+		
+		// Not returned ID up to this point? Create category
+		$wpdb->query($wpdb->prepare("INSERT INTO ".WATUPRO_QCATS." (name, description, parent_id) VALUES (%s, %s, %d)", 
+			$name, '', $parent_id));
+>>>>>>> branch/6.7.2
 		$insert_id = $wpdb->insert_id;
 		
 		// add to cats array
@@ -28,11 +54,21 @@ class WTPCategory {
 		global $wpdb;		
 		
 		$cat_ids=array(0); // Uncategorized are always in
+<<<<<<< HEAD
 		$user_groups=get_user_meta($uid, "watupro_groups", true);
+=======
+		$user_groups = get_user_meta($uid, "watupro_groups", true);
+		if(!is_array($user_groups)) $user_groups = array($user_groups);
+>>>>>>> branch/6.7.2
 		$cats=$wpdb->get_results("SELECT * FROM ".WATUPRO_CATS);
 
 		$use_wp_roles = get_option('watupro_use_wp_roles');
 		
+<<<<<<< HEAD
+=======
+		$user = get_userdata($uid);
+		//print_r($user->roles);
+>>>>>>> branch/6.7.2
 		foreach($cats as $cat) {
 			if($cat->ugroups=="||" or empty($cat->ugroups)) {
 				$cat_ids[]=$cat->ID;
@@ -41,10 +77,18 @@ class WTPCategory {
 			
 			if($use_wp_roles) {
 				$allowed_roles = explode("|", $cat->ugroups);
+<<<<<<< HEAD
 				foreach($allowed_roles as $role) {
 					if(empty($role)) continue;
 					if(current_user_can($role)) {
 						$cat_ids[]=$cat->ID;
+=======
+				//print_r($allowed_roles);
+				foreach($allowed_roles as $role) {
+					if(empty($role)) continue;					 
+					if ( in_array( $role, (array) $user->roles ) ) {
+						$cat_ids[] = $cat->ID;
+>>>>>>> branch/6.7.2
 						break;
 					}
 				}  // end foreach role 
@@ -59,28 +103,59 @@ class WTPCategory {
 			  } // end if there are any groups
 			} // end if using user groups
 		} // end foreach cats
+<<<<<<< HEAD
 		
+=======
+		//echo "CATEGORIES:";		
+		//print_r($cat_ids);
+>>>>>>> branch/6.7.2
 		return $cat_ids;
 	}
 	
 	// add question category, no duplicates
+<<<<<<< HEAD
 	static function add($name, $description='', $parent_id=0, $exclude_from_reports=0) {
 		global $wpdb, $user_ID;
 		
+=======
+	static function add($name, $description='', $parent_id=0, $exclude_from_reports=0, $icon = '') {
+		global $wpdb, $user_ID;
+		
+		$name = sanitize_text_field($name);
+		$description = watupro_strip_tags($description);
+		$exclude_from_reports = empty($exclude_from_reports) ? 0 : 1;
+		$icon = sanitize_text_field($icon);
+		
+>>>>>>> branch/6.7.2
 		// already exists?
 		$exists = $wpdb->get_var($wpdb->prepare("SELECT ID FROM ".WATUPRO_QCATS." 
 			WHERE name=%s AND parent_id=%d", $name, $parent_id));		
 		if($exists) return false;
 		
 		$wpdb -> query( $wpdb -> prepare(" INSERT INTO ".WATUPRO_QCATS." 
+<<<<<<< HEAD
 			SET name=%s, description=%s, editor_id=%d, parent_id=%d, exclude_from_reports=%d", 
 			$name, $description, $user_ID, $parent_id, $exclude_from_reports) );		
+=======
+			SET name=%s, description=%s, editor_id=%d, parent_id=%d, exclude_from_reports=%d, icon=%s", 
+			$name, $description, $user_ID, $parent_id, $exclude_from_reports, $icon) );		
+>>>>>>> branch/6.7.2
 		return $wpdb->insert_id;
 	}
 	
 	// save category, no duplicates
+<<<<<<< HEAD
 	static function save($name, $id, $description='', $exclude_from_reports = 0) {
 		global $wpdb;
+=======
+	static function save($name, $id, $description='', $exclude_from_reports = 0, $icon = '') {
+		global $wpdb;
+		$id = intval($id);
+		$name = sanitize_text_field($name);
+		$description = watupro_strip_tags($description);
+		$exclude_from_reports = empty($exclude_from_reports) ? 0 : 1;
+		$icon = sanitize_text_field($icon);
+>>>>>>> branch/6.7.2
 		
 		// select cat
 		$cat = $wpdb->get_row($wpdb->prepare("SELECT * FROM ".WATUPRO_QCATS." WHERE ID=%d", $id));
@@ -90,8 +165,13 @@ class WTPCategory {
 			WHERE name=%s AND ID!=%d AND parent_id=%d", $name, $id, $cat->parent_id));		
 		if($exists) return false;
 		
+<<<<<<< HEAD
 		$wpdb -> query( $wpdb -> prepare(" UPDATE ".WATUPRO_QCATS." SET name=%s, description=%s, exclude_from_reports=%d 
 		WHERE ID=%d", $name, $description, $exclude_from_reports, $id) );	
+=======
+		$wpdb -> query( $wpdb -> prepare(" UPDATE ".WATUPRO_QCATS." SET name=%s, description=%s, exclude_from_reports=%d, icon=%s 
+		WHERE ID=%d", $name, $description, $exclude_from_reports, $icon, $id) );	
+>>>>>>> branch/6.7.2
 		
 		return true;
 	}
@@ -127,7 +207,12 @@ class WTPCategory {
 			 echo "<!-- WATUPROCOMMENT user role has no access to this category -->";
     	 } // end if using WP roles
     	 else {    	 	
+<<<<<<< HEAD
 	    	 $user_groups=get_user_meta($user_ID, "watupro_groups", true);    	
+=======
+	    	 $user_groups=get_user_meta($user_ID, "watupro_groups", true);  
+	    	 if(!is_array($user_groups)) $user_groups = array($user_groups);  	
+>>>>>>> branch/6.7.2
 			 
 			 if(!is_array($user_groups)) {
 			 	echo "<!-- WATUPROCOMMENT not in any user groups -->";
@@ -154,7 +239,11 @@ class WTPCategory {
 			asort($sorted_cats); // sort by the order number
 			// print_r($sorted_cats);
 			foreach($sorted_cats as $key => $val) {
+<<<<<<< HEAD
 				if(!empty($advanced_settings['sorted_categories_encoded'])) $key = base64_decode($key);
+=======
+				if(!empty($advanced_settings['sorted_categories_encoded'])) $key = rawurldecode($key);
+>>>>>>> branch/6.7.2
 				foreach($cats as $cat) {										
 					if($cat == $key) $final_cats[] = $cat;
 				}
@@ -173,4 +262,25 @@ class WTPCategory {
 		
 		return $cats;
 	} // end sort_cats
+<<<<<<< HEAD
+=======
+	
+	// category %%ANSWERS%% variable
+	public static function answers_var($cat_id, $answers_by_cat) {
+		$answers = '';
+		
+		if(!empty($answers_by_cat[$cat_id])) $answers = implode("", $answers_by_cat[$cat_id]);
+		
+		return $answers;
+	}
+	
+	// category %%UNRESOLVED%% variable
+	public static function unresolved_var($cat_id, $unresolved_by_cat) {
+		$unresolved = '';
+		
+		if(!empty($unresolved_by_cat[$cat_id])) $unresolved = implode("", $unresolved_by_cat[$cat_id]);
+		
+		return $unresolved;
+	}
+>>>>>>> branch/6.7.2
 }

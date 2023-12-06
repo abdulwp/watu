@@ -6,20 +6,43 @@ class WatuPRODiffLevels {
 		
 		// for the moment use this same page to manage difficulty levels. When we extend their functionality this will be moved to a separate menu entry
 		if(!empty($_POST['ok'])) {
+<<<<<<< HEAD
 			update_option('watupro_difficulty_levels', trim($_POST['difficulty_levels']));
 			update_option('watupro_apply_diff_levels', @$_POST['apply_diff_levels']);
 			update_option('watupro_default_user_diff_levels', @$_POST['user_diff_levels']);
+=======
+			$apply_diff_levels = empty($_POST['apply_diff_levels']) ? 0 : 1;
+			update_option('watupro_difficulty_levels', trim(wp_kses_post($_POST['difficulty_levels'])));
+			update_option('watupro_apply_diff_levels', $apply_diff_levels);
+			update_option('watupro_default_user_diff_levels', array_map('sanitize_text_field', ($_POST['user_diff_levels']) ?? []) );
+			
+			// make sure there are no questions with saved unexisting difficulty level
+			$diff_levels = stripslashes(get_option('watupro_difficulty_levels'));
+			$diff_levels_arr = explode(PHP_EOL, $diff_levels); 
+			if(!empty($diff_levels) and count($diff_levels_arr)) {
+				$wpdb->query("UPDATE ".WATUPRO_QUESTIONS." SET difficulty_level='' 
+					WHERE difficulty_level != '' AND difficulty_level NOT IN ('".implode("','", $diff_levels_arr)."') ");
+			} 
+>>>>>>> branch/6.7.2
 		}
 		
 		$apply_diff_levels = get_option('watupro_apply_diff_levels');
 		$diff_levels = stripslashes(get_option('watupro_difficulty_levels'));
 		$user_diff_levels = get_option('watupro_default_user_diff_levels'); // sets through watupro_register_group()
+<<<<<<< HEAD
+=======
+		if(empty($user_diff_levels)) $user_diff_levels = [];
+>>>>>>> branch/6.7.2
 		$diff_levels_arr = explode(PHP_EOL, $diff_levels); 	
 		
 		// unlock criteria
 		if(!empty($_POST['add_criteria'])) {
 			// don't allow duplicates
+<<<<<<< HEAD
 			$exists = $wpdb->get_var($wpdb->prepare("SELECT ID FROM ".WATUPRO_UNLOCK_LEVELS." WHERE unlock_level=%s", $_POST['unlock_level']));
+=======
+			$exists = $wpdb->get_var($wpdb->prepare("SELECT ID FROM ".WATUPRO_UNLOCK_LEVELS." WHERE unlock_level=%s", sanitize_text_field($_POST['unlock_level']) ));
+>>>>>>> branch/6.7.2
 			if($exists) wp_die(__('You can have only one set of unlock criteria per level.', 'watupro'));		
 			
 			$wpdb->query($wpdb->prepare("INSERT INTO " . WATUPRO_UNLOCK_LEVELS . " SET
@@ -36,7 +59,11 @@ class WatuPRODiffLevels {
 		}
 		
 		if(!empty($_POST['del_criteria'])) {
+<<<<<<< HEAD
 			$wpdb->query($wpdb->prepare("DELETE FROM " . WATUPRO_UNLOCK_LEVELS . " WHERE ID=%d", $_POST['id']));
+=======
+			$wpdb->query($wpdb->prepare("DELETE FROM " . WATUPRO_UNLOCK_LEVELS . " WHERE ID=%d", intval($_POST['id']) ));
+>>>>>>> branch/6.7.2
 		}
 		
 		// select unlock criteria if any
@@ -129,6 +156,10 @@ class WatuPRODiffLevels {
  		
  		// if all passed, unlock the level
  		$user_diff_levels = get_user_meta($user_ID, 'watupro_difficulty_levels', true);
+<<<<<<< HEAD
+=======
+ 		if(!is_array($user_diff_levels)) $user_diff_levels = [];
+>>>>>>> branch/6.7.2
  		$user_diff_levels[] = $unlock->unlock_level;
  		update_user_meta( $user_ID, 'watupro_difficulty_levels', $user_diff_levels ); 
  		
@@ -139,4 +170,8 @@ class WatuPRODiffLevels {
  		$wpdb->query($wpdb->prepare("INSERT INTO " . WATUPRO_UNLOCK_LOGS . " SET 
  			unlocked_level = %s, user_id=%d, taking_id=%d", $unlock->unlock_level, $user_ID, $taking_id));
  	} // end maybe unlock level
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> branch/6.7.2

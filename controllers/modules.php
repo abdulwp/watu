@@ -14,6 +14,10 @@ function watupro_modules() {
 		// define the module
 		if($_FILES['module']['name']=='i.zip') $module = "Intelligence";		
 		if($_FILES['module']['name']=='reports.zip') $module = "Reporting";
+<<<<<<< HEAD
+=======
+		if($_FILES['module']['name']=='watupro-play.zip') wp_die("WatuPRO Play is a plugin, not a module. Please install it from your <a href='plugins.php'>Plugins</a> page.");
+>>>>>>> branch/6.7.2
 		if(empty($module)) wp_die("Incorrect module file");
 
 		// destination folder

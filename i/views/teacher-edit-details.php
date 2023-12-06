@@ -6,7 +6,11 @@
 	
 	<p><?php _e('You can use this page to manually edit and grade the submitted test details', 'watupro')?></p>
 	
+<<<<<<< HEAD
 	<form method="post" onsubmit="return validateForm(this);">
+=======
+	<form method="post" onsubmit="return validateForm(this);" enctype="multipart/form-data">
+>>>>>>> branch/6.7.2
 	<table class="widefat">
 		<tr><th><?php _e('Question', 'watupro')?></th><th><?php _e('Category', 'watupro');?></th><th><?php _e('Answer Given', 'watupro')?></th>
 		<th><?php _e('Points', 'watupro')?></th><th><?php _e('Is correct?', 'watupro')?></th>
@@ -17,7 +21,16 @@
 			<tr class="<?php echo $class?>"><td><?php echo apply_filters('watupro_content', stripslashes($answer->question))?><br>
 			<a href="admin.php?page=watupro_question&question=<?php echo $answer->question_id?>&action=edit&quiz=<?php echo $exam->ID?>" target="_blank"><?php _e('View/edit question', 'watupro');?></a></td>
 			<td><?php echo empty($answer->cat_id) ? __('Uncategorized', 'watupro') : stripslashes($answer->category); ?></td>
+<<<<<<< HEAD
 			<td><?php echo wpautop(stripslashes($answer->answer))?></td>
+=======
+			<td><?php if(empty($advanced_settings['answer_snapshot_in_table_format'])) echo nl2br(stripslashes($answer->answer));
+				else echo $answer->snapshot;
+				if(!empty($answer->file_id)):
+				 echo "<p><a href=".site_url('?watupro_download_file=1&id='.$answer->file_id.">".sprintf(__('Uploaded: %s (%d KB)', 'watupro'), $answer->filename, $answer->filesize))."</a></p>
+				 <p>".__('Change file:', 'watupro')." <input type='file' name='file-answer-".$answer->question_id."'></p>";
+				 endif;?></td>
+>>>>>>> branch/6.7.2
 			<td><input type="text" size="6" value="<?php echo $answer->points?>" name="points<?php echo $answer->ID?>"></td>
 			<td><?php if($answer->is_survey): _e('N/a (survey)', 'watupro');
 			else:?>
@@ -27,7 +40,12 @@
 		<?php endforeach;?>	
 	</table>
 	
+<<<<<<< HEAD
 	<p><input type="checkbox" name="send_email" value="1" onclick="jQuery('#emailDetails').toggle();"> <?php _e("I want to sent email to the user with the updated details", 'watupro')?></p>
+=======
+	<?php if(empty($restrict_emailing) or $restrict_emailing != 'restrict'):?>
+	<p><input type="checkbox" name="send_email" value="1" onclick="jQuery('#emailDetails').toggle();"> <?php _e("I want to send email to the user with the updated details", 'watupro')?></p>
+>>>>>>> branch/6.7.2
 	
 	<div id="emailDetails" style="display:none;" class="watupro">
 		<div><label><?php _e('Receiver email', 'watupro');?></label> <input type="text" name="email" value="<?php echo $receiver_email?>"></div>
@@ -39,6 +57,10 @@
 		else require WATUPRO_PATH."/views/usable-variables.php";?>
 		<p><?php printf(__('You can also use the <a href="%s" target="_blank">user info shortcodes</a>. To pass them the correct user ID the argument %s should contain "%s". Example: %s.', 'watupro'), 'http://blog.calendarscripts.info/user-info-shortcodes-from-watupro-version-4-1-1/', "user_id", "quiz-taker", '[watupro-userinfo first_name user_id="quiz-taker"]');?></p>
 	</div>
+<<<<<<< HEAD
+=======
+	<?php endif;?>
+>>>>>>> branch/6.7.2
 	
 	<p align="center"><input type="submit" value="<?php _e('Update Test Results', 'watupro')?>" class="button-primary"></p>
 	<input type="hidden" name="ok" value="1">

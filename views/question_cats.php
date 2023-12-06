@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 <div class="wrap">
+=======
+<div class="wrap watupro-wrap">
+>>>>>>> branch/6.7.2
 	<?php if(empty($_GET['parent_id'])):?>
 		<h1><?php _e('Manage Question Categories', 'watupro')?></h1>
 	<?php else:?>
@@ -22,9 +26,15 @@
 		<p><?php _e('Subcategories are useful for organizational purposes. They are not different than main categories: if you are grouping questions by category, or pulling random questions per category, subcategories will be treated equally with the main categories.', 'watupro');?></p>
 	<?php endif;?>	
 	
+<<<<<<< HEAD
 	<?php if(sizeof($cats)):?>
 		<table class="widefat">
 			<tr><th><?php _e('ID', 'watupro')?></th><th><?php _e('Category name and description', 'watupro')?></th>
+=======
+	<?php if(count($cats)):?>
+		<table class="widefat">
+			<tr><th><a href="admin.php?page=watupro_question_cats&ob=ID&dir=<?php echo $odir?>"><?php _e('ID', 'watupro')?></a></th><th><a href="admin.php?page=watupro_question_cats&ob=name&dir=<?php echo $odir?>"><?php _e('Category name and description', 'watupro')?></a></th>
+>>>>>>> branch/6.7.2
 			<?php if(empty($_GET['parent_id'])):?>
 				<th><?php _e('Manage Subcategories', 'watupro');?></th>
 			<?php endif;?>			
@@ -35,7 +45,11 @@
 				<td><h3><?php echo stripslashes(apply_filters('watupro_qtranslate', $cat->name));?></h3>
 				<?php echo stripslashes(apply_filters('watupro_qtranslate', $cat->description));?></td>
 				<?php if(empty($_GET['parent_id'])):?>
+<<<<<<< HEAD
 					<td><a href="admin.php?page=watupro_question_cats&parent_id=<?php echo $cat->ID?>"><?php _e('Manage', 'watupro');?></a></td>
+=======
+					<td><a href="admin.php?page=watupro_question_cats&parent_id=<?php echo $cat->ID?>"><?php printf(__('Manage (%d)', 'watupro'), $cat->num_subs);?></a></td>
+>>>>>>> branch/6.7.2
 				<?php endif;?>
 				<td><a href="admin.php?page=watupro_question_cats&do=edit&id=<?php echo $cat->ID?>&parent_id=<?php echo @$_GET['parent_id']?>"><?php _e('Edit', 'watupro')?></a>
 				| <a href="#" onclick="watuproConfirmDelete(<?php echo $cat->ID?>);return false;"><?php _e('Delete', 'watupro')?></a></td></tr>

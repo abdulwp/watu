@@ -23,6 +23,7 @@ class WTPIGrade {
 		}
 		
 		$grade_ids = $final_grade_ids;
+<<<<<<< HEAD
 		
 		// store the grade_ids in the DB. We may need this in the shortcode and elsehwere
 		$wpdb->query($wpdb->prepare("UPDATE ".WATUPRO_TAKEN_EXAMS." SET personality_grade_ids=%s
@@ -40,10 +41,80 @@ class WTPIGrade {
 			$grow = $wpdb->get_row($wpdb->prepare("SELECT * FROM ".WATUPRO_GRADES." WHERE ID=%d", $grade_id));
 			list($grade, $grade_obj, $certificate_id, $do_redirect) = WTPGrade :: match_grade($grow); 					
 		}		
+=======
+				
+		// store the grade_ids in the DB. We may need this in the shortcode and elsehwere
+		$wpdb->query($wpdb->prepare("UPDATE ".WATUPRO_TAKEN_EXAMS." SET personality_grade_ids=%s
+			WHERE ID=%d", serialize($grade_ids), @$GLOBALS['watupro_taking_id']));
+			
+		// find exam ID, we'll need it later
+		$exam_id = $wpdb->get_var($wpdb->prepare("SELECT exam_id FROM ".WATUPRO_TAKEN_EXAMS." WHERE ID=%d", @$GLOBALS['watupro_taking_id'] ));
+		$advanced_settings = $wpdb->get_var($wpdb->prepare("SELECT advanced_settings FROM ".WATUPRO_EXAMS." WHERE ID=%d", $exam_id));
+		$advanced_settings = unserialize(stripslashes($advanced_settings));
+		
+		//print_r($grade_ids);
+		// find the top grade
+		if(count($grade_ids)) {
+			$grade_ids = array_count_values($grade_ids);
+			
+         // is there more than one top grade? If yes, we'll have to build a cumulative grade
+         $top_cnt = max(array_values($grade_ids));         
+         $top_grades = array();
+		   foreach($grade_ids as $grid => $cnt) {
+		      if($cnt == $top_cnt) $top_grades[] = $grid;
+         } 
+         
+			if(count($top_grades) <= 1 or !empty($advanced_settings['single_personality_result'])) {
+			   // default behavior: just one grade found OR the setting "always assign only one personality" is selected
+			   // place counts as keys, IDs as values of the associative array		
+   			$grade_ids = array_flip($grade_ids);							
+   
+   			// sort so most count is on top
+   			krsort($grade_ids);						
+   			$grade_id = array_shift($grade_ids);
+			}
+			else {			   
+			   // multiple top grades: we may need to automatically create a cumulative grade and enter it in the DB.
+			   // in case such cumulative grade exists we'll just need to find the ID
+			   // for the moment we'll just not issue certificates with these grades. We'll see how to probably handle such stuff in future version
+			   $cumulative_ids_sql = '';
+			   foreach($top_grades as $top_grade) $cumulative_ids_sql .= " AND included_grade_ids LIKE '%|".$top_grade."|%' ";
+			   
+			   $grade_id = $wpdb->get_var("SELECT * FROM ".WATUPRO_GRADES." WHERE is_cumulative_grade=1 $cumulative_ids_sql");
+			   
+			   if(empty($grade_id)) {
+               // prepare the variables
+               $cumulative_grade_title = $cumulative_grade_desc = '';
+               $included_grade_ids = '|';
+               foreach($top_grades as $cnt=>$top_grade_id) {
+                  // these grades won't be hundreds and this query won't happen often so it's OK to run DB q for each one
+                  // spare your comments, if you are an optimization freak
+                  $top_grade = $wpdb->get_row($wpdb->prepare("SELECT gtitle, gdescription FROM ". WATUPRO_GRADES." WHERE ID=%d", $top_grade_id));
+                  if($cnt) $cumulative_grade_title .= ", ";
+                  $cumulative_grade_title .= stripslashes($top_grade->gtitle);
+                  $cumulative_grade_desc .= stripslashes($top_grade->gdescription).'<p>&nbsp;</p>';
+                  $included_grade_ids .= $top_grade_id . '|';                   
+               }			      
+			      
+			      // create the cumulative grade
+			      $wpdb->query($wpdb->prepare("INSERT INTO ".WATUPRO_GRADES." SET 
+			         exam_id=%d, gtitle=%s, gdescription=%s, is_cumulative_grade=1, included_grade_ids=%s",
+			         $exam_id, $cumulative_grade_title, $cumulative_grade_desc, $included_grade_ids));
+			      $grade_id = $wpdb->insert_id;   
+			   }
+			} // end case with multiple top grades
+			
+			// finally select the grade
+   		$grow = $wpdb->get_row($wpdb->prepare("SELECT * FROM ".WATUPRO_GRADES." WHERE ID=%d", $grade_id));
+   		list($grade, $grade_obj, $certificate_id, $do_redirect) = WTPGrade :: match_grade($grow); 	
+						
+		}	// end figure out the winning grade(s)	
+>>>>>>> branch/6.7.2
 		
 		return array($grade, $certificate_id, $do_redirect, $grade_obj);
 	}
 	
+<<<<<<< HEAD
 	/*** Get custom part 2 scores array after submission ***/
 	static function custom_part2_scores($taking_id) 
 	{
@@ -113,15 +184,23 @@ class WTPIGrade {
 		return array($part2grades);
 	}
 		
+=======
+>>>>>>> branch/6.7.2
 	// this method loops through all personality grades in the given quiz
 	// $atts['sort'] : best, worst, alphabetic, default (order of creation) 
 	// $atts['empty'] : true to show types where you got 0, false to not show them. Default: true
 	// $atts['limit'] : how many grades to show. Defaults to no limit 
 	static function expand_personality_result($atts, $content = '') {
 		global $wpdb;
+<<<<<<< HEAD
 		if(empty($content)) return '';
 	
 		
+=======
+	
+		if(empty($content)) return '';
+
+>>>>>>> branch/6.7.2
 		$taking_id = intval($_POST['watupro_current_taking_id']);
 		if(empty($taking_id)) return '';
 		
@@ -140,9 +219,15 @@ class WTPIGrade {
 		
 		// now select grades
 		$grades = $wpdb->get_results($wpdb->prepare("SELECT * FROM ".WATUPRO_GRADES."
+<<<<<<< HEAD
 			WHERE cat_id=0 AND exam_id=%d AND percentage_based=%d ORDER BY ID", $grade_exam_id, $exam->grades_by_percent)); 
 			
 		$grade_ids = unserialize($taking->personality_grade_ids);
+=======
+			WHERE cat_id=0 AND exam_id=%d AND percentage_based=%d AND is_cumulative_grade=0 ORDER BY ID", $grade_exam_id, $exam->grades_by_percent)); 
+			
+		$grade_ids = unserialize($taking->personality_grade_ids);		
+>>>>>>> branch/6.7.2
 		$grade_ids = array_count_values($grade_ids);			
 		
 		// fill the numbers
@@ -162,6 +247,7 @@ class WTPIGrade {
 			if($atts['sort'] == 'worst') uasort($grades, array(__CLASS__, 'sort_results_worst'));
 			if($atts['sort'] == 'alpha') uasort($grades, array(__CLASS__, 'sort_results_alpha'));
 		}
+<<<<<<< HEAD
 		if(!empty($atts['sort']) and $atts['sort'] == 'custom') {
 				/* usort($grades, function($a, $b) {
 				if($a['ID']==$b['ID']) return 0;
@@ -182,11 +268,24 @@ class WTPIGrade {
 			echo "</pre>"; */
 			//rsort($grades);
 		}
+=======
+>>>>>>> branch/6.7.2
 		
 		// limit
 		if(!empty($atts['limit']) and is_numeric($atts['limit'])) {
 			$grades = array_slice($grades, 0, $atts['limit']);
 		}
+<<<<<<< HEAD
+=======
+		
+		// calculate total number of answers with grade so we can know the % of each grade
+		$total_count = 0;
+		foreach($grades as $grade) $total_count += $grade->count;
+		foreach($grades as $cnt => $grade) {
+			$percent = $total_count > 0 ? round($grade->count * 100 / $total_count) : 0;
+			$grades[$cnt]->percent = $percent;
+		}
+>>>>>>> branch/6.7.2
 						
 		// and replace the texts
 		if(empty($atts['chart'])) {
@@ -194,7 +293,10 @@ class WTPIGrade {
 			$final_content = '';
 			
 			$n = 0;
+<<<<<<< HEAD
 			$part2grades = array();
+=======
+>>>>>>> branch/6.7.2
 			foreach($grades as $grade) {
 				// by passing arguments like "rank" or "personality" we can display just a specific result here
 				$n++;				
@@ -203,6 +305,7 @@ class WTPIGrade {
 				
 				$grade_content = str_replace('{{{personality-type}}}', stripslashes($grade->gtitle), $content);
 				$grade_content = str_replace('{{{personality-type-description}}}', wpautop(stripslashes($grade->gdescription)), $grade_content);
+<<<<<<< HEAD
 				$finalGradeCount = $grade->count;
 				if($finalGradeCount <=18)
 				{
@@ -224,6 +327,11 @@ class WTPIGrade {
 				'part2FinalGradeCount' => $finalGradeCount
 				);
 				
+=======
+				$grade_content = str_replace('{{{num-answers}}}', $grade->count, $grade_content);
+				$grade_content = str_replace('{{{percent-answers}}}', $grade->percent, $grade_content);
+				$final_content .= wpautop($grade_content);
+>>>>>>> branch/6.7.2
 			}
 		}
 		else {
@@ -234,7 +342,11 @@ class WTPIGrade {
 			if($max_points == 0) return '';
 			$step = round(200 / $max_points, 2);
 			
+<<<<<<< HEAD
 			$colors = array("red", "green", "blue", "yellow", "brown", "orange", "gray", "purple", "maroon");
+=======
+			$colors = array("red", "green", "blue", "yellow", "brown", "orange", "gray", "purple", "maroon", "crimson");
+>>>>>>> branch/6.7.2
 			
 			// display bar chart
 			$final_content = '<table class="watupro-personality-chart"><tr>';
@@ -250,6 +362,10 @@ class WTPIGrade {
 				$grade_content = str_replace('{{{personality-type}}}', stripslashes($grade->gtitle), $content);
 				$grade_content = str_replace('{{{personality-type-description}}}', wpautop(stripslashes($grade->gdescription)), $grade_content);
 				$grade_content = str_replace('{{{num-answers}}}', $grade->count, $grade_content);
+<<<<<<< HEAD
+=======
+				$grade_content = str_replace('{{{percent-answers}}}', $grade->percent, $grade_content);
+>>>>>>> branch/6.7.2
 				$final_content .= '<td>'.wpautop($grade_content).'</td>';
 			}
 			
@@ -275,7 +391,11 @@ class WTPIGrade {
 	static function sort_results_alpha($grade_a, $grade_b) {
 		if($grade_a->gtitle == $grade_b->gtitle) return 0;
 		return ($grade_a->gtitle < $grade_b->gtitle) ? -1 : 1;
+<<<<<<< HEAD
 
 	}
 	 
+=======
+	}
+>>>>>>> branch/6.7.2
 }

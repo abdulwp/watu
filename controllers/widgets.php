@@ -13,6 +13,13 @@ class WatuPROWidgets {
 		$num_yesterday = $wpdb->get_var("SELECT COUNT(ID) FROM ".WATUPRO_TAKEN_EXAMS."
 		 WHERE in_progress=0 AND date = '".date('Y-m-d', current_time('timestamp') - 24*3600)."'");
 		 
+<<<<<<< HEAD
+=======
+		 // num taken day before 
+		$num_daybefore = $wpdb->get_var("SELECT COUNT(ID) FROM ".WATUPRO_TAKEN_EXAMS."
+		 WHERE in_progress=0 AND date = '".date('Y-m-d', current_time('timestamp') - 48*3600)."'");
+		 
+>>>>>>> branch/6.7.2
 		// percentage up or down	
 		$today_arrow = 'green'; 	 
 		if($num_today == 0) $percent_today = 0;
@@ -21,12 +28,33 @@ class WatuPROWidgets {
 			else {
 				if($num_today >= $num_yesterday) $percent_today = round(100 * $num_today / $num_yesterday) - 100;
 				else {
+<<<<<<< HEAD
 					$percent_today = round(100 * $num_today / $num_yesterday);
+=======
+					$percent_today = 100 - round(100 * $num_today / $num_yesterday);
+>>>>>>> branch/6.7.2
 					$today_arrow = 'red';
 				}
 			}
 		}
 		
+<<<<<<< HEAD
+=======
+		// percentage up or down	
+		$yesterday_arrow = 'green'; 	 
+		if($num_yesterday == 0) $percent_yesterday = 0;
+		else {
+			if($num_daybefore == 0) $percent_yesterday = '&infin;';
+			else {
+				if($num_yesterday >= $num_daybefore) $percent_yesterday = round(100 * $num_yesterday / $num_daybefore) - 100;
+				else {
+					$percent_yesterday = 100 - round(100 * $num_yesterday / $num_daybefore);
+					$yesterday_arrow = 'red';
+				}
+			}
+		}
+		
+>>>>>>> branch/6.7.2
 		// num quizzes taken last 7 days
 		$num_7_days = $wpdb->get_var("SELECT COUNT(ID) FROM ".WATUPRO_TAKEN_EXAMS."
 		 WHERE in_progress=0 AND date >= '".date('Y-m-d', current_time('timestamp'))."' - INTERVAL 7 DAY");
@@ -68,12 +96,80 @@ class WatuPROWidgets {
 			else {
 				if($num_this_month >= $num_last_month) $percent_this_month = round(100 * $num_this_month / $num_last_month) - 100;
 				else {
+<<<<<<< HEAD
 					$percent_this_month = round(100 * $num_this_month / $num_last_month);
+=======
+					$percent_this_month = 100 - round(100 * $num_this_month / $num_last_month);
+>>>>>>> branch/6.7.2
 					$month_arrow = 'red';
 				}
 			}
 		} 
 		
+<<<<<<< HEAD
+=======
+		// two month ago, same dates 
+		if($last_month == 1) { $before_month = 12; $before_year = date('Y', current_time('timestamp')) - 1; }
+		else { $before_month = $last_month - 1; $before_year = date('Y', current_time('timestamp')); }
+		
+		// two months ago for last month arrows
+		$num_before_month = $wpdb->get_var("SELECT COUNT(ID) FROM ".WATUPRO_TAKEN_EXAMS."
+		 WHERE in_progress=0 AND date >= '$before_year-$before_month-01' AND date <= '$before_year-$before_month-".date("d", current_time('timestamp'))."'");
+		 
+		$last_month_arrow = 'green'; 	
+		if($num_last_month == 0) $percent_last_month = 0;
+		else {
+			if($num_before_month == 0) $percent_last_month = '&infin;';
+			else {
+				if($num_last_month >= $num_before_month) $percent_last_month = round(100 * $num_last_month / $num_before_month) - 100;
+				else {
+					$percent_last_month = 100-round(100 * $num_last_month / $num_before_month);
+					$month_arrow = 'red';
+				}
+			}
+		} 
+			
+		// this year	
+		$year = date('Y');
+		$last_year = $year - 1;
+		$before_year = $last_year - 1;
+		// day & month as a string. Will be used for all the 3 year queries to get the same period
+		$daymonth = date('m-d', current_time('timestamp'));
+		
+		$num_year = $wpdb->get_var("SELECT COUNT(ID) FROM ".WATUPRO_TAKEN_EXAMS."
+		 WHERE in_progress=0 AND date >= '$year-01-01' AND date <= '$year-$daymonth'");
+		$num_last_year = $wpdb->get_var("SELECT COUNT(ID) FROM ".WATUPRO_TAKEN_EXAMS."
+		 WHERE in_progress=0 AND date >= '$last_year-01-01' AND date <= '$last_year-$daymonth'");
+		$num_before_year = $wpdb->get_var("SELECT COUNT(ID) FROM ".WATUPRO_TAKEN_EXAMS."
+		 WHERE in_progress=0 AND date >= '$before_year-01-01' AND date <= '$before_year-$daymonth'"); 
+		 
+		$year_arrow = 'green'; 	
+		if($num_year == 0) $percent_year = 0;
+		else {
+			if($num_last_year == 0) $percent_year = '&infin;';
+			else {
+				if($num_year >= $num_last_year) $percent_year = round(100 * $num_year / $num_last_year) - 100;
+				else {
+					$percent_year = 100 - round(100 * $num_year / $num_last_year);
+					$year_arrow = 'red';
+				}
+			}
+		} 
+		
+		$last_year_arrow = 'green'; 	
+		if($num_last_year == 0) $percent_last_year = 0;
+		else {
+			if($num_before_year == 0) $percent_last_year = '&infin;';
+			else {
+				if($num_last_year >= $num_before_year) $percent_last_year = round(100 * $num_last_year / $num_before_year) - 100;
+				else {
+					$percent_last_year = 100 - round(100 * $num_last_year / $num_before_year);
+					$last_year_arrow = 'red';
+				}
+			}
+		} 
+		
+>>>>>>> branch/6.7.2
 		// total published quizzes
 		$uids = array();
 		$posts = $wpdb->get_results("SELECT post_content FROM {$wpdb->posts} 
@@ -107,7 +203,11 @@ class WatuPROWidgets {
 		
 		// latest quiz attempt / result
 		$latest_attempt = $wpdb->get_row("SELECT tE.name as name, tE.ID as ID, tT.end_time as end_time, tT.ID as taking_id
+<<<<<<< HEAD
 			FROM ".WATUPRO_EXAMS." tE JOIN ".WATUPRO_TAKEN_EXAMS." tT ON tE.ID = tT.exam_id
+=======
+			FROM ".WATUPRO_TAKEN_EXAMS." tT JOIN ".WATUPRO_EXAMS." tE ON tE.ID = tT.exam_id
+>>>>>>> branch/6.7.2
 			WHERE tT.in_progress=0 ORDER BY tT.ID DESC LIMIT 1");
 			
 		include(WATUPRO_PATH . "/views/dashboard-widget.html.php");	
@@ -115,7 +215,16 @@ class WatuPROWidgets {
 	
 	static function widget() {
 		if(get_option('watupro_low_memory_mode') == 1) return true;
+<<<<<<< HEAD
 		wp_add_dashboard_widget('watupro_dashboard', __('Watu PRO Quizzes', 'watupro'),
+=======
+		
+		if(get_option('watupro_stats_widget_off') == 1) return true;
+		
+		if( get_option('watupro_hide_stats_widget') == 1 and !current_user_can(WATUPRO_MANAGE_CAPS)) return true;
+		
+		wp_add_dashboard_widget('watupro_dashboard', sprintf(__('Watu PRO %s', 'watupro'), ucfirst(WATUPRO_QUIZ_WORD_PLURAL)),
+>>>>>>> branch/6.7.2
    				array(__CLASS__, 'stats'));
 	}
 }

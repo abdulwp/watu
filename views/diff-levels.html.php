@@ -1,4 +1,17 @@
+<<<<<<< HEAD
 <div class="wrap">
+=======
+<style type="text/css">
+textarea {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+
+    width: 100%;
+}
+</style>
+<div class="wrap watupro-wrap">
+>>>>>>> branch/6.7.2
 	<h1><?php _e('Manage Question Difficulty Levels', 'watupro');?></h1>
 	
 	<p><?php _e('Difficulty levels can be used in the administration to search the questions. You can also control which difficulty levels are active in a given quiz.', 'watupro');?><br>
@@ -7,7 +20,11 @@
 	<form method="post">
 		<p><textarea name="difficulty_levels" rows="7" cols="50"><?php echo $diff_levels?></textarea></p>
 		<p><input type="checkbox" name="apply_diff_levels" value="1" <?php if($apply_diff_levels == '1') echo 'checked'?> onclick="applyDiffLevels(this.checked);"> <?php _e('Apply difficulty level restrictions per user account.', 'watupro');?> </p>
+<<<<<<< HEAD
 		<div id="diffLevelsUser" style="display:<?php echo $apply_diff_levels ? 'block':'none';?>"><p><?php _e('When this is selected you will be able to limit the access of users to the difficulty level selected in their profile page.<br> If there are no difficulty levels selected on the user profile page they will have access to all questions.<br> Note that such limitations will apply together with any other limitations to the questions you give at per-quiz setting.', 'watupro');?></p>
+=======
+		<div id="diffLevelsUser" style='display:<?php echo $apply_diff_levels ? 'block':'none';?>'><p><?php _e('When this is selected you will be able to limit the access of users to the difficulty level selected in their profile page.<br> If there are no difficulty levels selected on the user profile page they will have access to all questions.<br> Note that such limitations will apply together with any other limitations to the questions you give at per-quiz setting.', 'watupro');?></p>
+>>>>>>> branch/6.7.2
 		<p><label><?php _e('Default levels for new users:', 'watupro');?></label> <select name="user_diff_levels[]" multiple="true" size="4">
 			<option value=""><?php _e('- None -', 'watupro');?></option>
 			<?php foreach($diff_levels_arr as $l):

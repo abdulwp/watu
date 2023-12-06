@@ -18,9 +18,15 @@ class WatuPROICoupons {
 		// update user meta
 		if($update) {
 			if($user_id) update_user_meta($user_id, 'watupro_coupon', $coupon->code);
+<<<<<<< HEAD
 			else $_SESSION['watupro_nouser_coupon'] = $coupon->code;
 		}
 		
+=======
+			else setcookie('watupro_nouser_coupon', $coupon->code, time() + 24*3600, '/');
+		}
+		session_write_close();
+>>>>>>> branch/6.7.2
 		return $price;
 	}
 	
@@ -45,7 +51,12 @@ class WatuPROICoupons {
 	}
 	
 	// gets currently used coupon. If user is logged in, searches meta, otherwise sessions
+<<<<<<< HEAD
 	static function existing_coupon($user_id = 0) {
+=======
+	static function existing_coupon($user_id = 0) {	
+		
+>>>>>>> branch/6.7.2
 		$existing_coupon = '';
 		if($user_id) {
 			$existing_coupon = get_user_meta($user_id, 'watupro_coupon', true);
@@ -53,7 +64,11 @@ class WatuPROICoupons {
 		}
 
 		// no user ID but session?
+<<<<<<< HEAD
 		if(!empty($_SESSION['watupro_nouser_coupon'])) $existing_coupon = $_SESSION['watupro_nouser_coupon'];
+=======
+		if(!empty($_COOKIE['watupro_nouser_coupon'])) $existing_coupon = $_COOKIE['watupro_nouser_coupon'];
+>>>>>>> branch/6.7.2
 		
 		return $existing_coupon;
 	}	
@@ -63,42 +78,85 @@ class WatuPROICoupons {
 		global $wpdb;
 		
 		update_user_meta($user_id, 'watupro_coupon', '');
+<<<<<<< HEAD
 		unset($_SESSION['watupro_nouser_coupon']);
 		
 		$wpdb->query($wpdb->prepare("UPDATE ".WATUPRO_COUPONS." SET times_used = times_used+1 WHERE ID=%d", $coupon->ID));
+=======
+		//setcookie('watupro_nouser_coupon', '', time() - 3600*24, '/');?>
+		<script type="text/javascript">
+		var d = new Date();
+		d.setTime(d.getTime() + (24*3600*1000));
+		var expires = "expires="+ d.toUTCString();
+		document.cookie = "watupro_nouser_coupon=<?php echo $access_code;?>;" + expires + ";path=/";
+		</script>
+		<?php
+		
+		$wpdb->query($wpdb->prepare("UPDATE ".WATUPRO_COUPONS." SET times_used = times_used+1 WHERE ID=%d", $coupon->ID));
+		session_write_close();
+>>>>>>> branch/6.7.2
 	} // end coupon_used()
 	
 	// manage coupons
 	static function manage() {
+<<<<<<< HEAD
 		global $wpdb;
 		$dateformat = get_option('date_format');
 		$start_date = date("Y-m-d");
 		$end_date = date("Y-m-d", strtotime("+1 month"));
+=======
+		global $wpdb, $user_ID;
+		$dateformat = get_option('date_format');
+		$start_date = date("Y-m-d");
+		$end_date = date("Y-m-d", strtotime("+1 month"));
+		$multiuser_access = 'all';
+		if(watupro_intel()) $multiuser_access = WatuPROIMultiUser::check_access('coupons_access');
+		
+		$own_sql = ($multiuser_access == 'own') ? $wpdb->prepare(" AND editor_id = %d ", $user_ID) : "";
+>>>>>>> branch/6.7.2
 		
 		if(!empty($_POST['add']) and check_admin_referer('watupro_coupons')) {
 			$wpdb->query($wpdb->prepare("INSERT INTO ".WATUPRO_COUPONS." 
 				SET discount=%d, code=%s, num_uses=%d, disc_type=%s, 
+<<<<<<< HEAD
 				quiz_id=%d, date_condition=%d, start_date=%s, end_date=%s", 
 				$_POST['discount'], $_POST['code'], $_POST['num_uses'], $_POST['disc_type'], $_POST['quiz_id'],
 				intval(@$_POST['date_condition']), $_POST['start_date'], $_POST['end_date']));
+=======
+				quiz_id=%d, date_condition=%d, start_date=%s, end_date=%s, editor_id=%d", 
+				$_POST['discount'], $_POST['code'], $_POST['num_uses'], $_POST['disc_type'], $_POST['quiz_id'],
+				intval(@$_POST['date_condition']), $_POST['start_date'], $_POST['end_date'], $user_ID));
+>>>>>>> branch/6.7.2
 			watupro_redirect("admin.php?page=watupro_coupons");	
 		}
 		
 		if(!empty($_POST['del']) and check_admin_referer('watupro_coupons')) {
+<<<<<<< HEAD
 			$wpdb->query($wpdb->prepare("DELETE FROM ".WATUPRO_COUPONS." WHERE ID=%d", $_POST['id']));
+=======
+			$wpdb->query($wpdb->prepare("DELETE FROM ".WATUPRO_COUPONS." WHERE ID=%d $own_sql ", $_POST['id']));
+>>>>>>> branch/6.7.2
 			watupro_redirect("admin.php?page=watupro_coupons");
 		}
 		
 		if(!empty($_POST['save']) and check_admin_referer('watupro_coupons')) {
 			$wpdb->query($wpdb->prepare("UPDATE ".WATUPRO_COUPONS." 
 				SET discount=%d, code=%s, num_uses=%d, disc_type=%s, quiz_id=%d, date_condition=%d, 
+<<<<<<< HEAD
 				start_date=%s, end_date=%s WHERE ID=%d", 
+=======
+				start_date=%s, end_date=%s WHERE ID=%d $own_sql ", 
+>>>>>>> branch/6.7.2
 				$_POST['discount'], $_POST['code'], $_POST['num_uses'], $_POST['disc_type'], $_POST['quiz_id'], 
 				intval(@$_POST['date_condition']), $_POST['start_date'], $_POST['end_date'], $_POST['id']));			
 		}
 		
 		// select existing coupons
+<<<<<<< HEAD
 		$coupons = $wpdb->get_results("SELECT * FROM ".WATUPRO_COUPONS." ORDER BY ID");
+=======
+		$coupons = $wpdb->get_results("SELECT * FROM ".WATUPRO_COUPONS." WHERE 1=1 $own_sql ORDER BY ID");
+>>>>>>> branch/6.7.2
 		
 		$currency = get_option('watupro_currency');		
 		
@@ -113,9 +171,13 @@ class WatuPROICoupons {
 	static function coupon_field($atts) {
 		global $wpdb;
 	
+<<<<<<< HEAD
 		$any_coupons = $wpdb->get_var("SELECT id FROM ".WATUPRO_COUPONS." WHERE num_uses = 0 OR (num_uses - times_used) > 0");
 		if(!$any_coupons) return '';
 		
+=======
+		$any_coupons = $wpdb->get_var("SELECT ID FROM ".WATUPRO_COUPONS." WHERE num_uses = 0 OR (CAST(num_uses as signed) - CAST(times_used as signed)) > 0");
+>>>>>>> branch/6.7.2
 		$content = '';		
 		
 		// if coupon is entered but is not valid add it to the output

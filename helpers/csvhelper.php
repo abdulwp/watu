@@ -22,6 +22,12 @@ function watupro_parse_csv_line($line) {
 	$delimiter=$_POST['delimiter'];
 	if($delimiter=="tab") $delimiter="\t";
 	
+<<<<<<< HEAD
+=======
+	// convert encoding?
+	if(!mb_detect_encoding($line, 'UTF-8', true)) $line = mb_convert_encoding($line, "UTF-8");
+	
+>>>>>>> branch/6.7.2
    $fields = true ? array_map('trim', explode($delimiter, $line)) : explode($delimiter, $line);
    return array_map(
        'watupro_urlencode_csv_field',

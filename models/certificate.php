@@ -1,5 +1,16 @@
 <?php
 class WatuPROCertificate {
+<<<<<<< HEAD
+=======
+	static $user_id;	
+	
+	// obfuscate the taking ID
+	static function obfuscate($id) {		
+		$output = base64_encode (convert_uuencode ($id));		                      
+		return $output;                      
+	}
+	
+>>>>>>> branch/6.7.2
 	// returns certificate link and inserts the certificate in user-certificates table
 	static function assign($exam, $taking_id, $certificate_id, $user_id) {
 		global $wpdb;		
@@ -17,7 +28,24 @@ class WatuPROCertificate {
 			if($cert->require_approval_notify_admin) self :: pending_approval_notify($cert, $user_id, $exam, $taking_id);
 		}
 		else {
+<<<<<<< HEAD
 			$certificate_text = "<p>".__('You can now', 'watupro')." <a href='".site_url("?watupro_view_certificate=1&taking_id=$taking_id&id=".$certificate_id)."' target='_blank'>".__('print your certificate', 'watupro')."</a></p>";
+=======
+			$certificate_url = site_url("?watupro_view_certificate=1&taking_id=".self :: obfuscate($taking_id)."&id=".$certificate_id);			
+			
+		   if(empty($cert->var_text)) {
+		   	$certificate_text = "<p>".__('You can now', 'watupro')." <a href='".$certificate_url."' target='_blank'>".__('print your certificate', 'watupro')."</a></p>";
+		   }			
+			else {
+				if(strstr($cert->var_text, '{{url}}')) {
+					$certificate_text = str_replace('{{url}}', $certificate_url, stripslashes($cert->var_text));
+				}				
+				else {
+					$certificate_text = '<p><a href="'.$certificate_url.'" target="_blank">'.stripslashes($cert->var_text).'</a></p>';
+				}
+			} // end replacing certificate text
+			
+>>>>>>> branch/6.7.2
 			$pending_approval = 0;
 		}
 		
@@ -47,11 +75,20 @@ class WatuPROCertificate {
 	   $ucert_id = $wpdb->insert_id;
 	   
 	   if($cert->is_multi_quiz) {
+<<<<<<< HEAD
 	   	// update the record with the multi-quiz details
 	   	$details = get_user_meta($user_id, 'watupro_multicertificate_details', true);
 	   	$wpdb->query($wpdb->prepare("UPDATE ".WATUPRO_USER_CERTIFICATES." SET
 	   		quiz_ids=%s, avg_points=%d, avg_percent=%d
 	   		WHERE ID=%d", $details['quiz_ids'], $details['avg_points'], $details['avg_percent'],  $ucert_id));
+=======
+            $taking = $wpdb->get_row($wpdb->prepare("SELECT * FROM ".WATUPRO_TAKEN_EXAMS." WHERE ID=%d", $taking_id));
+            // update the record with the multi-quiz details
+            $details = get_user_meta($user_id, 'watupro_multicertificate_details', true);
+            $wpdb->query($wpdb->prepare("UPDATE ".WATUPRO_USER_CERTIFICATES." SET
+                quiz_ids=%s, avg_points=%d, avg_percent=%d
+                WHERE ID=%d", $details['quiz_ids'] ?? $exam->ID, $details['avg_points'] ?? $taking->points, $details['avg_percent'] ?? $taking->percent_correct,  $ucert_id));
+>>>>>>> branch/6.7.2
 		}
     
  	   return $certificate_text;
@@ -77,11 +114,27 @@ class WatuPROCertificate {
 		
 		// send email
 		$admin_email = watupro_admin_email();
+<<<<<<< HEAD
 		$headers  = 'MIME-Version: 1.0' . "\r\n";
 		$headers .= 'Content-type: text/html; charset=utf8' . "\r\n";
 		$headers .= 'From: '. $admin_email . "\r\n";		
 		// echo "$admin_email, $subject, $message<br><br>";
 		wp_mail($admin_email, $subject, $message, $headers);
+=======
+		// $headers  = 'MIME-Version: 1.0' . "\r\n";
+		$headers = 'Content-type: text/html; charset=utf8' . "\r\n";
+		$headers .= 'From: '. $admin_email . "\r\n";		
+		// echo "$admin_email, $subject, $message<br><br>";
+		$result = wp_mail($admin_email, $subject, $message, $headers);
+		$status = $result ? 'OK' : "Error: ".$GLOBALS['phpmailer']->ErrorInfo;
+		
+		// save email log if the table is available
+        if(strtolower($wpdb->get_var("SHOW TABLES LIKE '".WATUPRO_EMAILLOG."'")) == strtolower(WATUPRO_EMAILLOG)) {
+            $wpdb->query($wpdb->prepare("INSERT INTO ".WATUPRO_EMAILLOG." SET
+                sender=%s, receiver=%s, subject=%s, date=CURDATE(), status=%s",
+                $admin_email, $admin_email, $subject, $status));
+        }
+>>>>>>> branch/6.7.2
 	}
 	
 	// sends approval notification to the user when their assigned certificate is approved
@@ -108,6 +161,7 @@ class WatuPROCertificate {
 		$message = str_replace('{{quiz-name}}', stripslashes($exam->name), stripslashes($certificate->approval_email_message));
 		$message = str_replace('{{certificate}}', stripslashes($certificate->title), $message);
 		$message = str_replace('{{date}}', $date, $message);
+<<<<<<< HEAD
 		$message = str_replace('{{url}}', site_url("?watupro_view_certificate=1&taking_id=".$user_certificate->taking_id."&id=".$certificate->ID), $message);
 		
 		$message = apply_filters('watupro_content', $message);
@@ -124,6 +178,65 @@ class WatuPROCertificate {
 	// find multi-quiz certificate
 	static function multi_quiz($exam_id, $achieved, $percent) {
 		global $wpdb, $user_ID;
+=======
+		$message = str_replace('{{url}}', site_url("?watupro_view_certificate=1&taking_id=".self :: obfuscate($user_certificate->taking_id)."&id=".$certificate->ID), $message);
+		
+		$message = apply_filters('watupro_content', $message);
+		$message = watupro_nl2br($message);
+		
+		$attachments = array();			
+		$generate_pdf_certificates = get_option('watupro_generate_pdf_certificates');
+		$attach_certificates = get_option('watupro_attach_certificates');
+		if(!empty($certificate->ID) and $generate_pdf_certificates == "1" and $attach_certificates) {
+			$_GET['certificate_as_attachment'] = true;
+			$_GET['id'] = $certificate->ID;
+			$_GET['taking_id'] = $user_certificate->taking_id;
+			
+			$settings = get_option('watupro_certificates_pdf');
+			$cert_settings = @$settings[$certificate_id];
+			$file_name = "certificate-".$_GET['taking_id'].'.pdf';
+			if(!empty($cert_settings['file_name'])) $file_name = $cert_settings['file_name'];
+			
+			// if file exists we have to change the file name
+			if(@file_exists(WP_CONTENT_DIR . "/uploads/".$file_name)) {
+				$file_name = preg_replace("/\.pdf/$", '', $file_name);
+				$file_name = $file_name .'-'. substr(md5($_SERVER['REMOTE_ADDR']), 0, 6).'.pdf';
+			}
+			$_GET['download_file_name'] = $file_name;				
+			watupro_view_certificate();
+			
+			$attachments = array( WP_CONTENT_DIR . "/uploads/".$file_name );			
+		}
+		
+		// send email
+		//$headers  = 'MIME-Version: 1.0' . "\r\n";
+		$headers = 'Content-type: text/html; charset=utf8' . "\r\n";
+		$headers .= 'From: '. $admin_email . "\r\n";
+		$user_email = empty($user_certificate->taking_email) ? $user->user_email :  $user_certificate->taking_email;
+		//echo "$user_email, $subject, $message<br><br>";		
+		$result = wp_mail($user_email, $subject, $message, $headers, $attachments);
+
+		// insert into the raw email log
+   	$status = $result ? 'OK' : "Error: ".$GLOBALS['phpmailer']->ErrorInfo;
+   	
+   	// save email log if the table is available
+   	if(strtolower($wpdb->get_var("SHOW TABLES LIKE '".WATUPRO_EMAILLOG."'")) == strtolower(WATUPRO_EMAILLOG)) {
+   		$wpdb->query($wpdb->prepare("INSERT INTO ".WATUPRO_EMAILLOG." SET
+   			sender=%s, receiver=%s, subject=%s, date=CURDATE(), status=%s",
+   			$admin_email, $user_email, $subject, $status));		
+   	}
+   	
+		// delete the certificate file
+		if(!empty($certificate->ID) and $generate_pdf_certificates == "1" and $attach_certificates) {
+			@unlink( WP_CONTENT_DIR . "/uploads/".$file_name );
+		}
+	}
+	
+	// find multi-quiz certificates
+	static function multi_quiz($exam_id, $achieved, $percent) {
+		global $wpdb, $user_ID;
+		if(empty(self :: $user_id)) self :: $user_id = $user_ID;
+>>>>>>> branch/6.7.2
 		
 		if(!is_user_logged_in()) return false; // such certificate can only work with logged in users
 		
@@ -131,15 +244,35 @@ class WatuPROCertificate {
 		$certificates = $wpdb->get_results("SELECT * FROM " . WATUPRO_CERTIFICATES . 
 			" WHERE is_multi_quiz=1 AND quiz_ids LIKE '%|".$exam_id."|%' ORDER BY avg_points DESC, avg_percent DESC, ID");	
 			
+<<<<<<< HEAD
 		// all takings of this user
 		$takings = $wpdb->get_results($wpdb->prepare("SELECT ID, exam_id, points, percent_correct 
 			FROM ".WATUPRO_TAKEN_EXAMS." WHERE user_id=%d AND in_progress=0", $user_ID));	
 		$taken_quiz_ids = array();
 		foreach($takings as $taking) {
+=======
+	
+		// all takings of this user
+		$takings = $wpdb->get_results($wpdb->prepare("SELECT ID, exam_id, points, percent_correct 
+			FROM ".WATUPRO_TAKEN_EXAMS." WHERE user_id=%d AND in_progress=0", self :: $user_id));	
+		$taken_quiz_ids = array();
+		foreach($takings as $cnt => $taking) {
+			// VERY IMPORTANT: If $taking->ID is the current taking, the % correct and points are not yet stored to the database 
+			// so we have to override it using the $percent variable which is passed to the function
+			if(isset($_POST['watupro_current_taking_id']) and $taking->ID == $_POST['watupro_current_taking_id']) {
+				$takings[$cnt]->percent_correct = $percent;
+				$takings[$cnt]->points = $achieved;
+			}
+			
+>>>>>>> branch/6.7.2
 			if(!in_array($taking->exam_id, $taken_quiz_ids)) $taken_quiz_ids[] = $taking->exam_id;
 		}	
 		
 		// when the first is found, return it
+<<<<<<< HEAD
+=======
+		$certificate_ids = array();
+>>>>>>> branch/6.7.2
 		foreach($certificates as $certificate) {
 			// extract quiz IDs
 			$quiz_ids = explode('|', $certificate->quiz_ids);
@@ -151,6 +284,7 @@ class WatuPROCertificate {
 				if(!in_array($quiz_id, $taken_quiz_ids)) continue 2; // even one non-taken quiz means this certificate won't be earned
 			}
 			
+<<<<<<< HEAD
 			// did the user collect the required averages?
 			$total_points = $total_percent = 0;
 			foreach($takings as $taking) {
@@ -174,3 +308,61 @@ class WatuPROCertificate {
 		} // end foreach certificate
 	} // end multi_quiz
 }
+=======
+			// the new option now allows you to require the average on every single quiz in the sequence
+			if($certificate -> avg_on_each_quiz) {				
+				foreach($quiz_ids as $quiz_id) {
+					$quiz_ok = false;
+					// make sure there is at least one completed attempt on this quiz where BOTH requirements for points and percent are satisfied
+					foreach($takings as $taking) {
+						if($taking->exam_id == $quiz_id and $taking->points >= $certificate->avg_points and $taking->percent_correct >= $certificate->avg_percent) {							
+							$quiz_ok = true;
+							break; // no need to check further takings
+						}
+					}					
+					
+					// even one non-satisfied means this certificate won't be earned
+					if(!$quiz_ok) continue 2;
+				}
+				
+				// good. This certificate is earned
+				$details = array('quiz_ids'=> implode(',', $quiz_ids), 'avg_points' => $certificate->avg_points, 'avg_percent' => $certificate->avg_percent);
+				update_user_meta(self :: $user_id, 'watupro_multicertificate_details', $details);
+				$certificate_ids[] = $certificate->ID;
+			}
+			else {
+				// the code below handles the default type of multi quiz certificates: where the averages mean average performance on ALL quizzes			
+				// count the number of takings for this certificate quizzes
+				$num_quizzes = 0;
+				foreach($takings as $taking) {
+					if(in_array($taking->exam_id, $quiz_ids)) $num_quizzes++;
+				}				
+				// echo "NUM QUIZZES $num_quizzes";
+				// did the user collect the required averages?
+				$total_points = $total_percent = 0;
+				foreach($takings as $taking) {
+					if(!in_array($taking->exam_id, $quiz_ids)) continue;
+					$total_points += $taking->points;
+					$total_percent += $taking->percent_correct;
+				}
+				
+				$avg_points = round($total_points / $num_quizzes);
+				$avg_percent = round($total_percent / $num_quizzes);
+				
+				// if all is true, return the certificate ID
+				if($avg_points >= $certificate->avg_points and $avg_percent >= $certificate->avg_percent) {
+					// update user meta with the certificate criteria because we'll need this on assign()
+					$details = array('quiz_ids'=> implode(',', $quiz_ids), 'avg_points'=>$avg_points, 'avg_percent'=>$avg_percent);
+					update_user_meta(self :: $user_id, 'watupro_multicertificate_details', $details);
+					
+					$certificate_ids[] = $certificate->ID;
+				}
+			}	// end if the averages are required as total		
+			
+		} // end foreach certificate
+		
+		// return array of all satisfied certificate IDs
+		return $certificate_ids;
+	} // end multi_quiz
+}
+>>>>>>> branch/6.7.2

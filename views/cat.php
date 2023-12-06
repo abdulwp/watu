@@ -1,5 +1,16 @@
+<<<<<<< HEAD
 <div class="wrap">
 	<h1><?php echo empty($cat->ID)?__("Create New", 'watupro'):__("Edit", 'watupro')?> <?php _e("Category", 'watupro')?></h1>
+=======
+<div class="wrap watupro-wrap">
+	<h1><?php echo empty($cat->ID)? ( (empty($parent_id)) ? __("Create New Category", 'watupro') : sprintf(__('Create Subcategory of "%s"', 'watupro'), stripslashes($parent->name)) ) : __("Edit Category", 'watupro');?></h1>
+	
+	<?php if(empty($parent_id)):?>
+		<p><a href="admin.php?page=watupro_cats"><?php printf(__('Back to %s categories', 'watupro'), WATUPRO_QUIZ_WORD);?></a></p>
+	<?php else:?>
+		<p><a href="admin.php?page=watupro_cats&parent_id=<?php echo $parent_id?>"><?php printf(__('Back to subcategories of %s', 'watupro'), stripslashes($parent->name));?></a></p>
+	<?php endif;?>
+>>>>>>> branch/6.7.2
 
 	<form method="post" onsubmit="return validate(this);">
 	<div class="postbox">
@@ -35,16 +46,31 @@
 		</select>
 	<?php endif;?>
 	
+<<<<<<< HEAD
 	<p class="note"><?php _e('Please note this restriction here is valid only for a specific exam category.', 'watupro')?></p>
 
 	<p class="submit">	
 	<input type="submit" name="ok" value="<?php _e('Save Category', 'watupro') ?>" style="font-weight: bold;" tabindex="4" class="button-primary" />
+=======
+	<p class="note"><?php printf(__('Please note this restriction here is valid only for a specific %s category.', 'watupro'), WATUPRO_QUIZ_WORD)?>
+		<?php if(empty($parent_id)):?><b><?php _e('It does NOT affect subcategories.', 'watupro');?></b><?php endif;?>	
+	</p>
+
+	<p class="submit">	
+	<input type="submit" value="<?php _e('Save Category', 'watupro') ?>" style="font-weight: bold;" tabindex="4" class="button-primary" />
+	<input type="submit" name="save_and_new" value="<?php _e('Save &amp; Add New', 'watupro') ?>" style="font-weight: bold;" tabindex="4" class="button-primary" />
+>>>>>>> branch/6.7.2
 	<?php if(!empty($cat->ID)):?>
 		<input type="button" value="<?php _e('Delete Category', 'watupro')?>" onclick="confirmDelete(this.form);" class="button">
 	<?php endif;?>
 	</p>
 	</div>
 	<input type="hidden" name="del" value="0">
+<<<<<<< HEAD
+=======
+	<input type="hidden" name="ok" value="1">
+	<?php wp_nonce_field('watupro_cat');?>
+>>>>>>> branch/6.7.2
 	</form>
 </div>
 

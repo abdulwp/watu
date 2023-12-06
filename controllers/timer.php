@@ -4,6 +4,13 @@ class WatuPROTimer {
 	static function calculate($start_time, &$exam) {
 		$limit_in_seconds = intval($exam->time_limit*60);
 		$time_elapsed = current_time('timestamp') - $start_time;	
+<<<<<<< HEAD
+=======
+
+		// time_elapsed is zero if we have adjusted the timer down due to schedule!
+		if(!empty($exam->timer_adjusted_by_schedule)) $time_elapsed = 0;		
+		
+>>>>>>> branch/6.7.2
 		$new_limit_seconds = $limit_in_seconds - $time_elapsed;
 		// echo $new_limit_seconds;
 		if($new_limit_seconds < 0) {		

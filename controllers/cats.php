@@ -14,6 +14,7 @@ function watupro_cats() {
 	if(!$use_wp_roles) $groups=$wpdb->get_results("SELECT * FROM ".WATUPRO_GROUPS." ORDER BY name");
 	else $roles = $wp_roles->roles;		
 	
+<<<<<<< HEAD
 	switch(@$_GET['do']) {
 		case 'add':
 			if(!empty($_POST['ok'])) {
@@ -21,6 +22,20 @@ function watupro_cats() {
 					VALUES (%s, %s, %d)", $_POST['name'], "|".@implode("|",$_POST['ugroups'])."|", $user_ID));
 				echo "<meta http-equiv='refresh' content='0;url=admin.php?page=watupro_cats' />"; 
 				exit;
+=======
+	$parent_id = empty($_GET['parent_id']) ? 0 : intval($_GET['parent_id']);
+	// is there a parent?
+	if(!empty($parent_id)) $parent = $wpdb->get_row($wpdb->prepare("SELECT * FROM ".WATUPRO_CATS." WHERE ID=%d", $parent_id));
+	
+	switch(@$_GET['do']) {
+		case 'add':
+			if(!empty($_POST['ok']) and check_admin_referer('watupro_cat')) {
+				$wpdb->query($wpdb->prepare("INSERT INTO ".WATUPRO_CATS." (name, ugroups, editor_id, parent_id)
+					VALUES (%s, %s, %d, %d)", sanitize_text_field($_POST['name']), "|".@implode("|",$_POST['ugroups'])."|", $user_ID, $parent_id));
+				$url = 'admin.php?page=watupro_cats&parent_id='.$parent_id;
+				if(!empty($_POST['save_and_new'])) $url .= "&do=add";	
+				watupro_redirect($url);				
+>>>>>>> branch/6.7.2
 			}
 		
 			if(@file_exists(get_stylesheet_directory().'/watupro/cat.php')) require get_stylesheet_directory().'/watupro/cat.php';
@@ -28,17 +43,28 @@ function watupro_cats() {
 		break;
 	
 		case 'edit':
+<<<<<<< HEAD
 			if($multiuser_access == 'own') {
 				$cat=$wpdb->get_row($wpdb->prepare("SELECT * FROM ".WATUPRO_CATS." WHERE ID=%d", $_GET['id']));
 				if($cat->editor_id != $user_ID) wp_die(__('You can manage only your own categories', 'watupro'));	
 			}				
 		
 			if(!empty($_POST['del'])) {
+=======
+		    $_GET['id'] = intval($_GET['id']);
+			if($multiuser_access == 'own') {
+				$cat = $wpdb->get_row($wpdb->prepare("SELECT * FROM ".WATUPRO_CATS." WHERE ID=%d", $_GET['id']));
+				if($cat->editor_id != $user_ID) wp_die(__('You can manage only your own categories', 'watupro'));	
+			}				
+		
+			if(!empty($_POST['del']) and check_admin_referer('watupro_cat')) {
+>>>>>>> branch/6.7.2
 				$wpdb->query($wpdb->prepare("DELETE FROM ".WATUPRO_CATS." WHERE ID=%d", $_GET['id']));
 	         
 	         // set cat_id=0 to all exams that were in this cat		
 				$wpdb -> query( $wpdb->prepare("UPDATE ".WATUPRO_EXAMS." SET cat_id=0 WHERE cat_id=%d", $_GET['id']));
 	
+<<<<<<< HEAD
 				echo "<meta http-equiv='refresh' content='0;url=admin.php?page=watupro_cats' />"; 
 				exit;
 			}
@@ -51,6 +77,23 @@ function watupro_cats() {
 			}
 	
 			$cat=$wpdb->get_row($wpdb->prepare("SELECT * FROM ".WATUPRO_CATS." WHERE ID=%d", $_GET['id']));
+=======
+				echo "<meta http-equiv='refresh' content='0;url=admin.php?page=watupro_cats&parent_id=$parent_id' />"; 
+				exit;
+			}
+			
+			if(!empty($_POST['ok']) and check_admin_referer('watupro_cat')) {
+				$wpdb->query($wpdb->prepare("UPDATE ".WATUPRO_CATS." SET
+					name=%s, ugroups=%s WHERE ID=%d", sanitize_text_field($_POST['name']), 
+					"|".@implode("|", $_POST['ugroups'])."|", $_GET['id']));
+					
+				$url = 'admin.php?page=watupro_cats&parent_id='.$parent_id;
+				if(!empty($_POST['save_and_new'])) $url .= "&do=add";	
+				watupro_redirect($url);		
+			}
+	
+			$cat = $wpdb->get_row($wpdb->prepare("SELECT * FROM ".WATUPRO_CATS." WHERE ID=%d", $_GET['id']));
+>>>>>>> branch/6.7.2
 			
 			if(@file_exists(get_stylesheet_directory().'/watupro/cat.php')) require get_stylesheet_directory().'/watupro/cat.php';
 			else require WATUPRO_PATH."/views/cat.php";
@@ -58,8 +101,13 @@ function watupro_cats() {
 	
 		default:
 			// select my cats
+<<<<<<< HEAD
 			$own_sql = ($multiuser_access == 'own') ? $wpdb->prepare(" WHERE editor_id = %d ", $user_ID) : "";
 			$cats=$wpdb->get_results("SELECT * FROM ".WATUPRO_CATS." $own_sql ORDER BY name");
+=======
+			$own_sql = ($multiuser_access == 'own') ? $wpdb->prepare(" AND editor_id = %d ", $user_ID) : "";
+			$cats = $wpdb->get_results($wpdb->prepare("SELECT * FROM ".WATUPRO_CATS." WHERE parent_id=%d $own_sql ORDER BY name", $parent_id));
+>>>>>>> branch/6.7.2
 			
 			// for each category prepare a string that shows which user groups or WP roles it's accessible to
 			foreach($cats as $cnt => $cat) {			

@@ -44,4 +44,32 @@ function watupro_get_hints() {
 // small helper, outputs an error
 function watupro_hint_error($error) {
 	die("ERROR|WATUPRO|".$error."|WATUPRO|nomorehints");
+<<<<<<< HEAD
+=======
+}
+
+// adjust question points based on hints used
+// @param $stored_answers - array of all stored answers for this taking. Should be queried once in submit_exam.php
+// @param $question - the question object
+// @param $points - the points collected as calculated by calc_answer
+function watupro_hint_adjust_points($stored_answers, $question, $points) {
+	global $wpdb;
+	
+	if(empty($question->reduce_points_per_hint)) return $points;
+	
+	// find record for answer on this question	
+	$this_answer = null;
+	foreach($stored_answers as $answer) {
+		if($answer->question_id == $question->ID) $this_answer = $answer;
+	}
+	if(empty($this_answer)) return $points;
+	
+	// answer found. See how many hints used, adjust the points
+	$points -= $question->reduce_points_per_hint * $this_answer->num_hints_used;
+	
+	// and make sure points don't go below zero if this is the setting
+	if($question->reduce_hint_points_to_zero and $points < 0) $points = 0;
+	
+	return $points;
+>>>>>>> branch/6.7.2
 }

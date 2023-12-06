@@ -50,6 +50,7 @@ class WatuPRODependency {
 		if(!$exam->require_login) return true;
 		
 		// if user is admin return true        
+<<<<<<< HEAD
 		if(current_user_can('WATUPRO_MANAGE_CAPS')) return true;		
 		
 		// now check if there are any dependencies, if not - return true
@@ -72,11 +73,40 @@ class WatuPRODependency {
 			foreach($takings as $taking) {
 				if(!empty($dependency->mode) and $dependency->mode == 'percent') $taking_compare = $taking->percent_correct;
 				else $taking_compare = $taking->points;
+=======
+		if(current_user_can('WATUPRO_MANAGE_CAPS')) return true;
+				
+		// now check if there are any dependencies, if not - return true
+		$dependencies = $wpdb->get_results($wpdb->prepare("SELECT * FROM ".WATUPRO_DEPENDENCIES."
+			WHERE exam_id=%d ORDER BY ID", $exam->ID));
+			
+		$dependencies = apply_filters('watupro_check_dependencies', $dependencies, $exam->ID);	
+			
+		if(!count($dependencies)) return true;	
+		
+		$advanced_settings = unserialize(stripslashes($exam->advanced_settings));
+		// all or any?
+		$dependency_type = (empty($advanced_settings['dependency_type']) or $advanced_settings['dependency_type'] == 'all') ? 'all' : 'any';
+		
+		// if there are unsatisfied dependencies return false 
+		// 1. select takings of this person
+		$takings = $wpdb->get_results($wpdb->prepare("SELECT * FROM ".WATUPRO_TAKEN_EXAMS." WHERE user_id=%d AND in_progress=0 ORDER BY ID DESC", $user_ID));
+	
+		// finally, let's check
+		foreach($dependencies as $dependency) {
+			$satisfied = false;
+
+			foreach($takings as $taking) {
+				$taking_compare = $taking->points;
+				if(!empty($dependency->mode) and $dependency->mode == 'percent') $taking_compare = $taking->percent_correct;
+				if(!empty($dependency->mode) and $dependency->mode == 'percent_points') $taking_compare = $taking->percent_points;
+>>>>>>> branch/6.7.2
 				
 				if($taking->exam_id == $dependency->depend_exam and $taking_compare >= $dependency->depend_points) {
 					$satisfied = true;
 					
 					// 'any' mode? (i.e. just one satisfied dependency is enough)
+<<<<<<< HEAD
 					if($depenency_type == 'any') return true;
 				}
 			}
@@ -87,6 +117,18 @@ class WatuPRODependency {
 				ob_start();
 				$_REQUEST['exam_id'] = $exam->ID;
 				self :: lock_details(false);
+=======
+					if($dependency_type == 'any') return true;
+				}
+			}
+
+			// if satisfied still false no need to check further
+			if(!$satisfied and $dependency_type != 'any') {				
+				// output info for this dependency
+				ob_start();
+				$_REQUEST['exam_id'] = $exam->ID;
+				self :: lock_details('noexit');
+>>>>>>> branch/6.7.2
 				$dependency_message = ob_get_clean();
 				return false;
 			}
@@ -96,7 +138,11 @@ class WatuPRODependency {
 		if($dependency_type == 'any') {
 			ob_start();
 			$_REQUEST['exam_id'] = $exam->ID;
+<<<<<<< HEAD
 			self :: lock_details(false);
+=======
+			self :: lock_details('noexit');
+>>>>>>> branch/6.7.2
 			$dependency_message = ob_get_clean();
 			return false;
 		}
@@ -139,7 +185,11 @@ class WatuPRODependency {
 	}
 	
 	// shows details on specific locked exam
+<<<<<<< HEAD
 	static function lock_details($exit = true) {
+=======
+	static function lock_details($exit = false) {
+>>>>>>> branch/6.7.2
 		global $wpdb, $user_ID;
 		
 		// select advanced settings
@@ -170,6 +220,12 @@ class WatuPRODependency {
 		
 		if(@file_exists(get_stylesheet_directory().'/watupro/i/lock_details.php')) require get_stylesheet_directory().'/watupro/i/lock_details.php';
 		else require WATUPRO_PATH."/i/views/lock_details.php";
+<<<<<<< HEAD
 		if($exit) exit;
 	}
 }
+=======
+		if($exit != 'noexit') exit;
+	}
+}
+>>>>>>> branch/6.7.2

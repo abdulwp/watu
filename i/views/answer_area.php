@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 <div class="postbox" id="sortAnswerArea" style="display:<?php echo (!empty($question) and $question->answer_type=='sort')?'block':'none';?>">
+=======
+<div class="postbox" id="sortAnswerArea" style='display:<?php echo (!empty($question) and $question->answer_type=='sort')?'block':'none';?>'>
+>>>>>>> branch/6.7.2
 	<h3 class="hndle"><span>&nbsp;<?php _e('Answers', 'watupro') ?></span></h3>
 	<div class="inside">
 		<p><?php _e('For sorting questions simply enter your values one per line in the correct way they should be sorted.<br> Feel free to leave blank lines for your own clarity.<br> If a value needs to contain a new line, use the HTML &lt;br&gt; tag and not a real new line.', 'watupro')?><br>
@@ -10,6 +14,10 @@
 			<p><?php _e('You need to enter the values to sort in the following order:', 'watupro')?> </p>
 			<ol>
 				<?php foreach($grades as $grade):
+<<<<<<< HEAD
+=======
+				  if($grade->is_cumulative_grade) continue;
+>>>>>>> branch/6.7.2
 					echo "<li>".sprintf(__('The value that matches result "%s"', 'watupro'), $grade->gtitle)."</li>";
 				endforeach;?>
 			</ol>
@@ -24,10 +32,17 @@
 	</div>
 </div>
 
+<<<<<<< HEAD
 <div class="postbox" id="matrixAnswerArea" style="display:<?php echo (!empty($question) and ($question->answer_type=='matrix' or $question->answer_type=='nmatrix'))?'block':'none';?>">
 	<h3 class="hndle">&nbsp;<span><?php _e('Answers', 'watupro') ?></span></h3>
 	<div class="inside">
 		<p><?php _e('Place the match criteria at left. These will be shown to the user in the order you enter them. Place the correct matches at right. These will be mixed so the user can drag and drop them.', 'watupro')?><br>
+=======
+<div class="postbox" id="matrixAnswerArea" style='display:<?php echo (!empty($question) and ($question->answer_type=='matrix' or $question->answer_type=='nmatrix'))?'block':'none';?>'>
+	<h3 class="hndle">&nbsp;<span><?php _e('Answers', 'watupro') ?></span></h3>
+	<div class="inside">
+		<p><?php _e('Place the match criteria at left. These will be shown to the user in the order you enter them. Place the correct matches at right. These will be mixed at right and the user will need to click on the right match for each left value.', 'watupro')?><br>
+>>>>>>> branch/6.7.2
 		<?php printf(__('<a href="%s" target="_blank">See here</a> if you want to add images to the answers.', 'watupro'), 'http://blog.calendarscripts.info/watupro-adding-images-in-matchmatrix-answers/')?> </p>
 		<?php if(!empty($matches) and sizeof($matches)):
 		foreach($matches as $match):
