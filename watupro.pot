@@ -1,0 +1,6610 @@
+# Copyright (C) 2016 Watu PRO
+# This file is distributed under the same license as the Watu PRO package.
+msgid ""
+msgstr ""
+"Project-Id-Version: Watu PRO 5.2.5.5\n"
+"Report-Msgid-Bugs-To: http://wordpress.org/tag/watupro\n"
+"POT-Creation-Date: 2016-10-19 12:52:41+00:00\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"PO-Revision-Date: 2016-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+
+#: controllers/advanced-import.php:17
+msgid "Please upload file"
+msgstr ""
+
+#: controllers/cats.php:33 controllers/questions.php:464
+#: controllers/questions.php:482
+msgid "You can manage only your own categories"
+msgstr ""
+
+#: controllers/cats.php:70 controllers/cats.php:90
+msgid "Everyone"
+msgstr ""
+
+#: controllers/certificates.php:37 controllers/certificates.php:320
+msgid "You can manage only your own certificates"
+msgstr ""
+
+#: controllers/certificates.php:131 views/users-earned-certificate.html.php:32
+msgid "Avg. points: %d; Avg. %% correct answers: %d%%"
+msgstr ""
+
+#: controllers/certificates.php:159
+msgid "no such certificate"
+msgstr ""
+
+#: controllers/certificates.php:166 controllers/certificates.php:188
+#: lib/watupro.php:639 lib/watupro.php:669
+msgid "You do not have sufficient permissions to access this page"
+msgstr ""
+
+#: controllers/certificates.php:176
+msgid "Such certificate was never earned."
+msgstr ""
+
+#: controllers/diff-levels.php:23
+msgid "You can have only one set of unlock criteria per level."
+msgstr ""
+
+#: controllers/diff-levels.php:136
+msgid "You just unlocked questions from %s difficulty level!"
+msgstr ""
+
+#: controllers/exam.php:117
+msgid "You can edit only quizzes within your allowed categories"
+msgstr ""
+
+#: controllers/exam.php:181
+msgid ""
+"<p>You have completed %%QUIZ_NAME%%.</p>\n"
+"\n"
+"<p>You scored %%SCORE%% correct out of %%TOTAL%% questions.</p>\n"
+"\n"
+"<p>You have collected %%POINTS%% points.</p>\n"
+"\n"
+"<p>Your obtained grade is <b>%%GRADE%%</b></p>\n"
+"\n"
+"<p>Your answers are shown below:</p>\n"
+"\n"
+"%%ANSWERS%%"
+msgstr ""
+
+#: controllers/exam.php:238 i/views/exam_form_intelligence.php:38
+#: i/views/exam_form_intelligence.php:53 i/views/lock_details.php:11
+#: views/takings.php:96
+msgid "% correct answers"
+msgstr ""
+
+#: controllers/exam.php:239
+msgid "% from maximum points"
+msgstr ""
+
+#: controllers/exam.php:265
+msgid "You can delete only your own quizzes."
+msgstr ""
+
+#: controllers/exam.php:271
+msgid "You are not allowed to delete this quiz"
+msgstr ""
+
+#: controllers/exam.php:388 controllers/exams.php:142
+#: i/views/teacher-edit-details.php:19 lib/watupro.php:451 models/exam.php:523
+#: modules/reports/models/reports.php:80
+#: modules/reports/models/reports.php:232 modules/reports/models/stats.php:333
+#: modules/reports/models/user.php:64 modules/reports/views/skills.php:18
+#: views/exams.php:14 views/exams.php:65 views/my_exams.php:21
+#: views/questions.php:82 views/questions.php:160
+msgid "Uncategorized"
+msgstr ""
+
+#: controllers/exam.php:396
+msgid "The quiz was successfully copied!"
+msgstr ""
+
+#: controllers/exams.php:72
+msgid "Question %d of %d"
+msgstr ""
+
+#: controllers/exams.php:126
+msgid "This tab will become available after the %s is created."
+msgstr ""
+
+#: controllers/exams.php:126 i/views/bundles.html.php:30 i/views/payment.php:2
+#: lib/watupro.php:296 models/user.php:42 show_exam.php:14
+#: views/certificate.php:31 views/copy-exam-form.html.php:2
+#: views/copy-exam-form.html.php:4 views/copy-exam-form.html.php:10
+#: views/copy-exam-form.html.php:12 views/copy-exam-form.html.php:15
+#: views/copy-exam-form.html.php:17 views/copy-exam-form.html.php:43
+#: views/exam_form.php:35 views/exam_form.php:49 views/exam_form.php:176
+#: views/exam_form.php:178 views/exam_form.php:236 views/exam_form.php:246
+#: views/exam_form.php:422 views/exam_form.php:428 views/grades.php:7
+#: views/grades.php:11 views/grades.php:16 views/grades.php:18
+#: views/grades.php:50 views/grades.php:51 views/grades.php:52
+#: views/question_form.php:257 views/questions.php:8 views/show_exam.php:10
+#: views/show_exam.php:11 views/taking_details.php:3
+#: views/taking_details.php:15 views/usable-variables.php:12
+#: views/usable-variables.php:18 views/usable-variables.php:27
+#: views/usable-variables.php:30 views/usable-variables.php:31
+#: views/usable-variables.php:32 views/usable-variables.php:33
+msgid "quiz"
+msgstr ""
+
+#: controllers/files.php:35
+msgid "The file %s was not uploaded. Probably too large."
+msgstr ""
+
+#: controllers/files.php:43
+msgid ""
+"Error uploading %s: The file is %dKB while the max. upload size is %dKB."
+msgstr ""
+
+#: controllers/files.php:55
+msgid "Error uploading %s: only files of type: %s are allowed"
+msgstr ""
+
+#: controllers/files.php:69
+msgid "Only logged in users can download uploaded files."
+msgstr ""
+
+#: controllers/files.php:75
+msgid "The file has been deleted."
+msgstr ""
+
+#: controllers/files.php:79
+msgid "You can only download your own files."
+msgstr ""
+
+#: controllers/files.php:90
+msgid "You can download only files of your own students."
+msgstr ""
+
+#: controllers/files.php:119 views/taking_details.php:43
+msgid "Uploaded: %s (%d KB)"
+msgstr ""
+
+#: controllers/grades.php:41
+msgid "You can only manage the grades on your own quizzes."
+msgstr ""
+
+#: controllers/grades.php:48
+msgid ""
+"You can only manage the greades of quizzes within your allowed categories"
+msgstr ""
+
+#: controllers/grades.php:50 i/controllers/teacher.php:10
+#: i/controllers/teacher.php:17 i/controllers/teacher.php:20
+msgid "You are not allowed to do this"
+msgstr ""
+
+#: controllers/grades.php:81 controllers/grades.php:149
+msgid ""
+"For category <strong>%%CATEGORY%%</strong> you got grade <strong>%%GTITLE%%</"
+"strong>."
+msgstr ""
+
+#: controllers/groups.php:78
+msgid "Watu PRO Fields"
+msgstr ""
+
+#: controllers/groups.php:81 controllers/init.php:799
+msgid "User Groups"
+msgstr ""
+
+#: controllers/groups.php:105
+msgid "Accessible difficulty levels"
+msgstr ""
+
+#: controllers/groups.php:145
+msgid "User Group:"
+msgstr ""
+
+#: controllers/groups.php:201
+msgid "Filter by WatuPRO user group:"
+msgstr ""
+
+#: controllers/groups.php:202
+msgid "- Any group -"
+msgstr ""
+
+#: controllers/hints.php:10
+msgid "This quiz does not allow hints."
+msgstr ""
+
+#: controllers/hints.php:14
+msgid "No hints in this quiz!"
+msgstr ""
+
+#: controllers/hints.php:21
+msgid "There are no more hints on this question."
+msgstr ""
+
+#: controllers/hints.php:25
+msgid "You have used all your hints for this quiz."
+msgstr ""
+
+#: controllers/hints.php:29
+msgid "You have used all your hints for this question."
+msgstr ""
+
+#: controllers/init.php:656 controllers/init.php:807
+msgid "Settings"
+msgstr ""
+
+#: controllers/init.php:680 views/question_form.php:173
+msgid "Answering this question is required"
+msgstr ""
+
+#: controllers/init.php:681
+msgid "You did not answer the question. Are you sure you want to continue?"
+msgstr ""
+
+#: controllers/init.php:682
+msgid "You have not answered a required question"
+msgstr ""
+
+#: controllers/init.php:683
+msgid "Please wait..."
+msgstr ""
+
+#: controllers/init.php:684
+msgid "Try again"
+msgstr ""
+
+#: controllers/init.php:685
+msgid "Sorry, your time is over! I'm submitting your results... Done!"
+msgstr ""
+
+#: controllers/init.php:686
+msgid "seconds"
+msgstr ""
+
+#: controllers/init.php:687
+msgid "minutes and"
+msgstr ""
+
+#: controllers/init.php:688
+msgid "hours,"
+msgstr ""
+
+#: controllers/init.php:689 views/show_exam.php:13
+msgid "Time left:"
+msgstr ""
+
+#: controllers/init.php:690
+msgid "Please enter your email address"
+msgstr ""
+
+#: controllers/init.php:691
+msgid "Please enter your name"
+msgstr ""
+
+#: controllers/init.php:692
+msgid "This field is required"
+msgstr ""
+
+#: controllers/init.php:693
+msgid "You are not on the last page. Are you sure you want to submit the quiz?"
+msgstr ""
+
+#: controllers/init.php:694
+msgid "Please first answer the question"
+msgstr ""
+
+#: controllers/init.php:695
+msgid "Your work has been saved. You can come later to continue."
+msgstr ""
+
+#: controllers/init.php:696
+msgid "Are you sure you want to submit the quiz?"
+msgstr ""
+
+#: controllers/init.php:697
+msgid "Details of submitted quiz"
+msgstr ""
+
+#: controllers/init.php:698
+msgid ""
+"The following questions have been flagged for review: %s. Are you sure you "
+"want to submit your results? Click OK to submit and Cancel to go back and "
+"review these questions."
+msgstr ""
+
+#: controllers/init.php:700
+msgid "You need to enter the image verification code"
+msgstr ""
+
+#: controllers/init.php:701
+msgid "You need to answer the verification question"
+msgstr ""
+
+#: controllers/init.php:702
+msgid "You can't continue until you reach the desired % correct answers."
+msgstr ""
+
+#: controllers/init.php:703
+msgid "Please wait for the feedback..."
+msgstr ""
+
+#: controllers/init.php:784 controllers/init.php:785 views/my_exams.php:1
+msgid "My %s"
+msgstr ""
+
+#: controllers/init.php:784 controllers/init.php:785 controllers/init.php:796
+#: i/views/payment-options.html.php:2 models/user.php:11 views/my_exams.php:1
+#: views/my_exams.php:8 views/options.php:4 views/options.php:158
+#: views/options.php:242
+msgid "Quizzes"
+msgstr ""
+
+#: controllers/init.php:786 controllers/init.php:787
+#: views/my_certificates.php:2
+msgid "My Certificates"
+msgstr ""
+
+#: controllers/init.php:791
+msgid "%s Settings"
+msgstr ""
+
+#: controllers/init.php:791 i/views/bundle.html.php:2 models/user.php:5
+#: modules/reports/models/user.php:5 modules/reports/views/history.php:48
+#: modules/reports/views/skills.php:13 modules/reports/views/tests.php:15
+#: views/advanced-import.html.php:4 views/cats.php:2 views/exam_form.php:2
+#: views/exam_form.php:23 views/exam_form.php:28 views/exam_form.php:159
+#: views/grades.php:31 views/my-options.html.php:2
+#: views/my_certificates.php:12 views/my_exams.php:11 views/options.php:160
+msgid "Quiz"
+msgstr ""
+
+#. #-#-#-#-#  watupro.pot (Watu PRO 5.2.5.5)  #-#-#-#-#
+#. Plugin Name of the plugin/theme
+#: controllers/init.php:795
+msgid "Watu PRO"
+msgstr ""
+
+#: controllers/init.php:797 views/certificates.php:2
+msgid "Watu PRO Certificates"
+msgstr ""
+
+#: controllers/init.php:797 models/user.php:12
+msgid "Certificates"
+msgstr ""
+
+#: controllers/init.php:798
+msgid "Quiz Categories"
+msgstr ""
+
+#: controllers/init.php:800
+msgid "Question Categories"
+msgstr ""
+
+#: controllers/init.php:801
+msgid "Difficulty Levels"
+msgstr ""
+
+#: controllers/init.php:802
+msgid "Default Grades"
+msgstr ""
+
+#: controllers/init.php:803 views/takings.php:6
+msgid "All Quiz Submissions"
+msgstr ""
+
+#: controllers/init.php:806
+msgid "Modules"
+msgstr ""
+
+#: controllers/init.php:808
+msgid "Social Sharing"
+msgstr ""
+
+#: controllers/init.php:814
+msgid "Help"
+msgstr ""
+
+#: controllers/init.php:817
+msgid "Add/Edit Exam"
+msgstr ""
+
+#: controllers/init.php:818
+msgid "Add/Edit Question"
+msgstr ""
+
+#: controllers/init.php:819 views/exam_form.php:8 views/exams.php:37
+#: views/grades.php:8
+msgid "Manage Questions"
+msgstr ""
+
+#: controllers/init.php:820
+msgid "Taken Exam Data"
+msgstr ""
+
+#: controllers/init.php:821 views/exam_form.php:9 views/exams.php:38
+#: views/questions.php:10
+msgid "Manage Grades"
+msgstr ""
+
+#: controllers/init.php:822
+msgid "Copy Exam"
+msgstr ""
+
+#: controllers/init.php:823
+msgid "Users Who Earned Certificate"
+msgstr ""
+
+#: controllers/init.php:824 views/edit-choice.html.php:2
+msgid "Editing an answer to question"
+msgstr ""
+
+#: controllers/init.php:825
+msgid "Advanced questions import"
+msgstr ""
+
+#: controllers/init.php:826
+msgid "User feedback on questions"
+msgstr ""
+
+#: controllers/init.php:827
+msgid "Assign users to a group"
+msgstr ""
+
+#: controllers/init.php:894
+msgid "WatuPRO plugin is network activated and will not function properly."
+msgstr ""
+
+#: controllers/init.php:894
+msgid ""
+"Please go to your Network administration and deactivate it. Then activate "
+"the plugin as blog admin for each blog which needs it."
+msgstr ""
+
+#: controllers/live-result.php:26
+msgid "Sorry, we couldn't retrieve the answer"
+msgstr ""
+
+#: controllers/options.php:155
+msgid "%d %s successfully copied."
+msgstr ""
+
+#: controllers/options.php:155 i/controllers/payments.php:19
+#: i/controllers/payments.php:20 i/controllers/payments.php:251
+#: i/controllers/payments.php:252 i/views/bundle.html.php:8
+#: i/views/bundle.html.php:9 i/views/bundles.html.php:29
+#: i/views/payment-options.html.php:4 i/views/payment-options.html.php:6
+#: views/cats.php:25 views/cats.php:27 views/cats.php:28 views/cats.php:29
+#: views/cats.php:30 views/cats.php:31 views/cats.php:32 views/cats.php:39
+#: views/grades.php:6 views/my-options.html.php:5 views/my_exams.php:4
+#: views/options.php:189 views/options.php:191 views/options.php:198
+#: views/options.php:236 views/questions.php:6
+msgid "quizzes"
+msgstr ""
+
+#: controllers/options.php:196
+msgid "What is the color of the snow? = white"
+msgstr ""
+
+#: controllers/options.php:196
+msgid "Is fire hot or cold? = hot"
+msgstr ""
+
+#: controllers/options.php:197
+msgid "In which continent is Norway? = Europe"
+msgstr ""
+
+#: controllers/questions.php:75 controllers/questions.php:153
+msgid "You can only manage the questions on your own quizzes."
+msgstr ""
+
+#: controllers/questions.php:82 controllers/questions.php:160
+msgid "You can only manage questions of quizzes within your allowed categories"
+msgstr ""
+
+#: controllers/questions.php:451 controllers/questions.php:467
+msgid "Another category with this name already exists."
+msgstr ""
+
+#: controllers/shortcodes.php:94 controllers/shortcodes.php:116
+#: modules/reports/controllers/shortcodes.php:12
+msgid "This content is only for logged in users"
+msgstr ""
+
+#: controllers/shortcodes.php:139 i/views/payments.html.php:47
+msgid "User"
+msgstr ""
+
+#: controllers/shortcodes.php:139 i/models/teacher.php:87
+#: i/views/exam_form_intelligence.php:37 i/views/exam_form_intelligence.php:52
+#: i/views/teacher-edit-details.php:12 models/record.php:37
+#: models/record.php:57 modules/reports/models/reports.php:173
+#: modules/reports/models/stats.php:148
+#: modules/reports/views/all-question-answers.html.php:17
+#: modules/reports/views/all-question-answers.html.php:28
+#: views/my_exams.php:36 views/takings.php:142 views/takings.php:179
+msgid "Points"
+msgstr ""
+
+#: controllers/shortcodes.php:190 views/takings.php:183
+msgid "N/a"
+msgstr ""
+
+#: controllers/shortcodes.php:229
+msgid "Unlimited"
+msgstr ""
+
+#: controllers/social-sharing.php:157
+msgid "Share by Email"
+msgstr ""
+
+#: controllers/submit_exam.php:204 views/users-earned-certificate.html.php:24
+msgid "Guest"
+msgstr ""
+
+#: controllers/submit_exam.php:214
+msgid "Phone: %s"
+msgstr ""
+
+#: controllers/submit_exam.php:215
+msgid "Company: %s"
+msgstr ""
+
+#: controllers/takings.php:30
+msgid "You can manage only the results on exams created by you."
+msgstr ""
+
+#: controllers/takings.php:49
+msgid "You can only view results on your own quizzes."
+msgstr ""
+
+#: controllers/timer.php:12
+msgid ""
+"Warning: your unfinished attempt was recorded. You ran out of time and your "
+"answers will be submitted automatically."
+msgstr ""
+
+#: controllers/timer.php:19
+msgid ""
+"Warning: you have started this test earlier and the timer is running behind "
+"the scene!"
+msgstr ""
+
+#: controllers/widgets.php:118
+msgid "Watu PRO Quizzes"
+msgstr ""
+
+#: helpers/htmlhelper.php:221
+msgid "Enter email to receive quiz results:"
+msgstr ""
+
+#: helpers/htmlhelper.php:264
+msgid "Page %d of %d"
+msgstr ""
+
+#: i/controllers/coupons.php:124
+msgid "Valid coupon code applied."
+msgstr ""
+
+#: i/controllers/coupons.php:125
+msgid "The coupon code is invalid."
+msgstr ""
+
+#: i/controllers/coupons.php:128
+msgid "Coupon code"
+msgstr ""
+
+#: i/controllers/coupons.php:129 i/views/payment.php:9
+msgid "Apply"
+msgstr ""
+
+#: i/controllers/multiuser.php:72
+msgid "You are not allowed to do this."
+msgstr ""
+
+#: i/controllers/payments.php:10
+msgid "No quiz with this ID"
+msgstr ""
+
+#: i/controllers/payments.php:16
+msgid "No bundle with this ID"
+msgstr ""
+
+#: i/controllers/payments.php:19
+msgid "Access to a category of %s (Bundle ID: %d)"
+msgstr ""
+
+#: i/controllers/payments.php:20
+msgid "Access to a selection of %s (Bundle ID: %d)"
+msgstr ""
+
+#: i/controllers/payments.php:27
+msgid "Unrecognized user login"
+msgstr ""
+
+#: i/controllers/payments.php:222
+msgid "You need to be logged in."
+msgstr ""
+
+#: i/controllers/payments.php:226
+msgid "This offer has been disabled."
+msgstr ""
+
+#: i/controllers/payments.php:251
+msgid "Access to a category of %s"
+msgstr ""
+
+#: i/controllers/payments.php:252
+msgid "Access to a selection of %s"
+msgstr ""
+
+#: i/controllers/payments.php:263 i/models/payment.php:68
+msgid "Not enough points."
+msgstr ""
+
+#: i/controllers/payments.php:266 i/models/payment.php:71
+msgid "Pay %d points"
+msgstr ""
+
+#: i/controllers/practice.php:11 show_exam.php:92
+msgid "Please go to <a href='%s'>%s</a> to view this test"
+msgstr ""
+
+#: i/controllers/practice.php:30
+msgid "Check"
+msgstr ""
+
+#: i/controllers/practice.php:76
+msgid "You answered:"
+msgstr ""
+
+#: i/models/exam_intel.php:23
+msgid "days"
+msgstr ""
+
+#: i/models/exam_intel.php:23
+msgid "hours"
+msgstr ""
+
+#: i/models/exam_intel.php:27
+msgid ""
+"You need to wait at least %d %s after your previous attempt on this test."
+msgstr ""
+
+#: i/models/grade.php:8 i/models/grade.php:9 i/models/teacher.php:44
+#: models/grade.php:10 models/grade.php:11 modules/reports/views/tests.php:27
+#: views/exam_form.php:145 views/options.php:26 views/question_form.php:115
+#: views/takings.php:171
+msgid "None"
+msgstr ""
+
+#: i/models/i.php:51
+msgid "Manually Grade Test Results"
+msgstr ""
+
+#: i/models/i.php:54
+msgid "Exam Payments"
+msgstr ""
+
+#: i/models/i.php:57
+msgid "Advanced Quiz Settings"
+msgstr ""
+
+#: i/models/i.php:60
+msgid "WatuPRO Multiuser Configurations"
+msgstr ""
+
+#: i/models/i.php:63
+msgid "Payment Buttons for Quiz Bundles"
+msgstr ""
+
+#: i/models/i.php:66
+msgid "Coupon Codes for Paid Quizzes"
+msgstr ""
+
+#: i/models/payment.php:31
+msgid ""
+"There is fee to take this quiz but no Paypal ID or other payment method has "
+"been set."
+msgstr ""
+
+#: i/models/payment.php:136
+msgid "Coupon %s"
+msgstr ""
+
+#: i/models/question.php:173
+msgid "Unselect"
+msgstr ""
+
+#: i/models/question.php:322 models/user.php:45 views/question_form.php:183
+msgid "or"
+msgstr ""
+
+#: i/models/question.php:323
+msgid "(correct answer: %s)"
+msgstr ""
+
+#: i/models/question.php:327
+msgid "[no answer]"
+msgstr ""
+
+#: i/models/question.php:424
+msgid "%d out of %d"
+msgstr ""
+
+#: i/models/teacher.php:86 i/views/teacher-edit-details.php:11
+#: views/questions-feedback.html.php:13 views/questions.php:110
+#: views/taking_details.php:33
+msgid "Question"
+msgstr ""
+
+#: i/models/teacher.php:87 views/taking_details.php:33
+msgid "Answer(s) given"
+msgstr ""
+
+#: i/models/teacher.php:88 modules/reports/models/stats.php:148
+#: modules/reports/views/all-question-answers.html.php:18
+#: modules/reports/views/all-question-answers.html.php:29
+msgid "Is Correct?"
+msgstr ""
+
+#: i/models/teacher.php:88
+msgid "Comments"
+msgstr ""
+
+#: i/models/teacher.php:93
+msgid "yes"
+msgstr ""
+
+#: i/models/teacher.php:93
+msgid "no"
+msgstr ""
+
+#: i/views/answer_area.php:2 i/views/answer_area.php:28
+#: views/question_form.php:222
+msgid "Answers"
+msgstr ""
+
+#: i/views/answer_area.php:4
+msgid ""
+"For sorting questions simply enter your values one per line in the correct "
+"way they should be sorted.<br> Feel free to leave blank lines for your own "
+"clarity.<br> If a value needs to contain a new line, use the HTML &lt;br&gt; "
+"tag and not a real new line."
+msgstr ""
+
+#: i/views/answer_area.php:5
+msgid "Do not use the special character \"|\" inside the answers."
+msgstr ""
+
+#: i/views/answer_area.php:8
+msgid "This is a personality quiz"
+msgstr ""
+
+#: i/views/answer_area.php:10
+msgid "You need to enter the values to sort in the following order:"
+msgstr ""
+
+#: i/views/answer_area.php:13
+msgid "The value that matches result \"%s\""
+msgstr ""
+
+#: i/views/answer_area.php:17
+msgid ""
+"These values will then be shown to the user randomized. The value that the "
+"user sorts on top will assign %d points to its corresponding result. The "
+"value that goes at the bottom will get one point. The other values will "
+"assign points depending on their position."
+msgstr ""
+
+#: i/views/answer_area.php:18
+msgid ""
+"For better understanding check <a href=\"%s\" target=\"_blank\">this post</a>"
+msgstr ""
+
+#: i/views/answer_area.php:30
+msgid ""
+"Place the match criteria at left. These will be shown to the user in the "
+"order you enter them. Place the correct matches at right. These will be "
+"mixed so the user can drag and drop them."
+msgstr ""
+
+#: i/views/answer_area.php:31
+msgid ""
+"<a href=\"%s\" target=\"_blank\">See here</a> if you want to add images to "
+"the answers."
+msgstr ""
+
+#: i/views/answer_area.php:48
+msgid "Add more matches"
+msgstr ""
+
+#: i/views/bundle.html.php:2
+msgid "Manage %s Bundle"
+msgstr ""
+
+#: i/views/bundle.html.php:4
+msgid "Back to bundle buttons"
+msgstr ""
+
+#: i/views/bundle.html.php:7
+msgid "Bundle type:"
+msgstr ""
+
+#: i/views/bundle.html.php:8 i/views/bundles.html.php:29
+msgid "Selected %s"
+msgstr ""
+
+#: i/views/bundle.html.php:9
+msgid "Category of %s"
+msgstr ""
+
+#: i/views/bundle.html.php:11
+msgid "Price:"
+msgstr ""
+
+#: i/views/bundle.html.php:20 views/exam_form.php:161
+msgid "Select category:"
+msgstr ""
+
+#: i/views/bundle.html.php:27
+msgid "After payment redirect to:"
+msgstr ""
+
+#: i/views/bundle.html.php:27
+msgid ""
+"Enter full URL where the user should go after payment. This can be for "
+"example the URL of the first quiz from the bundle."
+msgstr ""
+
+#: i/views/bundle.html.php:29
+msgid "Save Bundle Button"
+msgstr ""
+
+#: i/views/bundles.html.php:2
+msgid "Manage Paid Quiz Bundles"
+msgstr ""
+
+#: i/views/bundles.html.php:4
+msgid ""
+"You can create payment buttons for selling access to several paid quizzes or "
+"a whole category of quizzes at once. Learn more how this works <a href=\"#\" "
+"target=\"_blank\">here</a>."
+msgstr ""
+
+#: i/views/bundles.html.php:6
+msgid "Create new bundle"
+msgstr ""
+
+#: i/views/bundles.html.php:9
+msgid "Existing bundle buttons"
+msgstr ""
+
+#: i/views/bundles.html.php:12
+msgid "Shortcodes"
+msgstr ""
+
+#: i/views/bundles.html.php:12
+msgid "Bundle type"
+msgstr ""
+
+#: i/views/bundles.html.php:13
+msgid "Price"
+msgstr ""
+
+#: i/views/bundles.html.php:14
+msgid "Gives access to"
+msgstr ""
+
+#: i/views/bundles.html.php:15 views/takings.php:29
+msgid "View Payments"
+msgstr ""
+
+#: i/views/bundles.html.php:15
+msgid "Edit/delete"
+msgstr ""
+
+#: i/views/bundles.html.php:19
+msgid "Paypal button:"
+msgstr ""
+
+#: i/views/bundles.html.php:21
+msgid "Stripe button:"
+msgstr ""
+
+#: i/views/bundles.html.php:24
+msgid "Pay with points:"
+msgstr ""
+
+#: i/views/bundles.html.php:27
+msgid "Other payment methods:"
+msgstr ""
+
+#: i/views/bundles.html.php:30 modules/reports/views/skills.php:13
+msgid "%s category"
+msgstr ""
+
+#: i/views/bundles.html.php:31
+msgid "%s %s"
+msgstr ""
+
+#: i/views/bundles.html.php:33 views/certificates.php:21
+msgid "View/Manage"
+msgstr ""
+
+#: i/views/bundles.html.php:34 views/cat.php:2 views/cats.php:10
+#: views/cats.php:18 views/certificate.php:2 views/certificates.php:12
+#: views/certificates.php:22 views/exams.php:71 views/question_cats.php:40
+#: views/questions.php:166
+msgid "Edit"
+msgstr ""
+
+#: i/views/bundles.html.php:35 i/views/coupons.html.php:50
+#: i/views/exam_form_intelligence.php:162 i/views/payments.html.php:48
+#: i/views/payments.html.php:64 views/diff-levels.html.php:69
+#: views/exams.php:72 views/grades.php:147 views/groups.php:27
+#: views/question_cats.php:41 views/questions.php:167 views/takings.php:149
+msgid "Delete"
+msgstr ""
+
+#: i/views/bundles.html.php:44 i/views/coupons.html.php:67
+#: i/views/payments.html.php:81 i/views/payments.html.php:87 views/cat.php:66
+#: views/certificate.php:105 views/diff-levels.html.php:123
+#: views/grades.php:184 views/groups.php:58 views/questions.php:198
+#: views/questions.php:200 views/questions.php:202
+#: views/users-earned-certificate.html.php:49
+msgid "Are you sure?"
+msgstr ""
+
+#: i/views/coupons.html.php:2
+msgid "Manage Coupon Codes"
+msgstr ""
+
+#: i/views/coupons.html.php:5 i/views/coupons.html.php:31
+#: i/views/payment.php:9
+msgid "Coupon code:"
+msgstr ""
+
+#: i/views/coupons.html.php:5 i/views/coupons.html.php:31
+msgid "Discount"
+msgstr ""
+
+#: i/views/coupons.html.php:9 i/views/coupons.html.php:37
+msgid "Max. uses (enter 0 for unlimited)"
+msgstr ""
+
+#: i/views/coupons.html.php:11 i/views/coupons.html.php:39
+msgid "Valid for quiz:"
+msgstr ""
+
+#: i/views/coupons.html.php:12 i/views/coupons.html.php:40
+msgid "Any quiz"
+msgstr ""
+
+#: i/views/coupons.html.php:17 i/views/coupons.html.php:45
+msgid "Apply date condition"
+msgstr ""
+
+#: i/views/coupons.html.php:22
+msgid "Add Coupon"
+msgstr ""
+
+#: i/views/coupons.html.php:50
+msgid "Save Coupon"
+msgstr ""
+
+#: i/views/coupons.html.php:51
+msgid "Used %d times"
+msgstr ""
+
+#: i/views/coupons.html.php:60
+msgid "Using Coupons for Quiz Bundles"
+msgstr ""
+
+#: i/views/coupons.html.php:62
+msgid ""
+"To include the coupon code field on page selling quiz bundles use the "
+"shortcode %s. The shortcode accepts two optional attributes - \"%s\" (to "
+"control the field label) and \"%s\" (to control the value of the submit "
+"button). So for example you can use it like this: %s."
+msgstr ""
+
+#: i/views/exam_form_intelligence.php:3 views/exam_form.php:20
+msgid "Intelligence Module Settings"
+msgstr ""
+
+#: i/views/exam_form_intelligence.php:4
+msgid "Set exam mode:"
+msgstr ""
+
+#: i/views/exam_form_intelligence.php:5
+msgid "Live exam"
+msgstr ""
+
+#: i/views/exam_form_intelligence.php:6
+msgid "Practice mode"
+msgstr ""
+
+#: i/views/exam_form_intelligence.php:9
+msgid "What's this?"
+msgstr ""
+
+#: i/views/exam_form_intelligence.php:13
+msgid ""
+"Treat this quiz as a personality quiz: answers will be matched to results "
+"instead of calculating the points. <a href=\"%s\" target=\"_blank\">Learn "
+"more here</a>."
+msgstr ""
+
+#: i/views/exam_form_intelligence.php:17
+msgid "Dependencies"
+msgstr ""
+
+#: i/views/exam_form_intelligence.php:20
+msgid ""
+"This feature becomes active only when <strong>Require user log-in</strong> "
+"option in the <strong>User and Email Related Settings</strong> tab is "
+"selected."
+msgstr ""
+
+#: i/views/exam_form_intelligence.php:24
+msgid ""
+"Let the user access this exam only after they have completed %s of the "
+"following ones:"
+msgstr ""
+
+#: i/views/exam_form_intelligence.php:25
+msgid "all"
+msgstr ""
+
+#: i/views/exam_form_intelligence.php:26
+msgid "any"
+msgstr ""
+
+#: i/views/exam_form_intelligence.php:31
+msgid "Exam:"
+msgstr ""
+
+#: i/views/exam_form_intelligence.php:32 i/views/exam_form_intelligence.php:47
+msgid "- Select exam -"
+msgstr ""
+
+#: i/views/exam_form_intelligence.php:36 i/views/exam_form_intelligence.php:51
+msgid "is completed with at least"
+msgstr ""
+
+#: i/views/exam_form_intelligence.php:39 i/views/exam_form_intelligence.php:54
+msgid "achieved"
+msgstr ""
+
+#: i/views/exam_form_intelligence.php:40
+msgid "Mark To Delete"
+msgstr ""
+
+#: i/views/exam_form_intelligence.php:42
+msgid "Restore"
+msgstr ""
+
+#: i/views/exam_form_intelligence.php:46 i/views/teacher-edit-details.php:5
+#: modules/reports/views/all-question-answers.html.php:7
+#: modules/reports/views/chart-by-grade.html.php:7 views/takings.php:42
+msgid "Quiz:"
+msgstr ""
+
+#: i/views/exam_form_intelligence.php:55
+msgid "Add New Dependency"
+msgstr ""
+
+#: i/views/exam_form_intelligence.php:64
+msgid "Payment Settings"
+msgstr ""
+
+#: i/views/exam_form_intelligence.php:67
+msgid "Charge"
+msgstr ""
+
+#: i/views/exam_form_intelligence.php:67
+msgid "for accessing this exam."
+msgstr ""
+
+#: i/views/exam_form_intelligence.php:68
+msgid ""
+"Mark payment as used after each quiz attempt (so if multiple attempts are "
+"allowed the user will have to pay each time. <b>This is always true for non-"
+"logged in users: they can take quiz only once with each payment.</b>)"
+msgstr ""
+
+#: i/views/exam_form_intelligence.php:69
+msgid ""
+"If you leave zero in the box above, there will be no charge for users to "
+"access the exam. To manage your payments settings to to "
+msgstr ""
+
+#: i/views/exam_form_intelligence.php:69
+msgid "WatuPRO Settings"
+msgstr ""
+
+#: i/views/exam_form_intelligence.php:75
+msgid "Quiz Owner"
+msgstr ""
+
+#: i/views/exam_form_intelligence.php:77
+msgid ""
+"This settings matters most if you select \"Manage only exams created by users"
+"\" on the <a href=\"%s\" target=\"_blank\">page that lets you fine-tune role "
+"settings</a>. Admin can always access all tests."
+msgstr ""
+
+#: i/views/exam_form_intelligence.php:79
+msgid "Choose owner:"
+msgstr ""
+
+#: i/views/exam_form_intelligence.php:86
+msgid "Runtime Configuration"
+msgstr ""
+
+#: i/views/exam_form_intelligence.php:88
+msgid ""
+"You can configure premature quiz ending or not allow the user to continue if "
+"they do not meet certain threshold of correct answers duing the quiz. "
+"<b>These settings are available only for quizzes paginated \"each question "
+"on its own page\"</b>."
+msgstr ""
+
+#: i/views/exam_form_intelligence.php:91
+msgid ""
+"Leave the below boxes empty (or enter zeros) to not configure any run time "
+"logic. If you configure any of these logics the setting \"Automatically "
+"store user progress as they go from page to page\" will automatically be set "
+"to true at the time of saving the quiz."
+msgstr ""
+
+#: i/views/exam_form_intelligence.php:92
+msgid "Premature quiz ending"
+msgstr ""
+
+#: i/views/exam_form_intelligence.php:93
+msgid ""
+"Finalize the quiz if user answers correctly less than %s%% of the questions. "
+"Start performing this check after question number %s (min 1)."
+msgstr ""
+
+#: i/views/exam_form_intelligence.php:97
+msgid ""
+"In case of premature quiz end, display this message on the \"Final screen\" "
+"before the other content:"
+msgstr ""
+
+#: i/views/exam_form_intelligence.php:102
+msgid "Prevent moving forward"
+msgstr ""
+
+#: i/views/exam_form_intelligence.php:103
+msgid ""
+"Do not allow the user to submit or continue the quiz if they answer "
+"correctly less than %s%% of the questions. Start performing this check after "
+"question number %s (min 1)."
+msgstr ""
+
+#: i/views/exam_form_intelligence.php:135
+msgid "Please select exam"
+msgstr ""
+
+#: i/views/exam_form_intelligence.php:149
+msgid "You already have this dependency!"
+msgstr ""
+
+#: i/views/grade-to-answer.html.php:1 views/question_form.php:24
+msgid "assign to results:"
+msgstr ""
+
+#: i/views/grade-to-answer.html.php:4 views/question_form.php:24
+msgid "- please select -"
+msgstr ""
+
+#: i/views/lock_details.php:2
+msgid "This test is currently locked."
+msgstr ""
+
+#: i/views/lock_details.php:3
+msgid ""
+"To take this test you need first to complete one of the following "
+"dependencies:"
+msgstr ""
+
+#: i/views/lock_details.php:3
+msgid ""
+"To take this test you need first to complete the following dependencies:"
+msgstr ""
+
+#: i/views/lock_details.php:6
+msgid "Dependency"
+msgstr ""
+
+#: i/views/lock_details.php:6 i/views/payments.html.php:48
+#: views/users-earned-certificate.html.php:16
+msgid "Status"
+msgstr ""
+
+#: i/views/lock_details.php:8
+msgid "The test"
+msgstr ""
+
+#: i/views/lock_details.php:10
+msgid "with at least %s"
+msgstr ""
+
+#: i/views/lock_details.php:12 i/views/payments.html.php:54
+msgid "points"
+msgstr ""
+
+#: i/views/lock_details.php:14
+msgid "successfully"
+msgstr ""
+
+#: i/views/multiuser.html.php:2
+msgid "Manage multi-user configurations in Watu PRO"
+msgstr ""
+
+#: i/views/multiuser.html.php:5
+msgid ""
+"To edit this page you need to enable some roles to manage exams on the <a "
+"href=\"%s\" target=_blank\">Watu PRO Settings page</a>."
+msgstr ""
+
+#: i/views/multiuser.html.php:12
+msgid "Please select role to configure:"
+msgstr ""
+
+#: i/views/multiuser.html.php:13
+msgid "- Please select role -"
+msgstr ""
+
+#: i/views/multiuser.html.php:21
+msgid "Exams access:"
+msgstr ""
+
+#: i/views/multiuser.html.php:22
+msgid "Manage all exams"
+msgstr ""
+
+#: i/views/multiuser.html.php:23
+msgid "Manage only exams created by the user"
+msgstr ""
+
+#: i/views/multiuser.html.php:24
+msgid "Only view results"
+msgstr ""
+
+#: i/views/multiuser.html.php:25
+msgid "No access to manage exams"
+msgstr ""
+
+#: i/views/multiuser.html.php:26
+msgid "Apply user group / user role category restrictions"
+msgstr ""
+
+#: i/views/multiuser.html.php:28
+msgid "Certificates access:"
+msgstr ""
+
+#: i/views/multiuser.html.php:29
+msgid "Manage all certificates"
+msgstr ""
+
+#: i/views/multiuser.html.php:30
+msgid "Manage only certificates created by the user"
+msgstr ""
+
+#: i/views/multiuser.html.php:31
+msgid "No access to manage certificates"
+msgstr ""
+
+#: i/views/multiuser.html.php:34
+msgid "Exam categories access:"
+msgstr ""
+
+#: i/views/multiuser.html.php:35
+msgid "Manage all categories"
+msgstr ""
+
+#: i/views/multiuser.html.php:36
+msgid "Manage only categories created by the user"
+msgstr ""
+
+#: i/views/multiuser.html.php:37
+msgid "No access to manage categories"
+msgstr ""
+
+#: i/views/multiuser.html.php:40
+msgid "User group access:"
+msgstr ""
+
+#: i/views/multiuser.html.php:41
+msgid "Manage all user groups"
+msgstr ""
+
+#: i/views/multiuser.html.php:42
+msgid "No access to manage user groups"
+msgstr ""
+
+#: i/views/multiuser.html.php:45
+msgid "Question categories access:"
+msgstr ""
+
+#: i/views/multiuser.html.php:46
+msgid "Manage all question categories"
+msgstr ""
+
+#: i/views/multiuser.html.php:47
+msgid "Manage only question categories created by the user"
+msgstr ""
+
+#: i/views/multiuser.html.php:48
+msgid "No access to manage question categories"
+msgstr ""
+
+#: i/views/multiuser.html.php:51
+msgid "Settings page access:"
+msgstr ""
+
+#: i/views/multiuser.html.php:52
+msgid "Manage settings"
+msgstr ""
+
+#: i/views/multiuser.html.php:53
+msgid "No access to manage settings"
+msgstr ""
+
+#: i/views/multiuser.html.php:56
+msgid "Save configuration for this role"
+msgstr ""
+
+#: i/views/payment-options.html.php:2
+msgid "Payment Settings For %s That Require Payment"
+msgstr ""
+
+#: i/views/payment-options.html.php:4
+msgid ""
+"WatuPRO Intelligence module allows you to require payment to access selected "
+"%s."
+msgstr ""
+
+#: i/views/payment-options.html.php:5
+msgid ""
+"If the existing payment methods are not sufficient you can get access to a "
+"lot more via the free <a href=\"%s\" target=\"_blank\">WooCommerce</a> "
+"plugin and our <a href=\"%s\" target=\"_blank\">free bridge</a>. If you "
+"choose this route you will be selling access to quizzes as products in your "
+"WooCommerce store."
+msgstr ""
+
+#: i/views/payment-options.html.php:6
+msgid ""
+"Do not display these %s in user dashboard until access to them is purchased "
+"(Users with admin rights will always see them)."
+msgstr ""
+
+#: i/views/payment-options.html.php:8
+msgid "Payment currency:"
+msgstr ""
+
+#: i/views/payment-options.html.php:15
+msgid "Custom"
+msgstr ""
+
+#: i/views/payment-options.html.php:18
+msgid "Paypal Email ID:"
+msgstr ""
+
+#: i/views/payment-options.html.php:19
+msgid ""
+"If you provide this, a Paypal payment button will be generated and "
+"automatically instant payment notification will enable the user's access to "
+"the exam they have paid for."
+msgstr ""
+
+#: i/views/payment-options.html.php:21
+msgid "Use Paypal in sandbox mode"
+msgstr ""
+
+#: i/views/payment-options.html.php:23
+msgid ""
+"Note: Paypal IPN will not work if your site is behind a \"htaccess\" login "
+"box or running on localhost. Your site must be accessible from the internet "
+"for the IPN to work. In cases when IPN cannot work you need to use Paypal "
+"PDT."
+msgstr ""
+
+#: i/views/payment-options.html.php:25
+msgid ""
+"Use Paypal PDT instead of IPN (<a href=\"%s\" target=\"_blank\">Why and how</"
+"a>)"
+msgstr ""
+
+#: i/views/payment-options.html.php:28
+msgid "Paypal PDT Token:"
+msgstr ""
+
+#: i/views/payment-options.html.php:31
+msgid "Accept Stripe payments"
+msgstr ""
+
+#: i/views/payment-options.html.php:34
+msgid "Your Public Key:"
+msgstr ""
+
+#: i/views/payment-options.html.php:35
+msgid "Your Secret Key:"
+msgstr ""
+
+#: i/views/payment-options.html.php:40
+msgid "Other payment instructions or button code (optional):"
+msgstr ""
+
+#: i/views/payment-options.html.php:44
+msgid ""
+"Use this if you don't want to use Paypal or as additional manual or "
+"automated payment method. You can either textual instructions here, insert a "
+"link, or even payment button HTML code from a different payment system like "
+"2Checkout.com, Authorize.net etc. "
+msgstr ""
+
+#: i/views/payment-options.html.php:45
+msgid ""
+"In this case you can use the following shortcodes: <strong>[AMOUNT], "
+"[USER_ID], [EXAM_TITLE], and [EXAM_ID]</strong>."
+msgstr ""
+
+#: i/views/payment-options.html.php:46
+msgid ""
+"When rendering bundle buttons the shortcodes [EXAM_TITLE] and [EXAM_ID] will "
+"be replaced by a bundle title and bundle ID."
+msgstr ""
+
+#: i/views/payment-options.html.php:49
+msgid "View payments error log."
+msgstr ""
+
+#: i/views/payment-options.html.php:53
+msgid "Create payment buttons for selling bundles of quizzes"
+msgstr ""
+
+#: i/views/payment-options.html.php:54
+msgid "Manage discount codes."
+msgstr ""
+
+#: i/views/payment.php:2
+msgid "There is a fee of %s %s to access this %s."
+msgstr ""
+
+#: i/views/payment.php:4
+msgid "%s discount applied! <s>%s %s</s> %s %s!"
+msgstr ""
+
+#: i/views/payment.php:21 i/views/payment.php:41
+msgid "Exam"
+msgstr ""
+
+#: i/views/payments.html.php:3
+msgid "View payments made for all tests"
+msgstr ""
+
+#: i/views/payments.html.php:7
+msgid "View payments made for test \"%s\""
+msgstr ""
+
+#: i/views/payments.html.php:9
+msgid "Back to the record of users who submitted this quiz."
+msgstr ""
+
+#: i/views/payments.html.php:12
+msgid "View payments made for \"%s\""
+msgstr ""
+
+#: i/views/payments.html.php:14
+msgid "Back to manage bundles."
+msgstr ""
+
+#: i/views/payments.html.php:19
+msgid "Select specific quiz:"
+msgstr ""
+
+#: i/views/payments.html.php:20
+msgid "All tests"
+msgstr ""
+
+#: i/views/payments.html.php:30
+msgid "Manually add payment"
+msgstr ""
+
+#: i/views/payments.html.php:31
+msgid ""
+"This will allow the user to access the quiz or bundle like when they paid "
+"the fee through the website. You can use it to insert payments made by "
+"unsupported payment methods or just to allow someone access the quiz / "
+"bundle for free."
+msgstr ""
+
+#: i/views/payments.html.php:32
+msgid "Username:"
+msgstr ""
+
+#: i/views/payments.html.php:32
+msgid "Amount paid:"
+msgstr ""
+
+#: i/views/payments.html.php:33
+msgid "Add manual payment"
+msgstr ""
+
+#: i/views/payments.html.php:40
+msgid "No payments have been done yet for this item"
+msgstr ""
+
+#: i/views/payments.html.php:46 views/takings.php:137
+msgid "Quiz Name"
+msgstr ""
+
+#: i/views/payments.html.php:47
+msgid "Date paid"
+msgstr ""
+
+#: i/views/payments.html.php:47
+msgid "Amount"
+msgstr ""
+
+#: i/views/payments.html.php:48
+msgid "Payment method"
+msgstr ""
+
+#: i/views/payments.html.php:53
+msgid "Access code %s"
+msgstr ""
+
+#: i/views/payments.html.php:56 models/exam.php:430
+msgid "Completed"
+msgstr ""
+
+#: i/views/payments.html.php:57
+msgid "Make Pending"
+msgstr ""
+
+#: i/views/payments.html.php:59
+msgid "Pending"
+msgstr ""
+
+#: i/views/payments.html.php:60
+msgid "Used"
+msgstr ""
+
+#: i/views/payments.html.php:61
+msgid "Complete"
+msgstr ""
+
+#: i/views/payments.html.php:70
+#: modules/reports/views/all-question-answers.html.php:65
+#: views/diff-levels.html.php:94 views/takings.php:208
+msgid "previous page"
+msgstr ""
+
+#: i/views/payments.html.php:74
+#: modules/reports/views/all-question-answers.html.php:69
+#: views/diff-levels.html.php:97 views/takings.php:212
+msgid "next page"
+msgstr ""
+
+#: i/views/question_form.php:1
+msgid "Fill The Gaps"
+msgstr ""
+
+#: i/views/question_form.php:2 views/questions.php:149
+msgid "Sort the values"
+msgstr ""
+
+#: i/views/question_form.php:3
+msgid "Matrix / Match values"
+msgstr ""
+
+#: i/views/question_form.php:4
+msgid "Matrix / Match (legacy format)"
+msgstr ""
+
+#: i/views/question_form.php:5
+msgid "Slider / Rating"
+msgstr ""
+
+#: i/views/question_form.php:8
+msgid ""
+"For \"fill the gaps\" questions simply enter your <b>correct text</b> and "
+"place {{{ and }}} around the phrases that should turn into gaps (no spaces "
+"please). Example: \"<b>The color of sun is {{{yellow}}}.</b>\" The student "
+"will be shown input field instead of \"{{{yellow}}}\" in this case."
+msgstr ""
+
+#: i/views/question_form.php:9
+msgid ""
+"You can include multiple correct answers for each blank/gap if you separate "
+"them by |. For example: <b>\"The color of a good apple can be {{{green|"
+"yellow|red}}}\"</b>."
+msgstr ""
+
+#: i/views/question_form.php:10
+msgid ""
+"You can also specify a correct numeric range in the following format: <b>%s</"
+"b>. For example to accept any answer between 2.5 and 10 enter <b>%s</b>."
+msgstr ""
+
+#: i/views/question_form.php:11
+msgid ""
+"If you want to accept decimals the first value in the range must contain "
+"decimal points. Otherwise only whole numbers within the range will be "
+"considered correct answers."
+msgstr ""
+
+#: i/views/question_form.php:12
+msgid "Points to assign for correctly filled gap:"
+msgstr ""
+
+#: i/views/question_form.php:12
+msgid "Points to assign for incorrectly filled gap (optional):"
+msgstr ""
+
+#: i/views/question_form.php:12 i/views/question_form.php:19
+msgid "(Decimals allowed)"
+msgstr ""
+
+#: i/views/question_form.php:13
+msgid ""
+"Turn multiple-answer gaps into drop-downs (<a href=\"%s\" target=\"_blank\">?"
+"</a>)"
+msgstr ""
+
+#: i/views/question_form.php:18
+msgid "Treat this question as a whole"
+msgstr ""
+
+#: i/views/question_form.php:19 i/views/question_form.php:39
+msgid "Points to assign for correctly matched position:"
+msgstr ""
+
+#: i/views/question_form.php:19 i/views/question_form.php:35
+msgid "Points to assign for when all positions are matched correctly:"
+msgstr ""
+
+#: i/views/question_form.php:19 i/views/question_form.php:40
+msgid "Points to assign for incorrectly matched position (optional):"
+msgstr ""
+
+#: i/views/question_form.php:19 i/views/question_form.php:36
+msgid ""
+"Points to assign when there is a mistake in ordering the items (optional):"
+msgstr ""
+
+#: i/views/question_form.php:23
+msgid ""
+"Enter the from-to scale of the slider (in numbers). For example 1 - 100:"
+msgstr ""
+
+#: i/views/question_form.php:25
+msgid ""
+"When entering the possible answers in the answers are below, enter from-to "
+"values with comma like this: \"1, 10\", \"11, 20\", \"21, 30\" etc."
+msgstr ""
+
+#: i/views/question_form.php:29
+msgid ""
+"This is the legacy match/matrix format from the older WatuPRO versions. It "
+"is less user-friendly and in some cases doesn't work well on mobile phones. "
+"We strongly recommend selecting the new matrix format."
+msgstr ""
+
+#: i/views/reuse_questions.php:2
+msgid "Reuse questions from another quiz."
+msgstr ""
+
+#: i/views/reuse_questions.php:3
+msgid "- Please select -"
+msgstr ""
+
+#: i/views/reuse_questions.php:9 views/diff-levels.html.php:68
+#: views/grades.php:146 views/groups.php:26 views/groups.php:39
+#: views/questions.php:215 views/show_exam.php:112
+msgid "Save"
+msgstr ""
+
+#: i/views/teacher-edit-details.php:1
+msgid "Edit and Manually Grade Test Results"
+msgstr ""
+
+#: i/views/teacher-edit-details.php:4
+msgid "Student:"
+msgstr ""
+
+#: i/views/teacher-edit-details.php:7
+msgid ""
+"You can use this page to manually edit and grade the submitted test details"
+msgstr ""
+
+#: i/views/teacher-edit-details.php:11 views/advanced-settings.html.php:75
+#: views/cat.php:2 views/exams.php:34 views/my_exams.php:11
+#: views/questions.php:112 views/takings.php:179
+msgid "Category"
+msgstr ""
+
+#: i/views/teacher-edit-details.php:11
+msgid "Answer Given"
+msgstr ""
+
+#: i/views/teacher-edit-details.php:12
+msgid "Is correct?"
+msgstr ""
+
+#: i/views/teacher-edit-details.php:13
+msgid "Optional comments"
+msgstr ""
+
+#: i/views/teacher-edit-details.php:18
+msgid "View/edit question"
+msgstr ""
+
+#: i/views/teacher-edit-details.php:22
+msgid "N/a (survey)"
+msgstr ""
+
+#: i/views/teacher-edit-details.php:30
+msgid "I want to sent email to the user with the updated details"
+msgstr ""
+
+#: i/views/teacher-edit-details.php:33
+msgid "Receiver email"
+msgstr ""
+
+#: i/views/teacher-edit-details.php:34
+msgid "Subject:"
+msgstr ""
+
+#: i/views/teacher-edit-details.php:35
+msgid "Message:"
+msgstr ""
+
+#: i/views/teacher-edit-details.php:36
+msgid ""
+"Important: if you have included variables inside the grade description, they "
+"can't be properly replaced here. In such cases it's advised to avoid %%GDESC%"
+"% and %%GRADE%% in the email contents."
+msgstr ""
+
+#: i/views/teacher-edit-details.php:40
+msgid ""
+"You can also use the <a href=\"%s\" target=\"_blank\">user info shortcodes</"
+"a>. To pass them the correct user ID the argument %s should contain \"%s\". "
+"Example: %s."
+msgstr ""
+
+#: i/views/teacher-edit-details.php:43
+msgid "Update Test Results"
+msgstr ""
+
+#: i/views/teacher-edit-details.php:52
+msgid "Please enter receiver email"
+msgstr ""
+
+#: i/views/teacher-edit-details.php:58
+msgid "Please enter email subject"
+msgstr ""
+
+#: lib/watupro.php:127
+msgid "User results on %%QUIZ_NAME%%"
+msgstr ""
+
+#: lib/watupro.php:128
+msgid "Your results on %%QUIZ_NAME%%"
+msgstr ""
+
+#: lib/watupro.php:137
+msgid "Your results on "
+msgstr ""
+
+#: lib/watupro.php:212
+msgid "Sorry, you can take this quiz only %d times."
+msgstr ""
+
+#: lib/watupro.php:236
+msgid "Sorry, you are not allowed to submit this quiz."
+msgstr ""
+
+#: lib/watupro.php:246
+msgid "24 hours"
+msgstr ""
+
+#: lib/watupro.php:247
+msgid "a week"
+msgstr ""
+
+#: lib/watupro.php:248
+msgid "a month"
+msgstr ""
+
+#: lib/watupro.php:249
+msgid "an year"
+msgstr ""
+
+#: lib/watupro.php:251
+msgid "within interval of %s"
+msgstr ""
+
+#: lib/watupro.php:261
+msgid "Sorry, you can take this quiz only %d times%s."
+msgstr ""
+
+#: lib/watupro.php:280
+msgid ""
+"You can't take this quiz again because of the latest grade you achieved on "
+"it."
+msgstr ""
+
+#: lib/watupro.php:296
+msgid "Sorry, you can take this %s only once!"
+msgstr ""
+
+#: lib/watupro.php:470
+msgid "Failed"
+msgstr ""
+
+#: lib/watupro.php:470
+msgid "Just Passed"
+msgstr ""
+
+#: lib/watupro.php:471
+msgid "Satisfactory"
+msgstr ""
+
+#: lib/watupro.php:471
+msgid "Competent"
+msgstr ""
+
+#: lib/watupro.php:471
+msgid "Good"
+msgstr ""
+
+#: lib/watupro.php:471
+msgid "Very Good"
+msgstr ""
+
+#: lib/watupro.php:471
+msgid "Excellent"
+msgstr ""
+
+#: lib/watupro.php:471
+msgid "Unbeatable"
+msgstr ""
+
+#: lib/watupro.php:471
+msgid "Cheater"
+msgstr ""
+
+#: lib/watupro.php:534
+msgid ""
+"Note: This quiz requires payment, but you are administrator and do not need "
+"to go through it."
+msgstr ""
+
+#: lib/watupro.php:542
+msgid "You are not in allowed user group to take this quiz."
+msgstr ""
+
+#: models/certificate.php:20
+msgid "You can now"
+msgstr ""
+
+#: models/certificate.php:20 views/my_certificates.php:19
+msgid "print your certificate"
+msgstr ""
+
+#: models/certificate.php:71
+msgid "A certificate is earned and is pending approval."
+msgstr ""
+
+#: models/certificate.php:72
+msgid ""
+"The user \"%%user-name%%\" has earned the certificate \"%%certificate-name%%"
+"\".  \n"
+"\t\tTo view users who are pending approvals on this certificate visit %%url%%"
+msgstr ""
+
+#: models/exam.php:9
+msgid "Invalid exam ID"
+msgstr ""
+
+#: models/exam.php:48
+msgid "(Copy)"
+msgstr ""
+
+#: models/exam.php:428
+msgid "Not started"
+msgstr ""
+
+#: models/exam.php:430
+msgid "In progress"
+msgstr ""
+
+#: models/exam.php:566
+msgid "Start quiz!"
+msgstr ""
+
+#: models/exam.php:587 views/exam_form.php:331
+msgid "Start Quiz!"
+msgstr ""
+
+#: models/question.php:220
+msgid "Rate this question:"
+msgstr ""
+
+#: models/question.php:264 views/advanced-import.html.php:20
+msgid "Upload file:"
+msgstr ""
+
+#: models/question.php:696
+msgid "Question was not answered"
+msgstr ""
+
+#: models/question.php:857
+msgid "[Get Hints]"
+msgstr ""
+
+#: models/question.php:900
+msgid "Flag for review"
+msgstr ""
+
+#: models/record.php:36 models/record.php:45
+msgid "First name"
+msgstr ""
+
+#: models/record.php:36 models/record.php:45
+msgid "Last name"
+msgstr ""
+
+#: models/record.php:36
+msgid "Username and details"
+msgstr ""
+
+#: models/record.php:37 models/record.php:45
+#: modules/reports/models/stats.php:147
+#: modules/reports/views/all-question-answers.html.php:15
+#: views/group-users.html.php:10 views/takings.php:55 views/takings.php:139
+msgid "Email"
+msgstr ""
+
+#: models/record.php:37 models/record.php:45
+#: modules/reports/models/stats.php:147
+#: modules/reports/views/all-question-answers.html.php:15
+#: views/takings.php:140
+msgid "IP"
+msgstr ""
+
+#: models/record.php:37 models/record.php:45
+#: modules/reports/models/stats.php:147
+#: modules/reports/views/all-question-answers.html.php:15
+#: modules/reports/views/all-question-answers.html.php:27
+#: modules/reports/views/history.php:48 views/takings.php:141
+msgid "Date"
+msgstr ""
+
+#: models/record.php:38 modules/reports/models/reports.php:173
+#: modules/reports/views/tests.php:17
+msgid "Percent correct"
+msgstr ""
+
+#: models/record.php:38 models/record.php:57
+#: modules/reports/models/reports.php:172 views/takings.php:143
+#: views/takings.php:179
+msgid "Grade"
+msgstr ""
+
+#: models/record.php:45 modules/reports/views/all-question-answers.html.php:15
+#: modules/reports/views/all-question-answers.html.php:27
+#: views/group-users.html.php:10 views/takings.php:49
+msgid "Username"
+msgstr ""
+
+#: models/record.php:57 views/my_exams.php:37
+msgid "% Correct"
+msgstr ""
+
+#: models/taking.php:29
+msgid "You: %d%% correct"
+msgstr ""
+
+#: models/taking.php:30
+msgid "Avg. %d%% correct"
+msgstr ""
+
+#: models/taking.php:31
+msgid "Your points: %s"
+msgstr ""
+
+#: models/taking.php:32
+msgid "Avg. points: %s"
+msgstr ""
+
+#: models/taking.php:35
+msgid "%s: %d%% correct"
+msgstr ""
+
+#: models/taking.php:36
+msgid "%s: %s"
+msgstr ""
+
+#: models/user.php:5
+msgid "%s Data"
+msgstr ""
+
+#: models/user.php:11
+msgid "%s"
+msgstr ""
+
+#: models/user.php:17
+msgid "View reports"
+msgstr ""
+
+#: models/user.php:42
+msgid "You need to be registered and logged in to take this %s."
+msgstr ""
+
+#: models/user.php:43
+msgid "Log in"
+msgstr ""
+
+#: models/user.php:45
+msgid "Register"
+msgstr ""
+
+#: models/user.php:50
+msgid "You are not allowed to access this test at the moment."
+msgstr ""
+
+#: modules/reports/controllers/shortcodes.php:85
+#: modules/reports/views/history.php:56 views/questions.php:162
+msgid "n/a"
+msgstr ""
+
+#: modules/reports/models/reports.php:9
+msgid "Quiz Reports"
+msgstr ""
+
+#: modules/reports/models/reports.php:13
+#: modules/reports/views/per-question.php:3
+msgid "Stats Per Question"
+msgstr ""
+
+#: modules/reports/models/reports.php:13
+msgid "Status Per Question"
+msgstr ""
+
+#: modules/reports/models/reports.php:15
+msgid "All Question Answers"
+msgstr ""
+
+#: modules/reports/models/reports.php:17
+msgid "Chart By Grade"
+msgstr ""
+
+#: modules/reports/models/reports.php:19
+msgid "Stats per Category"
+msgstr ""
+
+#: modules/reports/models/reports.php:33
+msgid "Showing quiz reports for "
+msgstr ""
+
+#: modules/reports/models/reports.php:171
+msgid "Quiz name"
+msgstr ""
+
+#: modules/reports/models/reports.php:171 modules/reports/views/history.php:49
+#: modules/reports/views/tests.php:15 views/takings.php:146
+msgid "Time spent"
+msgstr ""
+
+#: modules/reports/models/reports.php:172 modules/reports/views/history.php:49
+#: modules/reports/views/tests.php:16
+msgid "Problems attempted"
+msgstr ""
+
+#: modules/reports/models/stats.php:97
+msgid "Unanswered"
+msgstr ""
+
+#: modules/reports/models/stats.php:147 views/diff-levels.html.php:80
+msgid "User name"
+msgstr ""
+
+#: modules/reports/models/stats.php:148
+#: modules/reports/views/all-question-answers.html.php:16
+#: modules/reports/views/all-question-answers.html.php:27
+#: views/questions-feedback.html.php:13
+msgid "Answer"
+msgstr ""
+
+#: modules/reports/models/stats.php:149
+#: modules/reports/views/all-question-answers.html.php:20
+#: modules/reports/views/all-question-answers.html.php:31
+msgid "Teacher comments"
+msgstr ""
+
+#: modules/reports/models/stats.php:150
+#: modules/reports/views/all-question-answers.html.php:23
+#: modules/reports/views/all-question-answers.html.php:34
+msgid "Hints used"
+msgstr ""
+
+#: modules/reports/models/stats.php:165 modules/reports/models/stats.php:166
+#: modules/reports/views/all-question-answers.html.php:43
+#: modules/reports/views/all-question-answers.html.php:46
+#: views/takings.php:167 views/takings.php:168 views/takings.php:170
+#: views/takings.php:191
+msgid "N/A"
+msgstr ""
+
+#: modules/reports/models/stats.php:171
+#: modules/reports/views/all-question-answers.html.php:52
+#: views/exam_form.php:308 views/exam_form.php:314 views/exam_form.php:320
+#: views/exam_form.php:326
+msgid "Yes"
+msgstr ""
+
+#: modules/reports/models/stats.php:171
+#: modules/reports/views/all-question-answers.html.php:52
+#: views/exam_form.php:307 views/exam_form.php:313 views/exam_form.php:319
+#: views/exam_form.php:325
+msgid "No"
+msgstr ""
+
+#: modules/reports/models/stats.php:174
+#: modules/reports/views/all-question-answers.html.php:57
+msgid "%d hints used:"
+msgstr ""
+
+#: modules/reports/models/stats.php:174
+#: modules/reports/views/all-question-answers.html.php:57
+msgid "No hints used"
+msgstr ""
+
+#: modules/reports/models/stats.php:395
+msgid "Missing user ID"
+msgstr ""
+
+#: modules/reports/models/user.php:5
+msgid "%s Reports"
+msgstr ""
+
+#: modules/reports/views/all-question-answers.html.php:3
+msgid "Detailed Question Report"
+msgstr ""
+
+#: modules/reports/views/all-question-answers.html.php:5
+#: modules/reports/views/chart-by-grade.html.php:18
+#: modules/reports/views/per-category.html.php:7
+#: modules/reports/views/per-question.php:7
+msgid "Shortcode to display this page:"
+msgstr ""
+
+#: modules/reports/views/all-question-answers.html.php:8
+msgid "Question:"
+msgstr ""
+
+#: modules/reports/views/all-question-answers.html.php:9
+msgid "Back to all question stats"
+msgstr ""
+
+#: modules/reports/views/all-question-answers.html.php:10
+msgid "Export all records (TAB delimited file)"
+msgstr ""
+
+#: modules/reports/views/barchart-by-category.html.php:11
+msgid "<b>%s</b> - %d%% (%d of %d points)"
+msgstr ""
+
+#: modules/reports/views/barchart-by-category.html.php:12
+msgid "<b>%s</b> - %d points"
+msgstr ""
+
+#: modules/reports/views/barchart-by-category.html.php:13
+msgid "<b>%s</b> - %d%%"
+msgstr ""
+
+#: modules/reports/views/chart-by-grade.html.php:5
+msgid "Chart by grades"
+msgstr ""
+
+#: modules/reports/views/chart-by-grade.html.php:8
+#: modules/reports/views/per-category.html.php:5
+#: modules/reports/views/per-question.php:5
+msgid "Back to the users list"
+msgstr ""
+
+#: modules/reports/views/chart-by-grade.html.php:10
+msgid ""
+"This chart shows what percentage of users achieved each of the results in "
+"this quiz."
+msgstr ""
+
+#: modules/reports/views/chart-by-grade.html.php:26
+msgid "%d%% (%d responses)"
+msgstr ""
+
+#: modules/reports/views/history.php:3 modules/reports/views/overview.php:3
+#: modules/reports/views/skills.php:3 modules/reports/views/tests.php:3
+msgid "Overview"
+msgstr ""
+
+#: modules/reports/views/history.php:4 modules/reports/views/overview.php:4
+#: modules/reports/views/skills.php:4 modules/reports/views/tests.php:4
+#: views/options.php:165
+msgid "Tests"
+msgstr ""
+
+#: modules/reports/views/history.php:5 modules/reports/views/overview.php:5
+#: modules/reports/views/skills.php:5 modules/reports/views/tests.php:5
+msgid "Skills/Categories"
+msgstr ""
+
+#: modules/reports/views/history.php:6 modules/reports/views/overview.php:6
+#: modules/reports/views/skills.php:6 modules/reports/views/tests.php:6
+#: views/options.php:166
+msgid "History"
+msgstr ""
+
+#: modules/reports/views/history.php:11
+msgid "Usage summary"
+msgstr ""
+
+#: modules/reports/views/history.php:16
+msgid "Total quiz sessions:"
+msgstr ""
+
+#: modules/reports/views/history.php:17
+msgid "Average time spent per session:"
+msgstr ""
+
+#: modules/reports/views/history.php:18
+msgid "Total question answered:"
+msgstr ""
+
+#: modules/reports/views/history.php:19
+msgid "Average questions per session:"
+msgstr ""
+
+#: modules/reports/views/history.php:20
+msgid "Average skills per session:"
+msgstr ""
+
+#: modules/reports/views/history.php:25
+msgid "Number of tests attempted over time"
+msgstr ""
+
+#: modules/reports/views/history.php:44
+msgid "Usage log"
+msgstr ""
+
+#: modules/reports/views/history.php:48
+msgid "Session start time"
+msgstr ""
+
+#: modules/reports/views/history.php:48
+msgid "Session end time"
+msgstr ""
+
+#: modules/reports/views/history.php:50
+msgid "Skills/Question categories"
+msgstr ""
+
+#: modules/reports/views/history.php:64 modules/reports/views/history.php:65
+msgid "g:i A"
+msgstr ""
+
+#: modules/reports/views/overview.php:11
+msgid "All time overview"
+msgstr ""
+
+#: modules/reports/views/overview.php:16
+msgid "Different tests attempted:"
+msgstr ""
+
+#: modules/reports/views/overview.php:17
+msgid "Skills practiced (question categories):"
+msgstr ""
+
+#: modules/reports/views/overview.php:18
+msgid "Certificates earned:"
+msgstr ""
+
+#: modules/reports/views/overview.php:19
+msgid "Avg. percent correct:"
+msgstr ""
+
+#: modules/reports/views/overview.php:19
+#: modules/reports/views/per-category.html.php:25
+#: modules/reports/views/per-category.html.php:26 views/my_exams.php:49
+#: views/my_exams.php:62
+msgid "%d%%"
+msgstr ""
+
+#: modules/reports/views/overview.php:20
+msgid "Total points from all attempts:"
+msgstr ""
+
+#: modules/reports/views/overview.php:21
+msgid "(This may differ than the <b>points balance</b> in the Play plugin)"
+msgstr ""
+
+#: modules/reports/views/overview.php:29
+msgid "Tests attempts per category"
+msgstr ""
+
+#: modules/reports/views/overview.php:30
+msgid "Multiple attempts per test are also included in the chart."
+msgstr ""
+
+#: modules/reports/views/overview.php:38
+msgid "Questions answered per question category"
+msgstr ""
+
+#: modules/reports/views/per-category.html.php:3
+msgid "%s: Stats Per Category"
+msgstr ""
+
+#: modules/reports/views/per-category.html.php:11 views/cat.php:6
+#: views/cats.php:9
+msgid "Category Name"
+msgstr ""
+
+#: modules/reports/views/per-category.html.php:11
+msgid "Total questions asked"
+msgstr ""
+
+#: modules/reports/views/per-category.html.php:12
+msgid "Answered - num and %"
+msgstr ""
+
+#: modules/reports/views/per-category.html.php:12
+msgid "Unanswered - num and %"
+msgstr ""
+
+#: modules/reports/views/per-category.html.php:13
+msgid "Num. Correct answers"
+msgstr ""
+
+#: modules/reports/views/per-category.html.php:14
+msgid "% Correct answers (from answered)"
+msgstr ""
+
+#: modules/reports/views/per-category.html.php:15
+msgid "% Correct answers (from total)"
+msgstr ""
+
+#: modules/reports/views/per-category.html.php:16
+msgid "Points collected"
+msgstr ""
+
+#: modules/reports/views/per-category.html.php:22
+#: modules/reports/views/per-category.html.php:23
+msgid "%d (%d%%)"
+msgstr ""
+
+#: modules/reports/views/per-question.php:9
+msgid ""
+"Sometimes the percentages don't add up to 100% or make more than 100% - this "
+"happens on a) open-end and 'fill the blanks' questions (usually under 100%) "
+"b) multiple-choices questions (usually more than 100%) and c) questions in "
+"which you have added or changed the possible answers after some users have "
+"taken the quiz. This is not error in calculations but natural effect of the "
+"different question types."
+msgstr ""
+
+#: modules/reports/views/per-question.php:17
+msgid "Answer or metric"
+msgstr ""
+
+#: modules/reports/views/per-question.php:17 views/certificate.php:22
+msgid "Value"
+msgstr ""
+
+#: modules/reports/views/per-question.php:18
+msgid "Number and % correct answers"
+msgstr ""
+
+#: modules/reports/views/per-question.php:19
+msgid "correct answers from"
+msgstr ""
+
+#: modules/reports/views/per-question.php:20
+msgid "total answers received"
+msgstr ""
+
+#: modules/reports/views/per-question.php:24
+msgid "times selected"
+msgstr ""
+
+#: modules/reports/views/per-question.php:28
+msgid "Get full details"
+msgstr ""
+
+#: modules/reports/views/poll-chart-answers.html.php:6
+msgid "%d / %d%% answers"
+msgstr ""
+
+#: modules/reports/views/poll-chart-correct.html.php:4
+msgid "%d / %d%% correct answers"
+msgstr ""
+
+#: modules/reports/views/poll-chart-correct.html.php:9
+msgid "%d / %d%% wrong answers"
+msgstr ""
+
+#: modules/reports/views/skills.php:14 modules/reports/views/skills.php:21
+msgid "All categories"
+msgstr ""
+
+#: modules/reports/views/skills.php:20
+msgid "Skill (Question category):"
+msgstr ""
+
+#: modules/reports/views/skills.php:31
+msgid "View skills:"
+msgstr ""
+
+#: modules/reports/views/skills.php:32
+msgid "All"
+msgstr ""
+
+#: modules/reports/views/skills.php:33
+msgid "Practiced only"
+msgstr ""
+
+#: modules/reports/views/skills.php:34
+msgid "Proficient only"
+msgstr ""
+
+#: modules/reports/views/skills.php:36
+msgid "Proficiency goal: at least"
+msgstr ""
+
+#: modules/reports/views/skills.php:36
+msgid "% correct answers on the whole quiz"
+msgstr ""
+
+#: modules/reports/views/skills.php:38
+msgid "Chart sorting:"
+msgstr ""
+
+#: modules/reports/views/skills.php:39
+msgid "Alphabetic"
+msgstr ""
+
+#: modules/reports/views/skills.php:40 modules/reports/views/skills.php:71
+msgid "Proficiency"
+msgstr ""
+
+#: modules/reports/views/skills.php:43
+msgid "Chart orientation:"
+msgstr ""
+
+#: modules/reports/views/skills.php:44
+msgid "Horizontal"
+msgstr ""
+
+#: modules/reports/views/skills.php:45
+msgid "Vertical"
+msgstr ""
+
+#: modules/reports/views/skills.php:47
+msgid "Show Report"
+msgstr ""
+
+#: modules/reports/views/skills.php:51
+msgid "These reports are based on the latest attempt made for every test."
+msgstr ""
+
+#: modules/reports/views/skills.php:71
+msgid "Skill"
+msgstr ""
+
+#: modules/reports/views/skills.php:83
+msgid "Proficiency summary"
+msgstr ""
+
+#: modules/reports/views/skills.php:88
+msgid "Proficiency by skill"
+msgstr ""
+
+#: modules/reports/views/skills.php:90
+msgid "Skill (question category) and exams"
+msgstr ""
+
+#: modules/reports/views/skills.php:90
+msgid "Proficiency (% correct answers)"
+msgstr ""
+
+#: modules/reports/views/tests.php:12 views/takings.php:22
+msgid "Export this page"
+msgstr ""
+
+#: modules/reports/views/tests.php:12
+msgid "(TAB delimited CSV file)"
+msgstr ""
+
+#: modules/reports/views/tests.php:15
+msgid "%s name"
+msgstr ""
+
+#: modules/reports/views/tests.php:16
+msgid "Score and Grade"
+msgstr ""
+
+#: modules/reports/views/tests.php:18
+msgid "View Details"
+msgstr ""
+
+#: modules/reports/views/tests.php:27
+msgid "(with %s points)"
+msgstr ""
+
+#: modules/reports/views/tests.php:30 modules/reports/views/tests.php:32
+#: views/my_exams.php:52 views/my_exams.php:54 views/my_exams.php:64
+#: views/my_exams.php:66 views/questions-feedback.html.php:25
+#: views/takings.php:191 views/users-earned-certificate.html.php:35
+msgid "view"
+msgstr ""
+
+#: modules/reports/views/tests.php:38 views/exams.php:85
+#: views/group-users.html.php:28 views/questions.php:179
+#: views/show_exam.php:109
+msgid "Previous page"
+msgstr ""
+
+#: modules/reports/views/tests.php:40 views/exams.php:87
+#: views/group-users.html.php:32 views/questions.php:182
+#: views/show_exam.php:109
+msgid "Next page"
+msgstr ""
+
+#: show_exam.php:14
+msgid "This %s is currently inactive."
+msgstr ""
+
+#: show_exam.php:59
+msgid "This test will be available between %s and %s."
+msgstr ""
+
+#: show_exam.php:60
+msgid "You can still see it only because you are administrator or manager."
+msgstr ""
+
+#: show_exam.php:82
+msgid "Time limit exceeded! Your answers were not accepted."
+msgstr ""
+
+#: show_exam.php:126
+msgid "No answer to the verification question."
+msgstr ""
+
+#: show_exam.php:157
+msgid "Invalid image validation code"
+msgstr ""
+
+#: show_exam.php:170
+msgid ""
+"The captcha verification is not correct. Please go back and try again. (%s)"
+msgstr ""
+
+#: show_exam.php:185
+msgid "Wrong answer to the verification question."
+msgstr ""
+
+#: views/advanced-import.html.php:2
+msgid "Advanced Questions Import"
+msgstr ""
+
+#: views/advanced-import.html.php:4
+msgid "%s:"
+msgstr ""
+
+#: views/advanced-import.html.php:6
+msgid "Back to manage questions"
+msgstr ""
+
+#: views/advanced-import.html.php:10
+msgid "The questions were imported."
+msgstr ""
+
+#: views/advanced-import.html.php:10
+msgid "There was an error importing your questions."
+msgstr ""
+
+#: views/advanced-import.html.php:15
+msgid "Import format:"
+msgstr ""
+
+#: views/advanced-import.html.php:16 views/advanced-import.html.php:41
+msgid "Simple WatuPRO"
+msgstr ""
+
+#: views/advanced-import.html.php:17 views/advanced-import.html.php:42
+msgid "Advanced WatuPRO"
+msgstr ""
+
+#: views/advanced-import.html.php:18 views/advanced-import.html.php:43
+msgid "Aiken (text file)"
+msgstr ""
+
+#: views/advanced-import.html.php:21
+msgid ""
+"Note: if you are uploading file containing non-English characters you should "
+"make sure the file is in Unicode format (UTF-8 encoded)."
+msgstr ""
+
+#: views/advanced-import.html.php:24 views/questions.php:45
+msgid "Fields Delimiter:"
+msgstr ""
+
+#: views/advanced-import.html.php:25 views/options.php:45
+#: views/questions.php:48
+msgid "Comma"
+msgstr ""
+
+#: views/advanced-import.html.php:26 views/questions.php:46
+msgid "Tab"
+msgstr ""
+
+#: views/advanced-import.html.php:27 views/questions.php:47
+msgid "Semicolon"
+msgstr ""
+
+#: views/advanced-import.html.php:29 views/questions.php:51
+msgid "Skip title row"
+msgstr ""
+
+#: views/advanced-import.html.php:30 views/questions.php:53
+msgid "If you have problems importing files with foreign characters, please"
+msgstr ""
+
+#: views/advanced-import.html.php:30 views/questions.php:53
+msgid "check this checkbox and try again."
+msgstr ""
+
+#: views/advanced-import.html.php:31
+msgid "Import Questions"
+msgstr ""
+
+#: views/advanced-import.html.php:36
+msgid "About The Import Formats"
+msgstr ""
+
+#: views/advanced-import.html.php:38
+msgid ""
+"Please visit the following links to learn about each of the formats, "
+"download samples and see which is the best for you"
+msgstr ""
+
+#: views/advanced-import.html.php:41
+msgid "- simple CSV format with only a few important fields"
+msgstr ""
+
+#: views/advanced-import.html.php:42
+msgid "- CSV format including all DB fields"
+msgstr ""
+
+#: views/advanced-import.html.php:43
+msgid "The Aiken format"
+msgstr ""
+
+#: views/advanced-settings.html.php:2
+msgid "Advanced Final Screen Settings"
+msgstr ""
+
+#: views/advanced-settings.html.php:4
+msgid "Ask for confirmation when the \"Submit\" button is pressed."
+msgstr ""
+
+#: views/advanced-settings.html.php:6
+msgid "Do not show correct / incorrect checkmarks at all."
+msgstr ""
+
+#: views/advanced-settings.html.php:7
+msgid ""
+"Do not show correct / incorrect checkmarks on unresolved questions to avoid "
+"right answers being revealed."
+msgstr ""
+
+#: views/advanced-settings.html.php:9
+msgid ""
+"Reveal the correct answers on unanswered and wrongly answered fields in "
+"\"Fill the gaps\" questions."
+msgstr ""
+
+#: views/advanced-settings.html.php:15
+msgid "Advanced Workflow Settings"
+msgstr ""
+
+#: views/advanced-settings.html.php:16
+msgid "Do not prompt the user when a non-required question is not answered."
+msgstr ""
+
+#: views/advanced-settings.html.php:19
+msgid ""
+"Don't load the unfinished quiz when user comes back to continue (Normally "
+"the software would let the user continue from where they were)."
+msgstr ""
+
+#: views/advanced-settings.html.php:20
+msgid ""
+"Don't auto-scroll the screen when user moves from page to page (Auto-"
+"scrolling happens to ensure user always sees the top of the page)."
+msgstr ""
+
+#: views/advanced-settings.html.php:23
+msgid "When user answers a \"single choice\" question:"
+msgstr ""
+
+#: views/advanced-settings.html.php:24
+msgid "Do nothing (default)"
+msgstr ""
+
+#: views/advanced-settings.html.php:26
+msgid "Go to next question"
+msgstr ""
+
+#: views/advanced-settings.html.php:28
+msgid "Show the answer"
+msgstr ""
+
+#: views/advanced-settings.html.php:30
+msgid ""
+"(By default nothing happens until the user clicks \"Next\", \"Show answer\", "
+"or other button.)"
+msgstr ""
+
+#: views/advanced-settings.html.php:32
+msgid "Don't store any data / results of this quiz in the database."
+msgstr ""
+
+#: views/advanced-settings.html.php:33
+msgid ""
+"This setting will be useful in fun quizzes or quizzes for practicing in "
+"which you don't need history. Such quizzes will not send the "
+"'watupro_completed_exam' call used by other plugins like WatuPRO Play to "
+"assign levels, badges, add to user's point balance etc."
+msgstr ""
+
+#: views/advanced-settings.html.php:40
+msgid "Student Dashboard Settings"
+msgstr ""
+
+#: views/advanced-settings.html.php:42
+msgid ""
+"Show results and points of every question in the table view (reveals the "
+"correct answer)."
+msgstr ""
+
+#: views/advanced-settings.html.php:44
+msgid ""
+"Show only snapshot when user opens taken quiz details pop-up. Admins/"
+"teachers will still be able to get the table format and CSV download."
+msgstr ""
+
+#: views/advanced-settings.html.php:52
+msgid "Paginator Settings"
+msgstr ""
+
+#: views/advanced-settings.html.php:54
+msgid ""
+"This configuration takes effect for quizzes that use numbered pagination. "
+"For the colors below you can enter words like \"red\", \"orange\", etc, or "
+"HTML color value like \"#FFCCAA\"."
+msgstr ""
+
+#: views/advanced-settings.html.php:56
+msgid "Color of answered question number (defaults to green):"
+msgstr ""
+
+#: views/advanced-settings.html.php:57
+msgid "Color of unanswered question number (defaults to red):"
+msgstr ""
+
+#: views/advanced-settings.html.php:65
+msgid "Advanced Question Randomization"
+msgstr ""
+
+#: views/advanced-settings.html.php:67
+msgid "Randomization currenty not in effect."
+msgstr ""
+
+#: views/advanced-settings.html.php:67
+msgid ""
+"You need to pull random questions per category on the main page for this to "
+"have any effect."
+msgstr ""
+
+#: views/advanced-settings.html.php:71
+msgid ""
+"You have chosen to pull %d random questions per category. Here you can "
+"elaborate by selecting specific random number for every question category. "
+"If you do not want to include any questions from a given category you should "
+"enter \"-1\" for it. Leaving 0 in the field will actually pull the default "
+"%d questions of that category."
+msgstr ""
+
+#: views/advanced-settings.html.php:75
+msgid "Order"
+msgstr ""
+
+#: views/advanced-settings.html.php:75 views/exams.php:32
+msgid "No. questions"
+msgstr ""
+
+#: views/advanced-settings.html.php:80
+msgid ""
+"The \"Order\" field in the above table lets you specify the order categories "
+"appear when the questions are grouped by category."
+msgstr ""
+
+#: views/cat.php:2 views/certificate.php:2
+msgid "Create New"
+msgstr ""
+
+#: views/cat.php:14
+msgid "Accessible For:"
+msgstr ""
+
+#: views/cat.php:15
+msgid "(Wordpress User Roles)"
+msgstr ""
+
+#: views/cat.php:16
+msgid "(Watupro User Groups)"
+msgstr ""
+
+#: views/cat.php:20 views/cat.php:29
+msgid "- All Users -"
+msgstr ""
+
+#: views/cat.php:38
+msgid ""
+"Please note this restriction here is valid only for a specific exam category."
+msgstr ""
+
+#: views/cat.php:41
+msgid "Save Category"
+msgstr ""
+
+#: views/cat.php:43
+msgid "Delete Category"
+msgstr ""
+
+#: views/cat.php:56
+msgid "Please enter title of this category"
+msgstr ""
+
+#: views/cats.php:2
+msgid "Watu PRO %s Categories"
+msgstr ""
+
+#: views/cats.php:4
+msgid ""
+"Categories can be used to organize your exams by topic. The most useful part "
+"of this is that you can limit the access to categories for the different"
+msgstr ""
+
+#: views/cats.php:4
+msgid "user groups"
+msgstr ""
+
+#: views/cats.php:8
+msgid "Click here to add new category"
+msgstr ""
+
+#: views/cats.php:9 views/certificates.php:12 views/exams.php:29
+#: views/question_cats.php:27 views/questions.php:109
+#: views/taking_details.php:33
+msgid "ID"
+msgstr ""
+
+#: views/cats.php:9
+msgid "Shortcode for exams list"
+msgstr ""
+
+#: views/cats.php:10
+msgid "Accessible to"
+msgstr ""
+
+#: views/cats.php:22
+msgid "You have not created any categories yet."
+msgstr ""
+
+#: views/cats.php:22 views/certificates.php:27
+msgid "Click here"
+msgstr ""
+
+#: views/cats.php:22 views/certificates.php:27
+msgid "to create one."
+msgstr ""
+
+#: views/cats.php:25
+msgid "Shortcodes to list published %s"
+msgstr ""
+
+#: views/cats.php:27
+msgid "To list all published %s in the system you can use the shortcode"
+msgstr ""
+
+#: views/cats.php:28
+msgid "To list all published uncategorized %s you can use the shortcode"
+msgstr ""
+
+#: views/cats.php:29
+msgid ""
+"To list %s from only one category use the shortcodes given in the table "
+"above."
+msgstr ""
+
+#: views/cats.php:30
+msgid ""
+"To list %s from multiple categories with one shortcode just separate their "
+"IDs with commas, like this:"
+msgstr ""
+
+#: views/cats.php:31
+msgid ""
+"You can use the same logic to limit the %s shown in user dashboard. Just add "
+"category ID(s) to the shortcode like this:"
+msgstr ""
+
+#: views/cats.php:31
+msgid ""
+"To sort them by title, or latest on top, add \"title\" or \"latest\" to the "
+"shortcode like this:"
+msgstr ""
+
+#: views/cats.php:32
+msgid ""
+"These shortcodes also accept third argument that allows you to specify the "
+"order of listing %s:"
+msgstr ""
+
+#: views/cats.php:35
+msgid "to order them by title, alphabetically. Example:"
+msgstr ""
+
+#: views/cats.php:36
+msgid "to order the most recent on top. Example:"
+msgstr ""
+
+#: views/cats.php:39
+msgid ""
+"By default all shortcodes list the %s sorted in the order of creation, "
+"oldest on top."
+msgstr ""
+
+#: views/certificate.php:2
+msgid "Certificate"
+msgstr ""
+
+#: views/certificate.php:6 views/certificates.php:12
+msgid "Certificate Title"
+msgstr ""
+
+#: views/certificate.php:14
+msgid "Certificate Text/HTML"
+msgstr ""
+
+#: views/certificate.php:20
+msgid "Usable Variables..."
+msgstr ""
+
+#: views/certificate.php:22 views/usable-variables.php:5
+#: views/usable-variables.php:36
+msgid "Variable"
+msgstr ""
+
+#: views/certificate.php:23
+msgid ""
+"Full user name, if provided, otherwise login will be used. Other user data "
+"can be included using the <a href=\"%s\" target=\"_blank\">watupro-userinfo "
+"shortcode</a>."
+msgstr ""
+
+#: views/certificate.php:24
+msgid "The user contact email address"
+msgstr ""
+
+#: views/certificate.php:25
+msgid "Total points collected"
+msgstr ""
+
+#: views/certificate.php:26
+msgid ""
+"The assigned grade after taking the exam. Or use %%GTITLE%% and %%GDESC%% to "
+"separate the grade title from the description."
+msgstr ""
+
+#: views/certificate.php:27
+msgid "The name of the exam"
+msgstr ""
+
+#: views/certificate.php:28
+msgid "The optional description."
+msgstr ""
+
+#: views/certificate.php:29
+msgid "Date when exam is submitted."
+msgstr ""
+
+#: views/certificate.php:30
+msgid "Unique ID for this issued certificate."
+msgstr ""
+
+#: views/certificate.php:31 views/usable-variables.php:30
+msgid "The time spent to take the %s."
+msgstr ""
+
+#: views/certificate.php:35
+msgid "Multiple Quiz Certificate"
+msgstr ""
+
+#: views/certificate.php:36
+msgid "This certificate will be issued for completing multiple quizzes."
+msgstr ""
+
+#: views/certificate.php:39
+msgid ""
+"Such certificate will be issued to logged in users who have completed all of "
+"the required quizzes with the average points / percent correct answers "
+"achieved. If multiple certificates match the criteria only the one with the "
+"highest requirements will be issued."
+msgstr ""
+
+#: views/certificate.php:41
+msgid "Required quizzes:"
+msgstr ""
+
+#: views/certificate.php:46
+msgid "Avg. points per quiz required:"
+msgstr ""
+
+#: views/certificate.php:47
+msgid "Avg. % correct answer required:"
+msgstr ""
+
+#: views/certificate.php:53
+msgid "Admin approval"
+msgstr ""
+
+#: views/certificate.php:54
+msgid ""
+"By default the certificate is issued automatically when a grade assigned to "
+"it is achieved by the user. Here you can optionalliy configure admin "
+"approval."
+msgstr ""
+
+#: views/certificate.php:56
+msgid "This certificate requires admin approval"
+msgstr ""
+
+#: views/certificate.php:59
+msgid "Notify me when a certificate approval requires my attention."
+msgstr ""
+
+#: views/certificate.php:61
+msgid ""
+"Notify the user when I approve their certificate.(You can configure the "
+"email contents.)"
+msgstr ""
+
+#: views/certificate.php:64 views/exam_form.php:359
+msgid "Email subject:"
+msgstr ""
+
+#: views/certificate.php:65
+msgid "Email message:"
+msgstr ""
+
+#: views/certificate.php:66
+msgid "You can use the following variables:"
+msgstr ""
+
+#: views/certificate.php:66
+msgid "for quiz name"
+msgstr ""
+
+#: views/certificate.php:66
+msgid "for certificate name"
+msgstr ""
+
+#: views/certificate.php:67
+msgid "for the date when the exam was submitted, and"
+msgstr ""
+
+#: views/certificate.php:68
+msgid "for the URL where the user can view/print their certificate."
+msgstr ""
+
+#: views/certificate.php:73
+msgid "Important!"
+msgstr ""
+
+#: views/certificate.php:75
+msgid ""
+"No CSS styles or header from your blog will be applied. Please include all "
+"the styling in the certificate."
+msgstr ""
+
+#: views/certificate.php:80
+msgid "Save Certificate"
+msgstr ""
+
+#: views/certificate.php:95
+msgid "Please enter title of this certificate"
+msgstr ""
+
+#: views/certificates.php:4
+msgid ""
+"These certificates are optional and can be assigned to grades. Then when "
+"user takes an exam and receives a grade which has assigned certificate, they "
+"will see a link to print this certificate, optionally personalized with "
+"their details."
+msgstr ""
+
+#: views/certificates.php:6
+msgid ""
+"Need help designing the certificates? Here are some <a href=\"http://blog."
+"calendarscripts.info/free-certificate-templates-for-watupro/\" target="
+"\"_blank\">free templates</a> made for you by our designer. If you need more "
+"individual design we can discuss it."
+msgstr ""
+
+#: views/certificates.php:11
+msgid "Click here to add new certificate"
+msgstr ""
+
+#: views/certificates.php:12
+msgid "Users earned"
+msgstr ""
+
+#: views/certificates.php:27
+msgid "You have not created any certificates yet."
+msgstr ""
+
+#: views/certificates.php:31
+msgid ""
+"Do not use rich text editor on certificates (to prevent it from messing my "
+"certificate HTML code)."
+msgstr ""
+
+#: views/certificates.php:33
+msgid ""
+"Keep all user certificates from multiple quiz attempts. When this option is "
+"NOT checked, a certificate earned on a quiz will overwrite any previous "
+"certificates from the same user on the same quiz."
+msgstr ""
+
+#: views/certificates.php:35
+msgid ""
+"Generate PDF Certificates instead of HTML based ones. (You need a DocRaptor "
+"account or the free pdf-bridge plugin for this)"
+msgstr ""
+
+#: views/certificates.php:35
+msgid "Save these settings"
+msgstr ""
+
+#: views/certificates.php:38
+msgid ""
+"Use the free <a href=\"%s\" target=\"_blank\">pdf bridge</a> plugin (must be "
+"installed and activated)."
+msgstr ""
+
+#: views/certificates.php:42
+msgid ""
+"Send certificate as attachment if quiz completion email is sent to admin "
+"and / or user. Requires PDF Bridge v. 0.8 or newer."
+msgstr ""
+
+#: views/certificates.php:45
+msgid "Use DocRaptor."
+msgstr ""
+
+#: views/certificates.php:49
+msgid "Your DocRaptor API Key:"
+msgstr ""
+
+#: views/certificates.php:49
+msgid ""
+"(The key has been saved. It's never shown here for security reasons! Enter "
+"something only if you want to add it or change it.)"
+msgstr ""
+
+#: views/certificates.php:50
+msgid "DocRaptor Mode:"
+msgstr ""
+
+#: views/certificates.php:51
+msgid "Test"
+msgstr ""
+
+#: views/certificates.php:52
+msgid "Production"
+msgstr ""
+
+#: views/certificates.php:54
+msgid ""
+"Note: to avoid wasting your document limit with DocRaptor each certificate "
+"is generated only once for each user. This means that if you make changes to "
+"the certificate will be applied only if the user is issued the certificate "
+"again. This can happen if they re-take the quiz or if they take another quiz "
+"that issues the same certificate."
+msgstr ""
+
+#: views/copy-exam-form.html.php:2
+msgid "Copy %s \"%s\""
+msgstr ""
+
+#: views/copy-exam-form.html.php:4 views/exam_form.php:2 views/grades.php:7
+msgid "Edit %s"
+msgstr ""
+
+#: views/copy-exam-form.html.php:5
+msgid "Manage questions"
+msgstr ""
+
+#: views/copy-exam-form.html.php:10
+msgid ""
+"This will copy the entire %s along with its grades and questions into "
+"another exam."
+msgstr ""
+
+#: views/copy-exam-form.html.php:12
+msgid ""
+"Copy into a new %s. The %s will have the same name with '(Copy)' at the end. "
+"You can edit the exam, change its name, remove questions etc, just like with "
+"every other %s that you create."
+msgstr ""
+
+#: views/copy-exam-form.html.php:15
+msgid ""
+"Copy into existing %s. Selecting this will result in copying only the "
+"questions and grades. If you select to copy in the same quiz, this will "
+"create clones / duplicates of the selected questions and grades."
+msgstr ""
+
+#: views/copy-exam-form.html.php:17
+msgid "Select existing %s to copy questions to:"
+msgstr ""
+
+#: views/copy-exam-form.html.php:20
+msgid "(This is the same quiz)"
+msgstr ""
+
+#: views/copy-exam-form.html.php:25
+msgid "Select which questions and grades to copy"
+msgstr ""
+
+#: views/copy-exam-form.html.php:28
+msgid "Questions:"
+msgstr ""
+
+#: views/copy-exam-form.html.php:30
+msgid "Category '%s'"
+msgstr ""
+
+#: views/copy-exam-form.html.php:37
+msgid "Grades:"
+msgstr ""
+
+#: views/copy-exam-form.html.php:43
+msgid "OK, Copy This %s"
+msgstr ""
+
+#: views/copy-exam-form.html.php:44
+msgid "Cancel"
+msgstr ""
+
+#: views/dashboard-widget.html.php:2
+msgid "Quizzes taken today:"
+msgstr ""
+
+#: views/dashboard-widget.html.php:3
+msgid "Quizzes taken last 7 days:"
+msgstr ""
+
+#: views/dashboard-widget.html.php:4
+msgid "Quizzes taken this month:"
+msgstr ""
+
+#: views/dashboard-widget.html.php:5
+msgid "Total published quizzes:"
+msgstr ""
+
+#: views/dashboard-widget.html.php:7
+msgid "Most popular quiz:"
+msgstr ""
+
+#: views/dashboard-widget.html.php:10
+msgid "Latest quiz attempt on:"
+msgstr ""
+
+#: views/dashboard-widget.html.php:10
+msgid "%s at %s"
+msgstr ""
+
+#: views/diff-levels.html.php:2
+msgid "Manage Question Difficulty Levels"
+msgstr ""
+
+#: views/diff-levels.html.php:4
+msgid ""
+"Difficulty levels can be used in the administration to search the questions. "
+"You can also control which difficulty levels are active in a given quiz."
+msgstr ""
+
+#: views/diff-levels.html.php:5
+msgid "Please enter difficulty levels one per line."
+msgstr ""
+
+#: views/diff-levels.html.php:9
+msgid "Apply difficulty level restrictions per user account."
+msgstr ""
+
+#: views/diff-levels.html.php:10
+msgid ""
+"When this is selected you will be able to limit the access of users to the "
+"difficulty level selected in their profile page.<br> If there are no "
+"difficulty levels selected on the user profile page they will have access to "
+"all questions.<br> Note that such limitations will apply together with any "
+"other limitations to the questions you give at per-quiz setting."
+msgstr ""
+
+#: views/diff-levels.html.php:11
+msgid "Default levels for new users:"
+msgstr ""
+
+#: views/diff-levels.html.php:12
+msgid "- None -"
+msgstr ""
+
+#: views/diff-levels.html.php:19
+msgid "Save Difficulty Levels"
+msgstr ""
+
+#: views/diff-levels.html.php:25
+msgid "Manage Difficulty Levels Unlock Criteria"
+msgstr ""
+
+#: views/diff-levels.html.php:27
+msgid ""
+"Here you can define criteria for users to automatically unlock difficulty "
+"levels when they achieve given points, number of correct questions etc.<br> "
+"Once a level is unlocked it will never be locked again unless you as admin "
+"do this manually from the Edit user profile page."
+msgstr ""
+
+#: views/diff-levels.html.php:30 views/diff-levels.html.php:49
+msgid "Unlock level"
+msgstr ""
+
+#: views/diff-levels.html.php:36 views/diff-levels.html.php:57
+msgid "when user collects min."
+msgstr ""
+
+#: views/diff-levels.html.php:36 views/diff-levels.html.php:57
+msgid "points and answers min."
+msgstr ""
+
+#: views/diff-levels.html.php:37 views/diff-levels.html.php:58
+msgid "questions with min."
+msgstr ""
+
+#: views/diff-levels.html.php:38 views/diff-levels.html.php:59
+msgid "% correct answers. All of this from difficulty level:"
+msgstr ""
+
+#: views/diff-levels.html.php:40 views/diff-levels.html.php:61
+#: views/questions.php:89
+msgid "- Any level -"
+msgstr ""
+
+#: views/diff-levels.html.php:45
+msgid "Add Criteria"
+msgstr ""
+
+#: views/diff-levels.html.php:77
+msgid "Unlock levels log"
+msgstr ""
+
+#: views/diff-levels.html.php:80
+msgid "Unlocked level"
+msgstr ""
+
+#: views/diff-levels.html.php:80
+msgid "Date / time"
+msgstr ""
+
+#: views/diff-levels.html.php:81
+msgid "Quiz / Details"
+msgstr ""
+
+#: views/diff-levels.html.php:106
+msgid "From level cannot be the same as the unlock level"
+msgstr ""
+
+#: views/diff-levels.html.php:114
+msgid ""
+"You have to enter at least one valid condition to save this unlock criteria"
+msgstr ""
+
+#: views/edit-choice.html.php:4
+msgid "Back to edit the whole question"
+msgstr ""
+
+#: views/edit-choice.html.php:6
+msgid ""
+"This page allows you to use the rich text editor and easily add images and "
+"media to the possible answers to each question. Points and other properties "
+"of the answer itself can be edited on the \"edit question\" page."
+msgstr ""
+
+#: views/edit-choice.html.php:8
+msgid "Remind me the question"
+msgstr ""
+
+#: views/edit-choice.html.php:16
+msgid "Save answer contents"
+msgstr ""
+
+#: views/exam_form.php:2
+msgid "Add %s"
+msgstr ""
+
+#: views/exam_form.php:6
+msgid "Back to Quizzes List"
+msgstr ""
+
+#: views/exam_form.php:7
+msgid "Copy into another quiz"
+msgstr ""
+
+#: views/exam_form.php:10 views/questions.php:11
+msgid "Manage Personality Types"
+msgstr ""
+
+#: views/exam_form.php:16
+msgid "Name and Description"
+msgstr ""
+
+#: views/exam_form.php:17
+msgid "General Settings"
+msgstr ""
+
+#: views/exam_form.php:18 views/exam_form.php:229
+msgid "User and Email Related Settings"
+msgstr ""
+
+#: views/exam_form.php:22
+msgid "Other Advanced Settings"
+msgstr ""
+
+#: views/exam_form.php:23
+msgid "Final Page / %s Result"
+msgstr ""
+
+#: views/exam_form.php:28
+msgid "%s Name"
+msgstr ""
+
+#: views/exam_form.php:35
+msgid "Deactivate this %s."
+msgstr ""
+
+#: views/exam_form.php:38
+msgid ""
+"Automatically publish this quiz in new post once I hit the \"Save\" button. "
+"(The new post will be auto-generated with the quiz title used for post "
+"title.)"
+msgstr ""
+
+#: views/exam_form.php:42
+msgid "Optional description"
+msgstr ""
+
+#: views/exam_form.php:46
+msgid ""
+"If provided, the description will be shown when starting the quiz. It can "
+"also be used in certificates. You can use the {{{button}}} tag <a href=\"%s"
+"\" target=\"_blank\">(more info)</a> to make the quiz start with a start "
+"button."
+msgstr ""
+
+#: views/exam_form.php:49
+msgid ""
+"This %s is published in custom field or other non-standard way (<a href=\"%s"
+"\" target=\"_blank\">what is this?</a>)"
+msgstr ""
+
+#: views/exam_form.php:50
+msgid "URL:"
+msgstr ""
+
+#: views/exam_form.php:54
+msgid "Internal comments"
+msgstr ""
+
+#: views/exam_form.php:58
+msgid ""
+"For management purposes. These comments will be shown only in the "
+"administration."
+msgstr ""
+
+#: views/exam_form.php:68
+msgid "Quiz Settings"
+msgstr ""
+
+#: views/exam_form.php:69
+msgid "Randomization:"
+msgstr ""
+
+#: views/exam_form.php:70
+msgid "Display questions and answers in the way I entered them"
+msgstr ""
+
+#: views/exam_form.php:71
+msgid "Randomize questions and answers"
+msgstr ""
+
+#: views/exam_form.php:72
+msgid "Randomize questions but NOT answers"
+msgstr ""
+
+#: views/exam_form.php:73
+msgid "Randomize answers but NOT questions"
+msgstr ""
+
+#: views/exam_form.php:75
+msgid ""
+"Show questions grouped by category (useful if you have categorized your "
+"questions)"
+msgstr ""
+
+#: views/exam_form.php:76
+msgid "Randomize categories"
+msgstr ""
+
+#: views/exam_form.php:78
+msgid "Answer to each question can be seen immediately by pressing a button"
+msgstr ""
+
+#: views/exam_form.php:80
+msgid "Enable save button to allow users continue their quiz later."
+msgstr ""
+
+#: views/exam_form.php:82
+msgid ""
+"Allow users to flag questions for review. In this case they will be prompted "
+"to review their flagged questions before submitting the quiz."
+msgstr ""
+
+#: views/exam_form.php:84
+msgid "Set time limit of"
+msgstr ""
+
+#: views/exam_form.php:84
+msgid "minutes (Leave it blank or enter 0 to not set any time limit.)"
+msgstr ""
+
+#: views/exam_form.php:84
+msgid "How does it work?"
+msgstr ""
+
+#: views/exam_form.php:85
+msgid "Pull"
+msgstr ""
+
+#: views/exam_form.php:85
+msgid "random questions"
+msgstr ""
+
+#: views/exam_form.php:86
+msgid "per category"
+msgstr ""
+
+#: views/exam_form.php:87
+msgid ""
+"each time when showing the exam (Leave it blank or enter 0 to show all "
+"questions)"
+msgstr ""
+
+#: views/exam_form.php:89
+msgid "Show max"
+msgstr ""
+
+#: views/exam_form.php:89
+msgid ""
+"random answers to each question. Leave blank or enter 0 to show all answers "
+"(default). The correct answer will always be shown."
+msgstr ""
+
+#: views/exam_form.php:91
+msgid "Calculate grades by %s instead of points collected"
+msgstr ""
+
+#: views/exam_form.php:93
+msgid "Allow up to"
+msgstr ""
+
+#: views/exam_form.php:93
+msgid "submissions by IP address. (Enter 0 for unlimited submissions)"
+msgstr ""
+
+#: views/exam_form.php:96
+msgid "Select only questions of this difficulty level:"
+msgstr ""
+
+#: views/exam_form.php:98
+msgid "All levels"
+msgstr ""
+
+#: views/exam_form.php:106
+msgid "Pagination Settings"
+msgstr ""
+
+#: views/exam_form.php:108
+msgid "Pagination:"
+msgstr ""
+
+#: views/exam_form.php:109
+msgid "All questions on single page"
+msgstr ""
+
+#: views/exam_form.php:110
+msgid "One page per question category"
+msgstr ""
+
+#: views/exam_form.php:111
+msgid "Each question on its own page"
+msgstr ""
+
+#: views/exam_form.php:112
+msgid "Custom number per page"
+msgstr ""
+
+#: views/exam_form.php:114
+msgid "per page"
+msgstr ""
+
+#: views/exam_form.php:118
+msgid "Show category-based paginator on top"
+msgstr ""
+
+#: views/exam_form.php:122
+msgid "Disallow previous button"
+msgstr ""
+
+#: views/exam_form.php:125
+msgid "Show numbered question paginator"
+msgstr ""
+
+#: views/exam_form.php:126
+msgid "Show progress bar on top"
+msgstr ""
+
+#: views/exam_form.php:128
+msgid "Display percentage of completeness."
+msgstr ""
+
+#: views/exam_form.php:131
+msgid "Show submit button on each page"
+msgstr ""
+
+#: views/exam_form.php:135
+msgid ""
+"Automatically store user progress as they go from page to page (causes "
+"server requests)"
+msgstr ""
+
+#: views/exam_form.php:139
+msgid "Questions and Answers Enumeration and Settings"
+msgstr ""
+
+#: views/exam_form.php:141
+msgid "Do not display question numbers."
+msgstr ""
+
+#: views/exam_form.php:143
+msgid ""
+"The setting below lets you enumerate the answers to single-choice and "
+"multiple-choice questions with numbers, small letters, or capital letters."
+msgstr ""
+
+#: views/exam_form.php:144
+msgid "Answers Enumerator:"
+msgstr ""
+
+#: views/exam_form.php:146
+msgid "Numbers"
+msgstr ""
+
+#: views/exam_form.php:147
+msgid "Capital letters"
+msgstr ""
+
+#: views/exam_form.php:148
+msgid "Small letters"
+msgstr ""
+
+#: views/exam_form.php:151
+msgid "Allow users to rate questions"
+msgstr ""
+
+#: views/exam_form.php:154
+msgid ""
+"The following settings let you define what is the default number of points "
+"pre-filled in the fields for correct and incorrect answer. When you click "
+"the radio / checkbox that sets a given answer as correct / incorrect, the "
+"corresponding points will be automatically filled in the box."
+msgstr ""
+
+#: views/exam_form.php:155 views/options.php:75
+msgid "Points for correct answer:"
+msgstr ""
+
+#: views/exam_form.php:155 views/options.php:75
+msgid "Ex.: 1.00"
+msgstr ""
+
+#: views/exam_form.php:156 views/options.php:76
+msgid "Points for incorrect answer:"
+msgstr ""
+
+#: views/exam_form.php:159
+msgid "%s Category (Optional)"
+msgstr ""
+
+#: views/exam_form.php:162
+msgid "- Uncategorized -"
+msgstr ""
+
+#: views/exam_form.php:169
+msgid "Anti-Spam Measures"
+msgstr ""
+
+#: views/exam_form.php:171
+msgid "Require image validation (reCaptcha) to submit the quiz"
+msgstr ""
+
+#: views/exam_form.php:173
+msgid "Require question based captcha to submit the quiz"
+msgstr ""
+
+#: views/exam_form.php:174
+msgid ""
+"Use a \"honeypot\" field (It is almost as efficient as captchas but is "
+"unobtrusive and does not require any action from the user)"
+msgstr ""
+
+#: views/exam_form.php:176
+msgid "Schedule %s (Optional)"
+msgstr ""
+
+#: views/exam_form.php:178
+msgid "Schedule this %s"
+msgstr ""
+
+#: views/exam_form.php:181
+msgid "Schedule from:"
+msgstr ""
+
+#: views/exam_form.php:204
+msgid "Schedule to:"
+msgstr ""
+
+#: views/exam_form.php:230
+msgid "Require user log-in"
+msgstr ""
+
+#: views/exam_form.php:233
+msgid "Logged user options"
+msgstr ""
+
+#: views/exam_form.php:234
+msgid ""
+"Registered <a href=\"users.php\" target=\"_blank\">users</a> will be able to "
+"take this exam. You can add the users yourself or let them register "
+"themselves. For the second option you need to make sure sure that \"Anyone "
+"can register\" is checked in your <a href=\"options-general.php\" target="
+"\"_blank\">general settings</a> page."
+msgstr ""
+
+#: views/exam_form.php:236
+msgid "Allow users to submit the %s multiple times:"
+msgstr ""
+
+#: views/exam_form.php:238
+msgid "Allow"
+msgstr ""
+
+#: views/exam_form.php:238
+msgid "times (For unlimited times enter 0)"
+msgstr ""
+
+#: views/exam_form.php:239
+msgid "in total"
+msgstr ""
+
+#: views/exam_form.php:240
+msgid "per 24 hours"
+msgstr ""
+
+#: views/exam_form.php:241
+msgid "within a week"
+msgstr ""
+
+#: views/exam_form.php:242
+msgid "within a month"
+msgstr ""
+
+#: views/exam_form.php:243
+msgid "within an year"
+msgstr ""
+
+#: views/exam_form.php:246
+msgid "but require an interval of at least"
+msgstr ""
+
+#: views/exam_form.php:246
+msgid "hours before the %s can be resubmitted."
+msgstr ""
+
+#: views/exam_form.php:248
+msgid ""
+"Once you create grades, you will be able to further restrict re-submitting "
+"the exam."
+msgstr ""
+
+#: views/exam_form.php:250
+msgid ""
+"Re-submitting is allowed only if some of the following grades is last "
+"achieved (leave all unchecked to not set any grade-related limitation):"
+msgstr ""
+
+#: views/exam_form.php:259
+msgid "When no more attempts are available display the latest result."
+msgstr ""
+
+#: views/exam_form.php:261
+msgid ""
+"Show the quiz description (if available) even to non-logged in users and "
+"users with no rights to access the quiz."
+msgstr ""
+
+#: views/exam_form.php:264
+msgid ""
+"Don't display questions that were previously answered by the user. Be "
+"careful with this setting - <a href='%s' target='_blank'>see why</a>"
+msgstr ""
+
+#: views/exam_form.php:267
+msgid ""
+"Hide only correctly answered questions to allow reattempting the missed ones."
+msgstr ""
+
+#: views/exam_form.php:273
+msgid "Send me email with details when someone takes the exam"
+msgstr ""
+
+#: views/exam_form.php:274
+msgid "Email address(es) to send to:"
+msgstr ""
+
+#: views/exam_form.php:277
+msgid "Send email to the user with their results"
+msgstr ""
+
+#: views/exam_form.php:279
+msgid "Once you create grades, you will be able to further configure this."
+msgstr ""
+
+#: views/exam_form.php:281
+msgid ""
+"The email will be sent only if some of the following grades is achieved "
+"(leave all unchecked to not set any grade-related limitation):"
+msgstr ""
+
+#: views/exam_form.php:286
+msgid ""
+"Entering email to receive quiz results is optional for non-logged in users. "
+"(Takes effect only when you have selected \"Send email to the user with "
+"their results\")"
+msgstr ""
+
+#: views/exam_form.php:293
+msgid "Ask for user contact details"
+msgstr ""
+
+#: views/exam_form.php:295
+msgid "For logged in users some of this data might be prepopulated."
+msgstr ""
+
+#: views/exam_form.php:297
+msgid "Should we ask the user for contact details?"
+msgstr ""
+
+#: views/exam_form.php:297
+msgid "Don't ask"
+msgstr ""
+
+#: views/exam_form.php:297
+msgid "Ask at the beginning"
+msgstr ""
+
+#: views/exam_form.php:298
+msgid "Ask at the end"
+msgstr ""
+
+#: views/exam_form.php:302
+msgid ""
+"Note: This is a timed quiz and the timer will not stop until the user "
+"completes the whole quiz including their contact details. For such quizzes "
+"you may prefer to select \"Ask at the beginning\" because the timer will "
+"start after the contact details are completed."
+msgstr ""
+
+#: views/exam_form.php:305
+msgid "Optional instructions before the contact fields:"
+msgstr ""
+
+#: views/exam_form.php:307
+msgid "Ask for email:"
+msgstr ""
+
+#: views/exam_form.php:309 views/exam_form.php:315 views/exam_form.php:321
+#: views/exam_form.php:327
+msgid "Required"
+msgstr ""
+
+#: views/exam_form.php:309 views/exam_form.php:315 views/exam_form.php:321
+#: views/exam_form.php:327
+msgid "Label:"
+msgstr ""
+
+#: views/exam_form.php:310
+msgid "Your email address:"
+msgstr ""
+
+#: views/exam_form.php:311 views/exam_form.php:317 views/exam_form.php:323
+#: views/exam_form.php:329
+msgid "Variable: %s"
+msgstr ""
+
+#: views/exam_form.php:313
+msgid "Ask for name:"
+msgstr ""
+
+#: views/exam_form.php:316
+msgid "Your name:"
+msgstr ""
+
+#: views/exam_form.php:319
+msgid "Ask for company name:"
+msgstr ""
+
+#: views/exam_form.php:322
+msgid "Company name:"
+msgstr ""
+
+#: views/exam_form.php:325
+msgid "Ask for phone:"
+msgstr ""
+
+#: views/exam_form.php:328
+msgid "Phone:"
+msgstr ""
+
+#: views/exam_form.php:331
+msgid "Value (text) of the \"Start\" button:"
+msgstr ""
+
+#: views/exam_form.php:333
+msgid ""
+"Note: the variable shown next to each field can be used in the quiz \"Final "
+"Page\" and also in certificate contents."
+msgstr ""
+
+#: views/exam_form.php:352
+msgid "Final Screen"
+msgstr ""
+
+#: views/exam_form.php:356
+msgid "Use different output for the email that is sent to the user/admin"
+msgstr ""
+
+#: views/exam_form.php:360
+msgid ""
+"If you leave it empty, default subject will be used. You can use the "
+"variable %%QUIZ_NAME%% to include the quiz name and the variable %%USER-NAME%"
+"% to include the user name."
+msgstr ""
+
+#: views/exam_form.php:362
+msgid "Email contents:"
+msgstr ""
+
+#: views/exam_form.php:363
+msgid ""
+"By default this content is used for both the email sent to user, and the "
+"email sent to admin. You can however use the %s tag to make the email "
+"contents different. The content before the %s tag will be sent to the user "
+"(if the corresponding checkbox is checked) and the content after the %s tag "
+"- to the admin."
+msgstr ""
+
+#: views/exam_form.php:377 views/sharing-options.html.php:55
+msgid "Save All Settings"
+msgstr ""
+
+#: views/exam_form.php:422
+msgid "Please enter %s name"
+msgstr ""
+
+#: views/exam_form.php:428
+msgid ""
+"If the %s is published in custom field you must provide the URL to the page "
+"where it is published."
+msgstr ""
+
+#: views/exams.php:2
+msgid "Manage Quizzes"
+msgstr ""
+
+#: views/exams.php:6 views/options.php:4
+msgid "Go to"
+msgstr ""
+
+#: views/exams.php:6 views/options.php:2
+msgid "Watu PRO Settings"
+msgstr ""
+
+#: views/exams.php:8
+msgid "Create New Quiz"
+msgstr ""
+
+#: views/exams.php:12
+msgid "Filter by category:"
+msgstr ""
+
+#: views/exams.php:13
+msgid "All Categories"
+msgstr ""
+
+#: views/exams.php:20
+msgid "title contains:"
+msgstr ""
+
+#: views/exams.php:21
+msgid "Filter quizzes"
+msgstr ""
+
+#: views/exams.php:23
+msgid "Clear filters"
+msgstr ""
+
+#: views/exams.php:30
+msgid "Title"
+msgstr ""
+
+#: views/exams.php:31
+msgid "Embed Code"
+msgstr ""
+
+#: views/exams.php:33
+msgid "Created on"
+msgstr ""
+
+#: views/exams.php:35
+msgid "View Results"
+msgstr ""
+
+#: views/exams.php:39 views/question_cats.php:31
+msgid "Edit/Delete"
+msgstr ""
+
+#: views/exams.php:57 views/questions.php:158
+msgid "(Inactive)"
+msgstr ""
+
+#: views/exams.php:62
+msgid "Reuses from other test(s)"
+msgstr ""
+
+#: views/exams.php:64
+msgid "By %s"
+msgstr ""
+
+#: views/exams.php:64
+msgid "admin"
+msgstr ""
+
+#: views/exams.php:66
+msgid "Taken %d times"
+msgstr ""
+
+#: views/exams.php:66
+msgid "view results"
+msgstr ""
+
+#: views/exams.php:68
+msgid "Questions"
+msgstr ""
+
+#: views/exams.php:69
+msgid "Grades"
+msgstr ""
+
+#: views/exams.php:70
+msgid "Personality types"
+msgstr ""
+
+#: views/exams.php:72
+msgid ""
+"You are about to delete this quiz? This will delete all the questions and "
+"answers within this quiz. Press 'OK' to delete and 'Cancel' to stop."
+msgstr ""
+
+#: views/exams.php:76
+msgid ""
+"To publish any of the existing tests simply copy the \"Embed code\" shown in "
+"the table above and paste it in a post or page of your blog. Please do not "
+"paste more than one of these shortcodes in a single post or page."
+msgstr ""
+
+#: views/exams.php:79
+msgid "No tests found."
+msgstr ""
+
+#: views/grades.php:3
+msgid "Manage Grades in \"%s\""
+msgstr ""
+
+#: views/grades.php:4
+msgid "Manage Personality Types in \"%s\""
+msgstr ""
+
+#: views/grades.php:6 views/questions.php:6
+msgid "Back to %s"
+msgstr ""
+
+#: views/grades.php:11
+msgid ""
+"This %s will reuse the <a href=\"%s\" target=\"_blank\">default grades</a>."
+msgstr ""
+
+#: views/grades.php:11
+msgid ""
+"(Alternatively you can <a href=\"%s\">copy the default grades</a> into the "
+"%s.)"
+msgstr ""
+
+#: views/grades.php:16
+msgid "This %s reuses the default grades"
+msgstr ""
+
+#: views/grades.php:18
+msgid ""
+"Any change you apply to the default grades will be applied to this %s as "
+"well. If you want to use the default grades but have your copy in this %s, "
+"you can <a href=\"%s\">copy the default grades</a> into it instead."
+msgstr ""
+
+#: views/grades.php:23
+msgid "Manage Default Grades"
+msgstr ""
+
+#: views/grades.php:25
+msgid "These grades / results can be reused or copied in any of your %s."
+msgstr ""
+
+#: views/grades.php:30
+msgid "Manage grades / results for"
+msgstr ""
+
+#: views/grades.php:31
+msgid "- The Whole %s -"
+msgstr ""
+
+#: views/grades.php:33 views/question_form.php:100
+msgid "Category:"
+msgstr ""
+
+#: views/grades.php:38 views/grades.php:40
+msgid "Design the common category grade output for this quiz"
+msgstr ""
+
+#: views/grades.php:41
+msgid ""
+"Note: you are currently managing category-specific grades. These can be "
+"displayed at the final screen using the %%CATGRADES%% variable. All of them "
+"will be shown in loop at the place of the variable. In the box below you can "
+"design how each of the category grades will look."
+msgstr ""
+
+#: views/grades.php:42
+msgid "This design is the same for all question categories in this exam."
+msgstr ""
+
+#: views/grades.php:46
+msgid ""
+"You can use several of the already known variables: <strong>%%CORRECT%%, %"
+"%TOTAL%%, %%POINTS%%, %%PERCENTAGE%%, %%GTITLE%%, %%GDESC%%</strong>. The "
+"variable <strong>%%CATEGORY%%</strong> will be replaced by the category name "
+"and the variable <strong>%%CATDESC%%</strong> - with the category "
+"description."
+msgstr ""
+
+#: views/grades.php:47
+msgid ""
+"You can also manually craft the output for each category instead of doing it "
+"in loop. <a href=\"%s\" target=\"_blank\">Learn how here</a>."
+msgstr ""
+
+#: views/grades.php:48
+msgid ""
+"When displaying the category results / grades on the final screen, order "
+"them:"
+msgstr ""
+
+#: views/grades.php:50
+msgid "The same way categories with questions were ordered in the %s"
+msgstr ""
+
+#: views/grades.php:51
+msgid "From the best to worst result"
+msgstr ""
+
+#: views/grades.php:52
+msgid "From the worst to best result"
+msgstr ""
+
+#: views/grades.php:55
+msgid "Exclude categories which have only survey questions."
+msgstr ""
+
+#: views/grades.php:57
+msgid "Save the Design"
+msgstr ""
+
+#: views/grades.php:62
+msgid ""
+"If you create <a href=\"admin.php?page=watupro_question_cats\">question "
+"categories</a> you will be able to create category-based grades as well."
+msgstr ""
+
+#: views/grades.php:66
+msgid "Currently managing grades for"
+msgstr ""
+
+#: views/grades.php:67
+msgid "points based calculation"
+msgstr ""
+
+#: views/grades.php:68
+msgid "percentage based calculation"
+msgstr ""
+
+#: views/grades.php:70
+msgid ""
+"This is not a setting - it is just a selector that lets you switch between "
+"managing grades for percent based or point based quizzes. The selection "
+"whether a quiz is point based or percent based is done on the Edit Quiz page "
+"itself."
+msgstr ""
+
+#: views/grades.php:71
+msgid ""
+"\"Percentage based calculation\" means that the grade will be calculated "
+"based on the achieved percent correct answers OR percent points from the "
+"maximum possible points on the quiz. This is a setting available on per-quiz "
+"basis."
+msgstr ""
+
+#: views/grades.php:76
+msgid "Add New Grade"
+msgstr ""
+
+#: views/grades.php:77
+msgid "Add New Personality Type"
+msgstr ""
+
+#: views/grades.php:81 views/grades.php:119 views/sharing-options.html.php:19
+msgid "Title:"
+msgstr ""
+
+#: views/grades.php:82 views/grades.php:120
+msgid "Description:"
+msgstr ""
+
+#: views/grades.php:85 views/grades.php:123
+msgid "Assign this grade when achieved % of maximum points is from"
+msgstr ""
+
+#: views/grades.php:86 views/grades.php:124
+msgid "Assign this grade when % correct answers is from"
+msgstr ""
+
+#: views/grades.php:87 views/grades.php:125
+msgid ""
+"Assign this grade when the number of points that user has collected are from"
+msgstr ""
+
+#: views/grades.php:89 views/grades.php:127
+msgid "to"
+msgstr ""
+
+#: views/grades.php:92 views/grades.php:131
+msgid ""
+"When creating global personality types for a personality quiz you don't need "
+"to set from/to points or % correct answers. Instead of this the grade is "
+"assigned to the choices your user make on questions."
+msgstr ""
+
+#: views/grades.php:96 views/grades.php:135
+msgid "Upon achieving this grade / result assign the following certificate:"
+msgstr ""
+
+#: views/grades.php:97 views/grades.php:136
+msgid "- Don't assign certificate"
+msgstr ""
+
+#: views/grades.php:103 views/grades.php:142
+msgid "If this grade is achieved redirect to URL (optional):"
+msgstr ""
+
+#: views/grades.php:104
+msgid "Add This Grade / Result"
+msgstr ""
+
+#: views/grades.php:112
+msgid "Edit Existing Grades"
+msgstr ""
+
+#: views/grades.php:113
+msgid "Edit Existing Personality Types"
+msgstr ""
+
+#: views/grades.php:144
+msgid ""
+"This default grade is not created by you and you have no permissions to edit "
+"or delete it."
+msgstr ""
+
+#: views/grades.php:162
+msgid "Please enter grade title"
+msgstr ""
+
+#: views/grades.php:169 views/grades.php:175
+msgid "Please enter number"
+msgstr ""
+
+#: views/group-users.html.php:2
+msgid "Manage users in group \"%s\""
+msgstr ""
+
+#: views/group-users.html.php:4
+msgid ""
+"This page allows you to mass-assign users to a WatuPRO group. You can "
+"individually manage user groups for a given users from the Users -> Edit "
+"user page."
+msgstr ""
+
+#: views/group-users.html.php:6
+msgid "Back to user groups"
+msgstr ""
+
+#: views/group-users.html.php:10
+msgid "User ID"
+msgstr ""
+
+#: views/group-users.html.php:23
+msgid "Assign selected users to the group"
+msgstr ""
+
+#: views/groups.php:2
+msgid "Watu PRO User Groups"
+msgstr ""
+
+#: views/groups.php:4
+msgid ""
+"User groups are optional. They help you to organize your students or users "
+"in different classes. Then if you wish you can leave some of your"
+msgstr ""
+
+#: views/groups.php:4
+msgid "exam categories"
+msgstr ""
+
+#: views/groups.php:4
+msgid ""
+"accessible to only some user groups and thus diversify the exams delivered "
+"to your users."
+msgstr ""
+
+#: views/groups.php:7
+msgid ""
+"Use the Wordpress User Roles instead of creating user groups (recommended "
+"for better integration with other plugins)."
+msgstr ""
+
+#: views/groups.php:15
+msgid "Group name:"
+msgstr ""
+
+#: views/groups.php:16 views/groups.php:25
+msgid "Assign by default"
+msgstr ""
+
+#: views/groups.php:17
+msgid "Add Group"
+msgstr ""
+
+#: views/groups.php:29
+msgid "Mass asssign users"
+msgstr ""
+
+#: views/groups.php:36
+msgid ""
+"If \"Assign by default\" is checked, the group will be assigned to every "
+"user who registers in your blog."
+msgstr ""
+
+#: views/groups.php:38
+msgid "Allow users to select user group on the registration page"
+msgstr ""
+
+#: views/groups.php:50
+msgid "Please enter group name"
+msgstr ""
+
+#: views/help.php:2
+msgid "Watu PRO Help"
+msgstr ""
+
+#: views/help.php:4
+msgid ""
+"Because most of the Watu PRO screens are self-explaining, this page is not "
+"meant to be a comprehensive user manual. Its intent is only to further "
+"clarify some of the functionality in the plugin. Also check the <a href="
+"\"http://calendarscripts.info/watupro/howto.html\" target=\"_blank\">online "
+"Help &amp; How-To page</a>"
+msgstr ""
+
+#: views/help.php:6
+msgid ""
+"If you want to <b>upgrade to a new version</b>, please <a href=\"%s\" target="
+"\"_blank\">check this</a>."
+msgstr ""
+
+#: views/help.php:9
+msgid "Upgrading from Watu"
+msgstr ""
+
+#: views/help.php:11
+msgid ""
+"If you are upgrading from the free Watu plugin you can easily transfer your "
+"quizzes to WatuPRO. Visit the <a href=\"%s\">WatuPRO Settings</a> page and "
+"scroll to the bottom - you will find a section called \"Quizzes from Watu "
+"Basic\"."
+msgstr ""
+
+#: views/help.php:30
+msgid "Shortcodes in Watu PRO"
+msgstr ""
+
+#: views/help.php:33
+msgid ""
+"is the shortcode to publish an exam in a post or page. Instead of X you need "
+"to use the test ID. The full dynamically generated shortcode can be copied "
+"from \"Manage quizzes\" page."
+msgstr ""
+
+#: views/help.php:34
+msgid ""
+"is the shortcode to display links to all published quizzes from a selected "
+"category. X should be replaced with category ID so please copy the dynamic "
+"code from Categories page."
+msgstr ""
+
+#: views/help.php:35
+msgid "lists links to all published quizzes in the system."
+msgstr ""
+
+#: views/help.php:35
+msgid ""
+"Use [watuprolist cat_id=\"ALL\" orderby=\"title\"] to show them ordered by "
+"title or [watuprolist cat_id=\"ALL\" orderby=\"latest\"] to order them "
+"latest on top. The same format can be used in the above shortcode as well."
+msgstr ""
+
+#: views/help.php:36
+msgid ""
+"lets you replicate the logged in user \"My Quizzes\" page outside of "
+"Wordpress admin area."
+msgstr ""
+
+#: views/help.php:36
+msgid ""
+"You can restrict this by categories as shown on the <a href=\"admin.php?"
+"page=watupro_cats\">categories page</a>."
+msgstr ""
+
+#: views/help.php:36
+msgid "You can define sorting - by title or latest on top like this:"
+msgstr ""
+
+#: views/modules.php:2
+msgid "Watu PRO Modules"
+msgstr ""
+
+#: views/modules.php:5
+msgid ""
+"If you have just uploaded a module, please reactivate WatuPRO from the "
+"Wordpress plugins page."
+msgstr ""
+
+#: views/modules.php:8
+msgid "Currently available modules"
+msgstr ""
+
+#: views/modules.php:11
+msgid "Intelligence module -"
+msgstr ""
+
+#: views/modules.php:11 views/modules.php:12
+msgid "Installed"
+msgstr ""
+
+#: views/modules.php:11 views/modules.php:12
+msgid "Not installed"
+msgstr ""
+
+#: views/modules.php:12
+msgid "Reporting module -"
+msgstr ""
+
+#: views/modules.php:15
+msgid "For more info about the additional modules please click here."
+msgstr ""
+
+#: views/modules.php:17
+msgid ""
+"Check also our <a href=\"%s\" target=\"_blank\">free add-ons and bridges</a>."
+msgstr ""
+
+#: views/modules.php:20
+msgid "Upload new module"
+msgstr ""
+
+#: views/modules.php:22
+msgid "Please upload only module files purchased from the"
+msgstr ""
+
+#: views/modules.php:22
+msgid "official WatuPRO site."
+msgstr ""
+
+#: views/modules.php:26
+msgid "Upload File"
+msgstr ""
+
+#: views/modules.php:31
+msgid "Uploading modules is disabled on this blog for security reasons"
+msgstr ""
+
+#: views/modules.php:34
+msgid ""
+"If you wish to disable the module upload feature for security reasons, "
+"please manually enter 'watupro_sandbox_mode' in your wp_options table. "
+"Although in general you shouldn't give your administrator's login details to "
+"any person you don't trust."
+msgstr ""
+
+#: views/my-options.html.php:2
+msgid "My %s Settings"
+msgstr ""
+
+#: views/my-options.html.php:5
+msgid "Do not send me emails about completed %s."
+msgstr ""
+
+#: views/my-options.html.php:7
+msgid "Save Settings"
+msgstr ""
+
+#: views/my_certificates.php:6
+msgid "Showing certificates of "
+msgstr ""
+
+#: views/my_certificates.php:12 views/my_exams.php:11
+msgid "%s title"
+msgstr ""
+
+#: views/my_certificates.php:12
+msgid "Completed on"
+msgstr ""
+
+#: views/my_certificates.php:12 views/users-earned-certificate.html.php:14
+msgid "With result"
+msgstr ""
+
+#: views/my_certificates.php:13
+msgid "View/Print"
+msgstr ""
+
+#: views/my_certificates.php:13
+msgid "Allow public access"
+msgstr ""
+
+#: views/my_certificates.php:25
+msgid ""
+"When \"Allow public access\" is checked, everyone who has the link will be "
+"able to see your certificate."
+msgstr ""
+
+#: views/my_certificates.php:29
+msgid "There are no accessible certificates at the moment."
+msgstr ""
+
+#: views/my_exams.php:4
+msgid "Showing %s of "
+msgstr ""
+
+#: views/my_exams.php:8
+msgid "%s to complete"
+msgstr ""
+
+#: views/my_exams.php:19
+msgid "Locked"
+msgstr ""
+
+#: views/my_exams.php:25
+msgid "There are no open quizzes to complete at this time."
+msgstr ""
+
+#: views/my_exams.php:30
+msgid "Completed quizzes"
+msgstr ""
+
+#: views/my_exams.php:33
+msgid "Delete all results of this user"
+msgstr ""
+
+#: views/my_exams.php:36
+msgid "Quiz title"
+msgstr ""
+
+#: views/my_exams.php:38
+msgid "Result/Grade"
+msgstr ""
+
+#: views/my_exams.php:38 views/takings.php:148
+msgid "Details"
+msgstr ""
+
+#: views/my_exams.php:46
+msgid "+ Toggle %d previous attempts"
+msgstr ""
+
+#: views/my_exams.php:74
+msgid "There are no completed quizzes yet."
+msgstr ""
+
+#: views/my_exams.php:81
+msgid "Are you sure? There is no undo!"
+msgstr ""
+
+#: views/options.php:4
+msgid "Manage Your %s"
+msgstr ""
+
+#: views/options.php:10
+msgid ""
+"Show all questions in a <strong>single page</strong> (This global setting "
+"can be overwritten for every quiz)"
+msgstr ""
+
+#: views/options.php:12
+msgid ""
+"Enable debug mode to see SQL errors. (Useful in case you have any problems)"
+msgstr ""
+
+#: views/options.php:14
+msgid ""
+"Enable low memory mode to reduce the server resources usage. <a href=\"%s\" "
+"target=\"_blank\">Learn more.</a>"
+msgstr ""
+
+#: views/options.php:16
+msgid ""
+"Load WatuPRO javascripts on all pages (select this only if quizzes do not "
+"work otherwise)."
+msgstr ""
+
+#: views/options.php:18
+msgid "Send the automated emails from this address:"
+msgstr ""
+
+#: views/options.php:19
+msgid ""
+"This defaults to your main admin email. However to set a friendlier sender "
+"name you can overwrite it here by entering your name in format: <b>Your Name "
+"&lt;email@domain.com&gt;</b>"
+msgstr ""
+
+#: views/options.php:22
+msgid "Quiz Design"
+msgstr ""
+
+#: views/options.php:24
+msgid "Select design theme:"
+msgstr ""
+
+#: views/options.php:31
+msgid "See previews and how to add your own theme"
+msgstr ""
+
+#: views/options.php:33
+msgid "Design Adjustments:"
+msgstr ""
+
+#: views/options.php:34
+msgid ""
+"There are some properties you can specify here without editing any CSS file "
+"or using design themes. If you specify them, they will override any CSS "
+"specified by your theme. If you leave them blank, the theme defaults will be "
+"used."
+msgstr ""
+
+#: views/options.php:36
+msgid "Spacing between questions:"
+msgstr ""
+
+#: views/options.php:36 views/options.php:37
+msgid "px"
+msgstr ""
+
+#: views/options.php:37
+msgid "Spacing between question and answers:"
+msgstr ""
+
+#: views/options.php:42
+msgid "CSV Exports"
+msgstr ""
+
+#: views/options.php:44
+msgid "Field separator:"
+msgstr ""
+
+#: views/options.php:46 views/questions.php:21
+msgid "TAB"
+msgstr ""
+
+#: views/options.php:48
+msgid "Add quotes around text fields (recommended)"
+msgstr ""
+
+#: views/options.php:54
+msgid "Default Answer Type"
+msgstr ""
+
+#: views/options.php:62
+msgid "Single Answer"
+msgstr ""
+
+#: views/options.php:64
+msgid "Multiple Answers"
+msgstr ""
+
+#: views/options.php:66 views/question_form.php:139
+msgid "Open End"
+msgstr ""
+
+#: views/options.php:71
+msgid "Default Answer Points"
+msgstr ""
+
+#: views/options.php:73
+msgid ""
+"Set default points for correct / wrong answers. This will auto-set the "
+"points when you click the \"correct\" checkbox next to each answer. The "
+"option can be overriden at quiz level. You can use decimals."
+msgstr ""
+
+#: views/options.php:82
+msgid "Database"
+msgstr ""
+
+#: views/options.php:84
+msgid "Automatically"
+msgstr ""
+
+#: views/options.php:86
+msgid "blankout"
+msgstr ""
+
+#: views/options.php:87
+msgid "cleanup"
+msgstr ""
+
+#: views/options.php:89
+msgid "user submitted data older than %s days"
+msgstr ""
+
+#: views/options.php:90
+msgid "This setting lets you keep your DB space usage low."
+msgstr ""
+
+#: views/options.php:90 views/takings.php:221
+msgid ""
+"Cleaning up all data may affect user levels and points, and the reports. "
+"Alternatively you can just blank out the data which will keep all user "
+"points and reports and will only remove the textual data from some fields. "
+"This will reduce less DB space but will keep most of the things intact."
+msgstr ""
+
+#: views/options.php:91
+msgid ""
+"This function will be executed when you visit your <a href=\"%s\">quizzes</"
+"a> page."
+msgstr ""
+
+#: views/options.php:96 views/options.php:146
+msgid "Save Options"
+msgstr ""
+
+#: views/options.php:100
+msgid "Roles"
+msgstr ""
+
+#: views/options.php:102
+msgid "Roles that can manage exams"
+msgstr ""
+
+#: views/options.php:104
+msgid ""
+"By default only Administrator and Super admin can manage Watu PRO exams. You "
+"can enable other roles here."
+msgstr ""
+
+#: views/options.php:111
+msgid "Fine-tune these settings."
+msgstr ""
+
+#: views/options.php:113
+msgid "Only administrator or superadmin can change this!"
+msgstr ""
+
+#: views/options.php:117 views/options.php:179
+msgid "Save All Options Above This Button"
+msgstr ""
+
+#: views/options.php:120
+msgid "ReCaptcha Settings"
+msgstr ""
+
+#: views/options.php:122
+msgid "ReCaptcha Public Key:"
+msgstr ""
+
+#: views/options.php:123
+msgid "ReCaptcha Private Key:"
+msgstr ""
+
+#: views/options.php:125
+msgid "reCaptcha Version:"
+msgstr ""
+
+#: views/options.php:126
+msgid "1 (Old reCaptcha)"
+msgstr ""
+
+#: views/options.php:127
+msgid "2 (no Captcha reCaptcha)"
+msgstr ""
+
+#: views/options.php:131
+msgid "Language code:"
+msgstr ""
+
+#: views/options.php:131
+msgid "See language codes"
+msgstr ""
+
+#: views/options.php:132
+msgid ""
+"Note that global keys are not supported in No Captcha reCaptcha. You need to "
+"create explicit keys for your domains. If you want to test the captcha on "
+"localhost you have to create a key for \"localhost\"."
+msgstr ""
+
+#: views/options.php:135
+msgid ""
+"Setting up <a href=\"http://www.google.com/recaptcha/intro/index.html\" "
+"target=\"_blank\">ReCaptcha</a> is optional. If you choose to do so you will "
+"be able to require image validation on chosen exams to avoid spam box "
+"submissions."
+msgstr ""
+
+#: views/options.php:140
+msgid "Question based captcha"
+msgstr ""
+
+#: views/options.php:142
+msgid ""
+"In addition to ReCaptcha or instead of it, you can use a simple text-based "
+"captcha. We have loaded 3 basic questions but you can edit them and load "
+"your own. Make sure to enter only one question per line and use = to "
+"separate question from answer."
+msgstr ""
+
+#: views/options.php:145
+msgid ""
+"This question-based captcha can be enabled individually by selecting a "
+"checkbox in the mailing list settings form. If you do not check the "
+"checkbox, the captcha question will not be generated."
+msgstr ""
+
+#: views/options.php:150
+msgid "User Settings and Pages"
+msgstr ""
+
+#: views/options.php:152
+msgid ""
+"Automatically delete user quiz-related data when the user account is "
+"deleted. Note: this will disregard the \"Attribute all content to\" option "
+"given by WordPress when you manually delete the user."
+msgstr ""
+
+#: views/options.php:154
+msgid ""
+"When manually deleting all quiz data of the user cleanup also all their "
+"achievements from the Play plugin."
+msgstr ""
+
+#: views/options.php:158
+msgid "Do not display \"My %s\" page in user dashboard."
+msgstr ""
+
+#: views/options.php:159
+msgid "Do not display \"My certificates\" page in user dashboard."
+msgstr ""
+
+#: views/options.php:160
+msgid "Do not display \"%s Settings\" page in user dashboard."
+msgstr ""
+
+#: views/options.php:163
+msgid "Reporting module tabs:"
+msgstr ""
+
+#: views/options.php:164
+msgid "In the \"Quiz Reports\" page do not display these tabs:"
+msgstr ""
+
+#: views/options.php:165
+msgid "Skills"
+msgstr ""
+
+#: views/options.php:189
+msgid "Ajax in %s"
+msgstr ""
+
+#: views/options.php:191
+msgid ""
+"Here you can select %s which will be submitted by regular post submit rather "
+"than using Ajax. You may want to do this mostly for two reasons:"
+msgstr ""
+
+#: views/options.php:194
+msgid "To allow file uploads in \"open end\" questions."
+msgstr ""
+
+#: views/options.php:195
+msgid ""
+"To embed in the \"Final screen\" content from plugins that do not normally "
+"work well in Ajax mode."
+msgstr ""
+
+#: views/options.php:198
+msgid "The selected %s will NOT use Ajax when users submit them."
+msgstr ""
+
+#: views/options.php:209
+msgid "Limitations for uploading files:"
+msgstr ""
+
+#: views/options.php:211
+msgid ""
+"In the quizzes that do NOT use ajax for submitting you will be able to allow "
+"file uploads for open end questions. Set your size and file type limitations "
+"here. Note that your server may also imply limitations on the uploaded file "
+"size."
+msgstr ""
+
+#: views/options.php:213
+msgid "Max uploaded file size:"
+msgstr ""
+
+#: views/options.php:213
+msgid "In KB. Keep it reasonably low."
+msgstr ""
+
+#: views/options.php:215
+msgid "Allowed file extensions:"
+msgstr ""
+
+#: views/options.php:215
+msgid ""
+"Separate with comma like this: \"jpg, gif, png, doc\". (Input them without "
+"quotes, all small letters)"
+msgstr ""
+
+#: views/options.php:218
+msgid "Save Ajax Related Settings"
+msgstr ""
+
+#: views/options.php:230
+msgid "Quizzes From Watu Basic"
+msgstr ""
+
+#: views/options.php:236
+msgid ""
+"You have %d %s created in the basic free Watu plugin. Do you want to copy "
+"these exams in Watu PRO? You can do this any time, and multiple times."
+msgstr ""
+
+#: views/options.php:238
+msgid ""
+"Automatically replace all Watu shortcodes embedded in posts so they will be "
+"managed by WatuPRO"
+msgstr ""
+
+#: views/options.php:240
+msgid "Copy also the results of users who submitted"
+msgstr ""
+
+#: views/options.php:242
+msgid "Copy These %s to WatuPRO"
+msgstr ""
+
+#: views/options.php:244
+msgid ""
+"Note: Watu should not be activated along with Watu PRO. Please deactivate "
+"the basic plugin if you have not already done this."
+msgstr ""
+
+#: views/question-cat.html.php:3
+msgid "%s Question Category"
+msgstr ""
+
+#: views/question-cat.html.php:3 views/question-cat.html.php:6
+msgid "Add"
+msgstr ""
+
+#: views/question-cat.html.php:3 views/question-cat.html.php:6
+msgid "Edit watupro"
+msgstr ""
+
+#: views/question-cat.html.php:4
+msgid "Back to question categories"
+msgstr ""
+
+#: views/question-cat.html.php:6
+msgid "%s Subcategory Under \"%s\""
+msgstr ""
+
+#: views/question-cat.html.php:7
+msgid "Back to all subcategories"
+msgstr ""
+
+#: views/question-cat.html.php:12
+msgid "Category name:"
+msgstr ""
+
+#: views/question-cat.html.php:16
+msgid "Category description:"
+msgstr ""
+
+#: views/question-cat.html.php:19
+msgid "Exclude from reports and result exports"
+msgstr ""
+
+#: views/question-cat.html.php:21
+msgid "Save category"
+msgstr ""
+
+#: views/question-cat.html.php:31
+msgid "Please enter category name"
+msgstr ""
+
+#: views/question_cats.php:3
+msgid "Manage Question Categories"
+msgstr ""
+
+#: views/question_cats.php:5
+msgid "Manage Subcategories of Category \"%s\""
+msgstr ""
+
+#: views/question_cats.php:12
+msgid ""
+"Question categories are optional. You can use them to organize large tests, "
+"to group and paginate the questions by category etc. They can also be added "
+"on the fly at the time of adding or editing a question."
+msgstr ""
+
+#: views/question_cats.php:14
+msgid "Category description is optional."
+msgstr ""
+
+#: views/question_cats.php:14
+msgid ""
+"If provided it will be shown when the questions in the test are "
+"<strong>grouped</strong> by category"
+msgstr ""
+
+#: views/question_cats.php:17
+msgid "Create new question category"
+msgstr ""
+
+#: views/question_cats.php:19
+msgid "Create new subcategory"
+msgstr ""
+
+#: views/question_cats.php:20
+msgid "Back to main categories"
+msgstr ""
+
+#: views/question_cats.php:22
+msgid ""
+"Subcategories are useful for organizational purposes. They are not different "
+"than main categories: if you are grouping questions by category, or pulling "
+"random questions per category, subcategories will be treated equally with "
+"the main categories."
+msgstr ""
+
+#: views/question_cats.php:27
+msgid "Category name and description"
+msgstr ""
+
+#: views/question_cats.php:29
+msgid "Manage Subcategories"
+msgstr ""
+
+#: views/question_cats.php:38
+msgid "Manage"
+msgstr ""
+
+#: views/question_cats.php:49
+msgid ""
+"Are you sure? All questions that use the category will be now uncategorized."
+msgstr ""
+
+#: views/question_form.php:2
+msgid "Add Question"
+msgstr ""
+
+#: views/question_form.php:2
+msgid "Edit Question"
+msgstr ""
+
+#: views/question_form.php:16
+msgid "Correct Answer "
+msgstr ""
+
+#: views/question_form.php:18
+msgid "Points: "
+msgstr ""
+
+#: views/question_form.php:45
+msgid "Please enter the question"
+msgstr ""
+
+#: views/question_form.php:72 views/question_form.php:303
+msgid "Go to Questions Page"
+msgstr ""
+
+#: views/question_form.php:73 views/takings.php:16
+msgid "Edit this quiz"
+msgstr ""
+
+#: views/question_form.php:78
+msgid "Question Contents and Settings"
+msgstr ""
+
+#: views/question_form.php:80
+msgid ""
+"Deactivate this question. This will exclude it from showing on the exam, "
+"counting it, including it in reports etc."
+msgstr ""
+
+#: views/question_form.php:81
+msgid ""
+"This is important question. (This means it should be included with priority "
+"if the quiz is pulling only a subset of all the questions.)"
+msgstr ""
+
+#: views/question_form.php:83
+msgid ""
+"Add this question in the beginning (Useful only if you do not randomize "
+"questions. By default new questions are added at the end.)"
+msgstr ""
+
+#: views/question_form.php:85
+msgid "Display code:"
+msgstr ""
+
+#: views/question_form.php:85
+msgid ""
+"(You can use this in the final screen or certificate contents to display the "
+"user answer on this question.)"
+msgstr ""
+
+#: views/question_form.php:87
+msgid "Shortcode for poll-like chart:"
+msgstr ""
+
+#: views/question_form.php:87
+msgid "How to configure?"
+msgstr ""
+
+#: views/question_form.php:91
+msgid ""
+"You can use the variable %s to display the question ID inside the question"
+msgstr ""
+
+#: views/question_form.php:94
+msgid "Tags:"
+msgstr ""
+
+#: views/question_form.php:94
+msgid "(Optional, for management purposes. Separate tags by commas.)"
+msgstr ""
+
+#: views/question_form.php:98
+msgid "Question Category and Difficulty Level"
+msgstr ""
+
+#: views/question_form.php:98
+msgid "Question Category"
+msgstr ""
+
+#: views/question_form.php:101
+msgid "- Uncategorized  "
+msgstr ""
+
+#: views/question_form.php:102
+msgid "- Add new category -"
+msgstr ""
+
+#: views/question_form.php:111
+msgid "Enter category"
+msgstr ""
+
+#: views/question_form.php:114
+msgid "Difficulty level:"
+msgstr ""
+
+#: views/question_form.php:125
+msgid "Answer Type and Settings"
+msgstr ""
+
+#: views/question_form.php:133
+msgid "Single Choice (Radio buttons)"
+msgstr ""
+
+#: views/question_form.php:136
+msgid "Multiple Choices (Checkboxes)"
+msgstr ""
+
+#: views/question_form.php:148
+msgid ""
+"In open-end questions you can also add any number of answers but none of "
+"them will be shown to the end user. Instead of that if the answer they typed "
+"matches any of your answers the matching points will be assigned."
+msgstr ""
+
+#: views/question_form.php:150
+msgid "Matching mode:"
+msgstr ""
+
+#: views/question_form.php:151
+msgid "Loose"
+msgstr ""
+
+#: views/question_form.php:152
+msgid "User answer text contains your answer"
+msgstr ""
+
+#: views/question_form.php:153
+msgid "Your answer text contains the whole user answer"
+msgstr ""
+
+#: views/question_form.php:154
+msgid "Exact match (case-insensitive)"
+msgstr ""
+
+#: views/question_form.php:155
+msgid "Learn more"
+msgstr ""
+
+#: views/question_form.php:157
+msgid "Display mode:"
+msgstr ""
+
+#: views/question_form.php:158
+msgid "Medium box (\"textarea\")"
+msgstr ""
+
+#: views/question_form.php:159
+msgid "Large box (\"textarea\")"
+msgstr ""
+
+#: views/question_form.php:160
+msgid "Text input field (single-line)"
+msgstr ""
+
+#: views/question_form.php:164
+msgid "Accept also file upload with the answer"
+msgstr ""
+
+#: views/question_form.php:169
+msgid "This is a True/False question"
+msgstr ""
+
+#: views/question_form.php:170
+msgid "Display as drop-down selector instead of a radio buttons group."
+msgstr ""
+
+#: views/question_form.php:174
+msgid ""
+"This is a survey question (will not be marked as correct/incorrect). Its "
+"answers will never be randomized regardless of the quiz settings."
+msgstr ""
+
+#: views/question_form.php:175
+msgid ""
+"Exclude from showing in the final screen (when %%ANSWERS%% variable is used)."
+msgstr ""
+
+#: views/question_form.php:178
+msgid "Display possible answers in:"
+msgstr ""
+
+#: views/question_form.php:179
+msgid "1 column (default)"
+msgstr ""
+
+#: views/question_form.php:180
+msgid "2 columns"
+msgstr ""
+
+#: views/question_form.php:181
+msgid "3 columns"
+msgstr ""
+
+#: views/question_form.php:182
+msgid "4 columns"
+msgstr ""
+
+#: views/question_form.php:185
+msgid ""
+"Display in compact format (answers will be aligned horizontally next to the "
+"question)"
+msgstr ""
+
+#: views/question_form.php:187
+msgid "Display as horizontal sortable"
+msgstr ""
+
+#: views/question_form.php:191
+msgid ""
+"Round the points collected from this question to the closest decimal. "
+"(Example: 0.98 points will be rounded to 1 point. But 0.9 points will remain "
+"0.9 points.)"
+msgstr ""
+
+#: views/question_form.php:192
+msgid "Penalize not-answering this question with"
+msgstr ""
+
+#: views/question_form.php:192
+msgid "<b>negative</b> points (type positive number)."
+msgstr ""
+
+#: views/question_form.php:195
+msgid "Maximum selections allowed:"
+msgstr ""
+
+#: views/question_form.php:195
+msgid "(Leave as 0 for unlimited)"
+msgstr ""
+
+#: views/question_form.php:199
+msgid "Answering this question will be considered CORRECT when:"
+msgstr ""
+
+#: views/question_form.php:201
+msgid ""
+"Positive number of points is achieved (so at least one correct answer is "
+"given)"
+msgstr ""
+
+#: views/question_form.php:202
+msgid ""
+"The maximum number of points is achieved (so all positive-point answers are "
+"given and none negative-points answer is given.)"
+msgstr ""
+
+#: views/question_form.php:205
+msgid ""
+"Discard the collected positive points on the question unless this condition "
+"is satisfied."
+msgstr ""
+
+#: views/question_form.php:206
+msgid ""
+"Discard ANY collected points on the question unless this condition is "
+"satisfied (so the quiz taker gets 0 points for the question)."
+msgstr ""
+
+#: views/question_form.php:207
+msgid ""
+"IMPORTANT: <b>Answers that have 0 points assigned to them do not affect the "
+"question points balance!</b> When the user selects all correct + some \"0 "
+"points\" answers, the quesiton will be considered correctly answered. <b>If "
+"you do not want this you must assign negative points to the wrong answers.</"
+"b>"
+msgstr ""
+
+#: views/question_form.php:224
+msgid ""
+"Correct answers must always have positive number of points. If you forget "
+"this, 1 point will be automatically assigned to each correct answer when "
+"saving the question."
+msgstr ""
+
+#: views/question_form.php:228
+msgid "Rich text editor"
+msgstr ""
+
+#: views/question_form.php:229
+msgid "(This link appears only on already saved answers)"
+msgstr ""
+
+#: views/question_form.php:232 views/question_form.php:233
+msgid "True"
+msgstr ""
+
+#: views/question_form.php:232 views/question_form.php:233
+msgid "False"
+msgstr ""
+
+#: views/question_form.php:235
+msgid "Correct Answer"
+msgstr ""
+
+#: views/question_form.php:237
+msgid "Points:"
+msgstr ""
+
+#: views/question_form.php:248
+msgid "Add New Answer"
+msgstr ""
+
+#: views/question_form.php:253
+msgid "Optional Answer Explanation / Feedback Shown At The End"
+msgstr ""
+
+#: views/question_form.php:257
+msgid ""
+"You can use this field to explain the correct answer. This will be shown "
+"only at the end of the %s if you have choosen to display correct answers. "
+"Use the tag %s if you want to show how many points the user has earned on "
+"this question."
+msgstr ""
+
+#: views/question_form.php:258
+msgid "Elaborate answer feedback"
+msgstr ""
+
+#: views/question_form.php:260
+msgid ""
+"I want to have different answer feedback for correctly and incorrectly "
+"answered question."
+msgstr ""
+
+#: views/question_form.php:261
+msgid ""
+"I want to have different answer feedback depending on every specific user "
+"selection."
+msgstr ""
+
+#: views/question_form.php:263
+msgid ""
+"In this case please use the tag {{{split}}} to split the two contents. The "
+"content that should be shown if the question is answered correctly goes "
+"before the {{{split}}} tag, and the incorrect goes after it. For more info "
+"visit <a href=\"%s\" target=\"_blank\">this link</a>."
+msgstr ""
+
+#: views/question_form.php:264
+msgid ""
+"In this case please use the tag {{{split}}} to split between all the "
+"feedbacks. They should be ordered in the same way you have ordered the user "
+"choices. For more info visit <a href=\"%s\" target=\"_blank\">this link</a>."
+msgstr ""
+
+#: views/question_form.php:267
+msgid "Accept feedback / comments from users"
+msgstr ""
+
+#: views/question_form.php:270
+msgid ""
+"A text box will be displayed along with the question to allow the user to "
+"comment on the question along with answering it."
+msgstr ""
+
+#: views/question_form.php:271
+msgid "The following label will be displayed above the box:"
+msgstr ""
+
+#: views/question_form.php:272
+msgid "Your comments:"
+msgstr ""
+
+#: views/question_form.php:279
+msgid "Question Hints"
+msgstr ""
+
+#: views/question_form.php:283
+msgid ""
+"Question hints support rich text formatting. You can enter multiple hints "
+"for this question splitting them with the tag %s."
+msgstr ""
+
+#: views/question_form.php:299
+msgid "Save Question"
+msgstr ""
+
+#: views/question_form.php:300
+msgid "Save &amp; Reuse as New"
+msgstr ""
+
+#: views/question_form.php:302
+msgid ""
+"If you click on the \"Save & Reuse as New\" button the question will be "
+"saved and the form for the next question will be loaded with the prefilled "
+"settings and answers to save you time."
+msgstr ""
+
+#: views/questions-feedback.html.php:2
+msgid "User feedback on questions from quiz \"%s\""
+msgstr ""
+
+#: views/questions-feedback.html.php:4
+msgid "Back to the results on this quiz"
+msgstr ""
+
+#: views/questions-feedback.html.php:7
+msgid "There is no feedback left for any of the questions on this quiz yet."
+msgstr ""
+
+#: views/questions-feedback.html.php:14
+msgid "Feedback"
+msgstr ""
+
+#: views/questions-feedback.html.php:14
+msgid "Left on"
+msgstr ""
+
+#: views/questions-feedback.html.php:15
+msgid "Quiz result"
+msgstr ""
+
+#: views/questions-feedback.html.php:15
+#: views/users-earned-certificate.html.php:14
+msgid "View details"
+msgstr ""
+
+#: views/questions.php:2
+msgid "Manage Questions in "
+msgstr ""
+
+#: views/questions.php:8
+msgid "Edit this %s"
+msgstr ""
+
+#: views/questions.php:13
+msgid "Export Questions"
+msgstr ""
+
+#: views/questions.php:15
+msgid "Import questions"
+msgstr ""
+
+#: views/questions.php:17
+msgid "Legacy import/export"
+msgstr ""
+
+#: views/questions.php:19
+msgid "Copy quiz and / or questions"
+msgstr ""
+
+#: views/questions.php:21
+msgid ""
+"Note: The fields in the CSV export files are currently separated by <b>%s</"
+"b>. You can change this <a href=\"%s\">at the Settings page</a>."
+msgstr ""
+
+#: views/questions.php:21
+msgid "COMMA"
+msgstr ""
+
+#: views/questions.php:24
+msgid "Legacy exports:"
+msgstr ""
+
+#: views/questions.php:25
+msgid "Export To Copy"
+msgstr ""
+
+#: views/questions.php:27
+msgid "Export To Edit"
+msgstr ""
+
+#: views/questions.php:31
+msgid "What file are you importing?"
+msgstr ""
+
+#: views/questions.php:33
+msgid ""
+"I'm importing new questions. (This is a file exported by clicking on 'Export "
+"to copy' or a file that you created yourself.)"
+msgstr ""
+
+#: views/questions.php:34
+msgid ""
+"In this case all questions and answers will be added as new. The format of "
+"the CSV file should be: <strong>Question; Answer Type: \"radio\", \"checkbox"
+"\", or \"textarea\", Order (leave \"0\" to auto-order the questions); "
+"Category (optional); Explanation/Feedback (optional); Required: \"0\" for "
+"not required, \"1\" for required question; Correct answer condition (any or "
+"all); Fill the gaps or sorting points (correct/incorrect); Sortable question "
+"values; Max selections allowed; Is inactive (0 or 1); Is survey (0 or 1); "
+"Elaborate asnwer feedback (\"exact\" or \"boolean\"). After that answers "
+"start like this: answer; points; answer; points;"
+msgstr ""
+
+#: views/questions.php:35
+msgid "Optional columns should still be present but their values can be empty."
+msgstr ""
+
+#: views/questions.php:36
+msgid ""
+"For a working example just click on \"Export to copy\" link on this page. Of "
+"course you must have created at least one question in the quiz."
+msgstr ""
+
+#: views/questions.php:39
+msgid ""
+"I'm importing a file with edited questions. (This file was created by "
+"clicking 'Export to edit' link)"
+msgstr ""
+
+#: views/questions.php:40
+msgid ""
+"In this case we will assume you are keeping the same format that was "
+"exported. If you have added new questions or answers please make sure their "
+"ID columns contain \"0\". Questions or answers with unrecognized IDs will be "
+"ignored."
+msgstr ""
+
+#: views/questions.php:43
+msgid "CSV File:"
+msgstr ""
+
+#: views/questions.php:61
+msgid "To add this exam to your blog, insert the code "
+msgstr ""
+
+#: views/questions.php:61
+msgid "into any post or page."
+msgstr ""
+
+#: views/questions.php:74
+msgid "Show questions from category:"
+msgstr ""
+
+#: views/questions.php:75
+msgid "- All categories -"
+msgstr ""
+
+#: views/questions.php:85
+msgid "and tagged as:"
+msgstr ""
+
+#: views/questions.php:88
+msgid "with difficulty level:"
+msgstr ""
+
+#: views/questions.php:97
+msgid "with ID (you can separate multiple IDs with comma):"
+msgstr ""
+
+#: views/questions.php:97
+msgid "Filter questions"
+msgstr ""
+
+#: views/questions.php:101 views/questions.php:208
+msgid "Create New Question"
+msgstr ""
+
+#: views/questions.php:108
+msgid "Click here to automatically fix the order of questions."
+msgstr ""
+
+#: views/questions.php:111
+msgid "Type"
+msgstr ""
+
+#: views/questions.php:113
+msgid "Number Of Answers"
+msgstr ""
+
+#: views/questions.php:115
+msgid "Avg. users rating"
+msgstr ""
+
+#: views/questions.php:117
+msgid "Action"
+msgstr ""
+
+#: views/questions.php:135
+msgid "Move Up"
+msgstr ""
+
+#: views/questions.php:138
+msgid "Move Down"
+msgstr ""
+
+#: views/questions.php:145
+msgid "Sorting"
+msgstr ""
+
+#: views/questions.php:146
+msgid "Fill the gaps"
+msgstr ""
+
+#: views/questions.php:147
+msgid "Open-end (essay)"
+msgstr ""
+
+#: views/questions.php:148
+msgid "Multiple choices"
+msgstr ""
+
+#: views/questions.php:150
+msgid "Match / Matrix"
+msgstr ""
+
+#: views/questions.php:151
+msgid "Slider"
+msgstr ""
+
+#: views/questions.php:154
+msgid "True/False"
+msgstr ""
+
+#: views/questions.php:155
+msgid "Single choice"
+msgstr ""
+
+#: views/questions.php:159
+msgid "(Important!)"
+msgstr ""
+
+#: views/questions.php:167
+msgid ""
+"You are about to delete this question. This will delete the answers to this "
+"question. Press 'OK' to delete and 'Cancel' to stop."
+msgstr ""
+
+#: views/questions.php:172
+msgid "No questions found."
+msgstr ""
+
+#: views/questions.php:187
+msgid "Change category of selected questions to:"
+msgstr ""
+
+#: views/questions.php:196
+msgid "Assign selected category"
+msgstr ""
+
+#: views/questions.php:198
+msgid "Activate Selected"
+msgstr ""
+
+#: views/questions.php:200
+msgid "Deactivate Selected"
+msgstr ""
+
+#: views/questions.php:202
+msgid "Delete Selected"
+msgstr ""
+
+#: views/questions.php:210
+msgid ""
+"Note: you can use the up/down arrows to reorder questions. This will take "
+"effect for quizzes whose questions are <b>not randomized</b>."
+msgstr ""
+
+#: views/questions.php:213
+msgid "Question Hints Settings:"
+msgstr ""
+
+#: views/questions.php:215
+msgid "Enable question hints in this quiz."
+msgstr ""
+
+#: views/questions.php:217
+msgid ""
+"Question hints are optionally displayed to the quiz taker upon request. It "
+"is usually a good idea to limit the number of hints the user can see so they "
+"have some incentive to try taking the quiz without using all the hints."
+msgstr ""
+
+#: views/questions.php:218 views/questions.php:219
+msgid "Allow the user to view up to"
+msgstr ""
+
+#: views/questions.php:218
+msgid "total hints for the whole quiz (leave 0 for unlimited hints)."
+msgstr ""
+
+#: views/questions.php:219
+msgid ""
+"hints per question - for questions that have more than one hint available "
+"(leave 0 for unlimited hints)."
+msgstr ""
+
+#: views/questions.php:226
+msgid "Please select CSV file."
+msgstr ""
+
+#: views/sharing-options.html.php:2
+msgid "WatuPRO Social Sharing"
+msgstr ""
+
+#: views/sharing-options.html.php:4
+msgid ""
+"You can use the shortcode [watuproshare-buttons] to display Facebook and "
+"Twitter share buttons on the \"Final screen\" on your quiz."
+msgstr ""
+
+#: views/sharing-options.html.php:5
+msgid ""
+"The social media buttons are provided by <a href=\"%s\" target=\"_blank"
+"\">Arbenting</a>. Feel free to replace them with other icons."
+msgstr ""
+
+#: views/sharing-options.html.php:8
+msgid "Facebook, Google Plus and LinkedIn Sharing"
+msgstr ""
+
+#: views/sharing-options.html.php:10
+msgid "Your Facebook App ID:"
+msgstr ""
+
+#: views/sharing-options.html.php:10
+msgid "Get one here"
+msgstr ""
+
+#: views/sharing-options.html.php:11
+msgid "If you leave it empty, no Facebook share button will be generated."
+msgstr ""
+
+#: views/sharing-options.html.php:14
+msgid "Enable Google Plus share button"
+msgstr ""
+
+#: views/sharing-options.html.php:16
+msgid "Show LinkedIn button"
+msgstr ""
+
+#: views/sharing-options.html.php:20
+msgid "Text:"
+msgstr ""
+
+#: views/sharing-options.html.php:21
+msgid ""
+"You can use the variables {{{quiz-name}}}, {{{url}}}, {{{grade-title}}} and "
+"{{{grade-description}}}."
+msgstr ""
+
+#: views/sharing-options.html.php:23
+msgid "Known issue: Google Plus ignores the texts and shows only title."
+msgstr ""
+
+#: views/sharing-options.html.php:24
+msgid ""
+"If you leave title and text empty, grade title and grade description will be "
+"used respectively."
+msgstr ""
+
+#: views/sharing-options.html.php:27
+msgid ""
+"IMPORTANT: Facebook, Google, and LinkedIn need to be able to access your "
+"site to retrieve the social sharing data. If the site is on localhost or "
+"behind a htaccess login box sharing will not work properly."
+msgstr ""
+
+#: views/sharing-options.html.php:29
+msgid "Share by Email Options"
+msgstr ""
+
+#: views/sharing-options.html.php:31
+msgid "Enable sharing by email."
+msgstr ""
+
+#: views/sharing-options.html.php:34
+msgid "Subject"
+msgstr ""
+
+#: views/sharing-options.html.php:35
+msgid "Message"
+msgstr ""
+
+#: views/sharing-options.html.php:36
+msgid ""
+"You can use the variables {{{quiz-name}}}, {{{grade-title}}}, {{{grade-"
+"description}}} and {{{url}}}."
+msgstr ""
+
+#: views/sharing-options.html.php:39
+msgid "You can place the shortcode"
+msgstr ""
+
+#: views/sharing-options.html.php:39
+msgid "in the quiz \"Final page\" box."
+msgstr ""
+
+#: views/sharing-options.html.php:41
+msgid "Twitter Sharing Options:"
+msgstr ""
+
+#: views/sharing-options.html.php:43
+msgid ""
+"If you leave \"Tweet text\" empty the tweet text will be extracted from the "
+"grade description. If it is empty, the grade title will be used."
+msgstr ""
+
+#: views/sharing-options.html.php:45
+msgid "Show Tweet button"
+msgstr ""
+
+#: views/sharing-options.html.php:48
+msgid "Show count"
+msgstr ""
+
+#: views/sharing-options.html.php:49
+msgid "Via @"
+msgstr ""
+
+#: views/sharing-options.html.php:50
+msgid "Hashtag #"
+msgstr ""
+
+#: views/sharing-options.html.php:51
+msgid "Tweet text (No more than 140 chars):"
+msgstr ""
+
+#: views/sharing-options.html.php:52
+msgid ""
+"You can use the variables {{{quiz-name}}}, {{{grade-title}}} and {{{grade-"
+"description}}}."
+msgstr ""
+
+#: views/show_exam.php:10
+msgid "This %s must be completed in %d minutes."
+msgstr ""
+
+#: views/show_exam.php:11
+msgid "Click here to start the %s"
+msgstr ""
+
+#: views/show_exam.php:17
+msgid ""
+"jQuery is not properly loaded in the header. Your blog theme is probably "
+"missing the wp_head() call. Please contact your theme developer."
+msgstr ""
+
+#: views/show_exam.php:25
+msgid "There are no questions to answer."
+msgstr ""
+
+#: views/show_exam.php:27
+msgid "Looks like you have already answered them all!"
+msgstr ""
+
+#: views/show_exam.php:64 views/show_exam.php:92
+msgid "Loading..."
+msgstr ""
+
+#: views/show_exam.php:72 views/show_exam.php:106
+msgid "See Answer"
+msgstr ""
+
+#: views/show_exam.php:103
+msgid "Previous"
+msgstr ""
+
+#: views/show_exam.php:105
+msgid "Next"
+msgstr ""
+
+#: views/show_exam.php:114 views/show_exam.php:116
+msgid "Submit"
+msgstr ""
+
+#: views/student_form.php:8
+msgid "Date registered"
+msgstr ""
+
+#: views/student_form.php:13
+msgid "Student name"
+msgstr ""
+
+#: views/student_form.php:19
+msgid "Student email"
+msgstr ""
+
+#: views/student_form.php:33
+msgid "Optional Notes"
+msgstr ""
+
+#: views/student_form.php:41
+msgid "Save Student"
+msgstr ""
+
+#: views/student_form.php:42
+msgid "Back To Students"
+msgstr ""
+
+#: views/taking_details.php:3
+msgid "Details for completed %s "
+msgstr ""
+
+#: views/taking_details.php:5
+msgid "User:"
+msgstr ""
+
+#: views/taking_details.php:9
+msgid "Date:"
+msgstr ""
+
+#: views/taking_details.php:10
+msgid "Total points collected:"
+msgstr ""
+
+#: views/taking_details.php:11
+msgid "Achieved grade:"
+msgstr ""
+
+#: views/taking_details.php:15
+msgid ""
+"The textual details below show exact snapshot of the questions in the way "
+"that student have seen them when taking the %s. If you have added, edited or "
+"deleted questions since then you will not see these changes here."
+msgstr ""
+
+#: views/taking_details.php:18
+msgid "Table format"
+msgstr ""
+
+#: views/taking_details.php:19
+msgid "Snapshot"
+msgstr ""
+
+#: views/taking_details.php:20
+msgid "Download"
+msgstr ""
+
+#: views/taking_details.php:35 views/takings.php:90
+msgid "Points received"
+msgstr ""
+
+#: views/taking_details.php:36
+msgid "Result"
+msgstr ""
+
+#: views/taking_details.php:45
+msgid "Rating: %d"
+msgstr ""
+
+#: views/taking_details.php:48
+msgid "N/a (survey question)"
+msgstr ""
+
+#: views/taking_details.php:50
+msgid "Correct answer"
+msgstr ""
+
+#: views/taking_details.php:50
+msgid "Wrong answer"
+msgstr ""
+
+#: views/takings.php:4
+msgid "Users who took quiz \"%s\""
+msgstr ""
+
+#: views/takings.php:14
+msgid "Back to quizzes list"
+msgstr ""
+
+#: views/takings.php:19
+msgid "Filter/search these records"
+msgstr ""
+
+#: views/takings.php:22 views/takings.php:23
+msgid "(Filters apply)"
+msgstr ""
+
+#: views/takings.php:23
+msgid "Export with details"
+msgstr ""
+
+#: views/takings.php:24
+msgid "Feedback on questions"
+msgstr ""
+
+#: views/takings.php:25
+msgid "Stats per question"
+msgstr ""
+
+#: views/takings.php:26
+msgid "Stats per category"
+msgstr ""
+
+#: views/takings.php:27
+msgid "Chart by grade"
+msgstr ""
+
+#: views/takings.php:31
+msgid ""
+"Export files are currently delimited by \"%s\". You can change the delimiter "
+"at <a href=\"%s\">WatuPRO Settings</a> page."
+msgstr ""
+
+#: views/takings.php:33
+msgid "Back to completed results"
+msgstr ""
+
+#: views/takings.php:34
+msgid "There are %d unfinished attempt(s)."
+msgstr ""
+
+#: views/takings.php:36
+msgid "Shortcode to publish a simplified version of this page:"
+msgstr ""
+
+#: views/takings.php:43
+msgid "- All quizzes -"
+msgstr ""
+
+#: views/takings.php:50 views/takings.php:56 views/takings.php:64
+#: views/takings.php:72 views/takings.php:80 views/takings.php:86
+msgid "Equals"
+msgstr ""
+
+#: views/takings.php:51 views/takings.php:57 views/takings.php:65
+#: views/takings.php:73 views/takings.php:81
+msgid "Starts with"
+msgstr ""
+
+#: views/takings.php:52 views/takings.php:58 views/takings.php:66
+#: views/takings.php:74 views/takings.php:82
+msgid "Ends with"
+msgstr ""
+
+#: views/takings.php:53 views/takings.php:59 views/takings.php:67
+#: views/takings.php:75 views/takings.php:83
+msgid "Contains"
+msgstr ""
+
+#: views/takings.php:79
+msgid "IP Address"
+msgstr ""
+
+#: views/takings.php:85
+msgid "Date Taken"
+msgstr ""
+
+#: views/takings.php:87
+msgid "Is before"
+msgstr ""
+
+#: views/takings.php:88
+msgid "Is after"
+msgstr ""
+
+#: views/takings.php:91 views/takings.php:97
+msgid "Equal"
+msgstr ""
+
+#: views/takings.php:92
+msgid "Are less than"
+msgstr ""
+
+#: views/takings.php:93
+msgid "Are more than"
+msgstr ""
+
+#: views/takings.php:98
+msgid "Is less than"
+msgstr ""
+
+#: views/takings.php:99
+msgid "Is more than"
+msgstr ""
+
+#: views/takings.php:103
+msgid "Grade equals"
+msgstr ""
+
+#: views/takings.php:111
+msgid "User role is"
+msgstr ""
+
+#: views/takings.php:112
+msgid "Any role"
+msgstr ""
+
+#: views/takings.php:119
+msgid "User is in group"
+msgstr ""
+
+#: views/takings.php:120
+msgid "Any group"
+msgstr ""
+
+#: views/takings.php:127
+msgid "Search/Filter"
+msgstr ""
+
+#: views/takings.php:128
+msgid "Clear Filters"
+msgstr ""
+
+#: views/takings.php:133
+msgid "There are no records that match your search criteria"
+msgstr ""
+
+#: views/takings.php:139
+msgid "Name"
+msgstr ""
+
+#: views/takings.php:143 views/takings.php:179
+msgid "% correct"
+msgstr ""
+
+#: views/takings.php:144
+msgid "Toggle per category"
+msgstr ""
+
+#: views/takings.php:163
+msgid "User groups: %s"
+msgstr ""
+
+#: views/takings.php:168
+msgid "%%%d"
+msgstr ""
+
+#: views/takings.php:172
+msgid "(<a href=\"%s\" target=\"_blank\">Why?</a>)"
+msgstr ""
+
+#: views/takings.php:193
+msgid "edit"
+msgstr ""
+
+#: views/takings.php:194
+msgid "Last edited on %s"
+msgstr ""
+
+#: views/takings.php:198
+msgid "delete"
+msgstr ""
+
+#: views/takings.php:204
+msgid "Showing"
+msgstr ""
+
+#: views/takings.php:204
+msgid "from"
+msgstr ""
+
+#: views/takings.php:204
+msgid "records"
+msgstr ""
+
+#: views/takings.php:218
+msgid "Show me a button to cleanup all submitted data on this quiz."
+msgstr ""
+
+#: views/takings.php:222
+msgid "These operations cannot be undone!"
+msgstr ""
+
+#: views/takings.php:223
+msgid "Blank out data"
+msgstr ""
+
+#: views/takings.php:224
+msgid "Cleanup all data"
+msgstr ""
+
+#: views/takings.php:249
+msgid "Are you sure? This operation cannot be undone!"
+msgstr ""
+
+#: views/usable-variables.php:1
+msgid "Usable Variables:"
+msgstr ""
+
+#: views/usable-variables.php:1
+msgid "show/hide"
+msgstr ""
+
+#: views/usable-variables.php:2
+msgid "(All the variables can be used in grade descriptions as well.)"
+msgstr ""
+
+#: views/usable-variables.php:4
+msgid "Quiz Variables"
+msgstr ""
+
+#: views/usable-variables.php:5 views/usable-variables.php:36
+msgid "Explanation"
+msgstr ""
+
+#: views/usable-variables.php:6
+msgid "The number of correct answers (the old %%SCORE%% also works)"
+msgstr ""
+
+#: views/usable-variables.php:7
+msgid "Total number of questions"
+msgstr ""
+
+#: views/usable-variables.php:8
+msgid ""
+"Total points collected. You can use the variable %s to show the points "
+"rounded without decimals."
+msgstr ""
+
+#: views/usable-variables.php:9
+msgid "Maximum number of points that user could collect."
+msgstr ""
+
+#: views/usable-variables.php:10
+msgid "Correct answer percentage"
+msgstr ""
+
+#: views/usable-variables.php:11
+msgid "Percentage of points achieved vs. maximum possible points"
+msgstr ""
+
+#: views/usable-variables.php:12
+msgid "The assigned grade after taking the %s - title and description together"
+msgstr ""
+
+#: views/usable-variables.php:13
+msgid "The assigned grade - title only"
+msgstr ""
+
+#: views/usable-variables.php:14
+msgid "The assigned grade - description only"
+msgstr ""
+
+#: views/usable-variables.php:16
+msgid ""
+"A generic rating of your performance - it could be 'Failed'(0-39%), 'Just "
+"Passed'(40%-50%), 'Satisfactory', 'Competent', 'Good', 'Excellent' and "
+"'Unbeatable'(100%)"
+msgstr ""
+
+#: views/usable-variables.php:18
+msgid "The name of the %s"
+msgstr ""
+
+#: views/usable-variables.php:19
+msgid ""
+"Outputs a link to printable certificate. Will be displayed only if "
+"certificate is assigned to the achieved grade and you have the user email. "
+"For troubleshooting check <a href=\"%s\" target=\"_blank\">this post</a>."
+msgstr ""
+
+#: views/usable-variables.php:21
+msgid ""
+"Shows unresolved questions without showing which is the correct answer. "
+"Useful if you want to point user attention where they need to work more "
+"without exposing the correct results. Questions that are considered "
+"unresolved are unanswered ones or the questions where points collected are "
+"less or equal to 0."
+msgstr ""
+
+#: views/usable-variables.php:23
+msgid ""
+"Displays the user answers along with correct/incorrect mark. Shows the same "
+"as the setting under \"Correct answer display\" but without any predefined "
+"text before it."
+msgstr ""
+
+#: views/usable-variables.php:24
+msgid "Displays table with user answers, points, and teacher comments"
+msgstr ""
+
+#: views/usable-variables.php:25
+msgid ""
+"Same as %%ANSWERS%% but one question/answer is shown at a time with a "
+"numbered paginator at the bottom."
+msgstr ""
+
+#: views/usable-variables.php:26
+msgid "Grades and stats per category in case you have defined such grades."
+msgstr ""
+
+#: views/usable-variables.php:27
+msgid ""
+"The date when the %s is completed (Date format comes from your Wordpress "
+"Settings page)."
+msgstr ""
+
+#: views/usable-variables.php:28
+msgid "The time when the quiz was started"
+msgstr ""
+
+#: views/usable-variables.php:29
+msgid "The time when the quiz was completed"
+msgstr ""
+
+#: views/usable-variables.php:31
+msgid "Shows the average points achieved by others who took the same %s."
+msgstr ""
+
+#: views/usable-variables.php:32
+msgid ""
+"Shows the average percent correct answer given by others who took the same "
+"%s."
+msgstr ""
+
+#: views/usable-variables.php:33
+msgid ""
+"Shows the percentage of users performed worse. It will compare by percent "
+"correct answers or by points depending on how the %s calculates grades - by "
+"points or percent correct answers."
+msgstr ""
+
+#: views/usable-variables.php:34
+msgid ""
+"Direct URL to view this submission in the administration. Do not use this "
+"variable in the email sent to user."
+msgstr ""
+
+#: views/usable-variables.php:35
+msgid "User Info Variables"
+msgstr ""
+
+#: views/usable-variables.php:37
+msgid "User email address."
+msgstr ""
+
+#: views/usable-variables.php:38
+msgid ""
+"The logged in (or requested by a {{{name-field}}} tag, or \"Ask for user "
+"contact details\") user name. If empty, it will display \"Guest\""
+msgstr ""
+
+#: views/usable-variables.php:39
+msgid ""
+"The value of the \"Company\" field from the optional \"Ask user for contact "
+"details\" section."
+msgstr ""
+
+#: views/usable-variables.php:40
+msgid ""
+"The value of the \"Phone\" field from the optional \"Ask user for contact "
+"details\" section."
+msgstr ""
+
+#: views/users-earned-certificate.html.php:2
+msgid "Users Who Earned Certificate %s"
+msgstr ""
+
+#: views/users-earned-certificate.html.php:4
+msgid "Back to all certificates"
+msgstr ""
+
+#: views/users-earned-certificate.html.php:7
+msgid "No user has earned this certificate yet."
+msgstr ""
+
+#: views/users-earned-certificate.html.php:13
+msgid "User name and email"
+msgstr ""
+
+#: views/users-earned-certificate.html.php:13
+msgid "Date earned"
+msgstr ""
+
+#: views/users-earned-certificate.html.php:14
+msgid "Quizzes taken"
+msgstr ""
+
+#: views/users-earned-certificate.html.php:14
+msgid "Quiz taken"
+msgstr ""
+
+#: views/users-earned-certificate.html.php:14
+msgid "Details of last quiz"
+msgstr ""
+
+#: views/users-earned-certificate.html.php:18
+msgid "View Certificate"
+msgstr ""
+
+#: views/users-earned-certificate.html.php:19
+#: views/users-earned-certificate.html.php:42
+msgid "Remove"
+msgstr ""
+
+#: views/users-earned-certificate.html.php:38
+msgid "Approve"
+msgstr ""
+
+#: views/users-earned-certificate.html.php:39
+msgid "Approved"
+msgstr ""
+
+#: views/users-earned-certificate.html.php:41
+msgid "View / print"
+msgstr ""
+
+#: views/users-earned-certificate.html.php:55
+msgid "Are you sure? The user will not be able to print this certificate."
+msgstr ""
+
+#. Plugin URI of the plugin/theme
+msgid "http://calendarscripts.info/watupro"
+msgstr ""
+
+#. Description of the plugin/theme
+msgid ""
+"Create exams and quizzes and display the result immediately after the user "
+"takes the exam. More information at <a href=\"http://calendarscripts.info/"
+"watupro\">Watu PRO Site</a>"
+msgstr ""
+
+#. Author of the plugin/theme
+msgid "Kiboko Labs"
+msgstr ""
+
+#. Author URI of the plugin/theme
+msgid "http://kibokolabs.com"
+msgstr ""

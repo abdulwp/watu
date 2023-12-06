@@ -1,0 +1,101 @@
+/* This theme displays single-choice and multiple-choice questions as buttons instead of visible radio buttons or checkboxes */
+.watupro-user-feedback, .watupro-textarea-medium, .watupro-text, .watupro-gap {
+	border: 1pt solid #EAFFD0;
+	background-color : #EAFFD0 !important;
+}
+
+/* thanks to http://cssdemos.tupence.co.uk/button-styling.htm */
+.watupro_buttons input[type=button],
+.watupro_buttons input[type=submit],
+.watupro-exam-description button  {
+	cursor:pointer;
+	padding:5px 25px;
+	margin-left: 5px;
+	background:#EAFFD0;
+	border:1px solid #EAFFD0;
+	-moz-border-radius: 10px;
+	-webkit-border-radius: 10px;
+	border-radius: 10px;
+	-webkit-box-shadow: 0 0 4px rgba(0,0,0, .75);
+	-moz-box-shadow: 0 0 4px rgba(0,0,0, .75);
+	box-shadow: 0 0 4px rgba(0,0,0, .75);	
+	color:black;
+	font-size:1.1em;
+} 
+
+
+.watupro_buttons input[type=button]:focus,
+.watupro_buttons input[type=submit]:focus {
+	background-color :#33dd99;
+	color:white;
+	-webkit-box-shadow: 0 0 1px rgba(0,0,0, .75);
+	-moz-box-shadow: 0 0 1px rgba(0,0,0, .75);
+	box-shadow: 0 0 1px rgba(0,0,0, .75);
+} 
+
+/* thanks to http://viralpatel.net/blogs/css-radio-button-checkbox-background/ */
+.watupro-question-choice input[type=radio],
+.watupro-question-choice input[type=checkbox] {
+    display:none;
+}
+ 
+.watupro-question-choice input[type=radio] + label,
+.watupro-question-choice input[type=checkbox] + label {
+    display:inline-block;
+    margin:-2px;
+    padding: 4px 12px;
+    margin-bottom: 0;
+    font-size: 14px;
+    line-height: 20px;
+    color: #333;
+    text-align: center;
+    text-shadow: 0 1px 1px rgba(255,255,255,0.75);
+    vertical-align: middle;
+    cursor: pointer;
+    background-color: #EAFFD0;
+    background-image: -moz-linear-gradient(top,#fff,#EAFFD0);
+    background-image: -webkit-gradient(linear,0 0,0 100%,from(#fff),to(#EAFFD0));
+    background-image: -webkit-linear-gradient(top,#fff,#EAFFD0);
+    background-image: -o-linear-gradient(top,#fff,#EAFFD0);
+    background-image: linear-gradient(to bottom,#fff,#EAFFD0);
+    background-repeat: repeat-x;
+    border: 1px solid #ccc;
+    border-color: #e6e6e6 #e6e6e6 #EAFFD0;
+    border-color: rgba(0,0,0,0.1) rgba(0,0,0,0.1) rgba(0,0,0,0.25);
+    border-bottom-color: #EAFFD0;
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffffff',endColorstr='#ffe6e6e6',GradientType=0);
+    filter: progid:DXImageTransform.Microsoft.gradient(enabled=false);
+    -webkit-box-shadow: inset 0 1px 0 rgba(255,255,255,0.2),0 1px 2px rgba(0,0,0,0.05);
+    -moz-box-shadow: inset 0 1px 0 rgba(255,255,255,0.2),0 1px 2px rgba(0,0,0,0.05);
+    box-shadow: inset 0 1px 0 rgba(255,255,255,0.2),0 1px 2px rgba(0,0,0,0.05);
+}
+ 
+.watupro-question-choice input[type=radio]:checked + label,
+.watupro-question-choice input[type=checkbox]:checked + label {
+    background-image: none;
+    outline: 0;
+    -webkit-box-shadow: inset 0 2px 4px rgba(0,0,0,0.15),0 1px 2px rgba(0,0,0,0.05);
+    -moz-box-shadow: inset 0 2px 4px rgba(0,0,0,0.15),0 1px 2px rgba(0,0,0,0.05);
+    box-shadow: inset 0 2px 4px rgba(0,0,0,0.15),0 1px 2px rgba(0,0,0,0.05);
+    background-color:#33dd99;
+}
+
+.watupro-question-choice {
+	margin:10px;
+}
+
+ul.watupro-paginator li.answered {
+	background-color: #33DD99;
+}
+
+.watupro-progress-bar {
+	border-radius: 10px;
+	background: rgb(180,223,91);
+	background: -moz-linear-gradient(top,  rgba(180,223,91,1) 0%, rgba(180,223,91,1) 100%);
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(180,223,91,1)), color-stop(100%,rgba(180,223,91,1)));
+	background: -webkit-linear-gradient(top,  rgba(180,223,91,1) 0%,rgba(180,223,91,1) 100%);
+	background: -o-linear-gradient(top,  rgba(180,223,91,1) 0%,rgba(180,223,91,1) 100%);
+	background: -ms-linear-gradient(top,  rgba(180,223,91,1) 0%,rgba(180,223,91,1) 100%);
+	background: linear-gradient(to bottom,  rgba(180,223,91,1) 0%,rgba(180,223,91,1) 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#b4df5b', endColorstr='#b4df5b',GradientType=0 );
+}

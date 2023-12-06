@@ -1,0 +1,346 @@
+.watu-question {
+	display: none;
+	clear: both;
+	float: left;
+}
+
+form.quiz-form {
+	text-align:left;
+}
+
+.single-page-quiz .watu-question, .single-page-quiz {
+	display:block;
+}
+.single-page-quiz #next-question {
+	display:none;
+}
+.question-content {
+	margin-top:20px;
+	margin-left: 5px;
+}
+
+.show-question {
+	border-bottom:1px solid #000;
+	margin-bottom: 15px;
+	padding: 5px;
+	display:block;
+	float:left;
+}
+.watupro-question-choice {
+	padding-right:18px;
+}
+
+.user-answer span.answer {
+	font-weight:bold;
+	color:blue;
+	background:url(wrong.png) no-repeat right top;
+	padding-right: 18px;
+	display: inline-block;
+}
+.user-answer-unrevealed {
+	font-weight:bold;
+	color:blue;
+}
+
+.user-answer {
+	color: blue;
+}
+
+.user-answer img {
+	border: 2pt solid blue;
+}
+
+.correct-answer span.answer {
+	background:url(correct.png) no-repeat right top;
+	padding-right: 16px;
+	display: inline-block;
+}
+
+span.answer {
+	display: inline-block;
+}
+
+.show-question-content {
+    font-weight:bold;
+}
+
+p.error {
+    clear:both !important;
+    color:red;
+}
+
+#detailsText {
+	background-color:red;
+}
+
+.watupro label {
+	display:block;
+	float:left;
+	width:150px;
+}
+
+.watupro select {
+	min-width:120px;
+}
+
+.watupro-alert, .watupro-success {
+	padding:20px;
+	background-color: #EEE;
+	font-weight: bold;
+}
+
+.watupro-error {
+	padding:20px;
+	font-weight: bold;
+	background:#EEE;
+	color:red;
+}
+
+.watupro-padded {
+	padding: 20px;
+}
+
+.watupro-warning {
+	font-weight:bold;
+	color:red;
+}
+
+.watupro-help {
+	font-style: italic;
+	font-size:11pt;
+	color:gray;
+}
+
+.watupro_buttons td {
+	min-width:80px;
+}
+
+table.watupro_buttons {
+	width:auto;
+	border: none;
+	clear:both;
+}
+
+ul.watupro-paginator {
+	list-style-type: none;	
+	display: block;
+	clear: both;
+	float: left;
+	width:100%;
+}
+
+ul.watupro-paginator li {
+	display: block;
+	float: left;
+	padding: 5px;
+	border: 1px solid black;	
+	text-align: center;
+	margin: 10px 3px;
+	font-weight: bold;
+	cursor: pointer;	
+}
+
+ul.watupro-paginator li.active {
+	padding: 10px;
+	margin: 5px 3px;
+}
+
+ul.watupro-paginator li.answered {
+	background-color: #88FF88;
+}
+
+ul.watupro-paginator li.unanswered {
+	background-color: #FF6A6A;
+}
+
+#timerDiv {
+	margin-bottom: 20px;
+	color: green;
+}
+
+.watupro-textarea-medium {
+	width: 280px;
+	height:80px;
+}
+
+.watupro-textarea-large {
+	width: 600px;
+	height:300px;
+}
+
+.watupro-qnum-info {
+	font-style: italic;
+	margin-top: 25px;
+}
+
+.watupro-compact {
+	clear:both;
+	width:100%;
+	float:left;
+	margin-bottom: 20px;
+}
+
+.watupro-compact div.question-content, .watupro-compact div.show-question-content {
+	float:left;
+	width:48%;
+	margin-top:0px !important;
+}
+
+.watupro-compact div.question-choices, .watupro-compact div.show-question-choices {
+	float:left;
+	width:48%;	
+}
+
+.watupro-compact .question-choices div.watupro-question-choice, .watupro-compact .show-question-choices li.answer {
+	float: left;
+}
+
+.watupro-compact .show-question-choices li.answer {
+	margin-right: 25px;
+}
+
+.watupro-matrix-droppable tr td {
+   border: 1px dashed #DDD;
+   min-width: 150px;
+   min-height: 80px;
+   padding: 10px;
+} 
+
+/* Social sharing CSS */
+.watuproshare-facebook {
+	padding: 10px;
+	background-color: #4c66a4;
+	color:white !important;
+	font-weight:bold;
+	text-decoration:none;
+}
+
+a.watuproshare-facebook {	
+	color:white !important;	
+}
+
+.watupro-share {
+	margin: 20px;
+}
+
+.watupro-share a {
+	margin: 15px;
+}
+
+.watupro-progress-container {
+	width:100%; 
+	height:30px;
+	float:left; 
+}
+
+.watupro-progress-bar {
+	text-align:right;
+}
+
+.watupro-progress-percent {
+	padding: 0px 5px;
+	background: white;
+	font-weight: bold;
+	border-radius: 10px;
+}
+
+.watupro-twitter-share-button {
+	margin: 0px !important;
+}
+
+.watupro-rating-wrap {
+	padding: 10px;
+}
+
+.watupro-paginated-hidden { display: none; }
+
+/* honeypot */
+.watupro-beehive { display:none !important; } 
+
+.quiz-form label {
+   display: inline !important;
+}
+.quiz-form input[type="checkbox"] {
+   display: inline !important;
+}
+.quiz-form input[type="radio"] {
+   display: inline !important;
+}
+
+.watupro-question-choice span {
+  display: inline !important;
+}
+span.watupro_num {
+ display: inline !important;
+}
+
+.watupro-basic-chart td, .watupro-basic-chart-points td, .watupro-basic-chart-percent td {
+	padding: 6px;
+}
+
+.watupro_buttons, .watupro_buttons td {
+   border: none !important;
+}
+
+div.watupro-question-choice.watupro-2-columns, li.watupro-2-columns {
+	float: left !important;
+	width:41%;
+	display:block;
+}
+
+div.watupro-question-choice.watupro-3-columns, li.watupro-3-columns {
+	float: left !important;
+	width:26%;
+	display:block;
+}
+
+div.watupro-question-choice.watupro-4-columns, li.watupro-4-columns {
+	float: left !important;
+	width:20%;
+	display:block;
+}
+
+div.watupro-choices-columns {
+	clear:both;
+	float:left;
+	width:100%;
+}
+
+.watupro-main-feedback {
+	display:block;
+	clear:both;
+}
+
+.watupro-dashboard {
+	font-size: 120%;
+}
+
+.watupro-dashboard td {
+	border-bottom: 1pt solid #EEE;
+	padding-top: 10px;
+}
+
+.watupro-text-captcha {
+	clear:both;
+}
+
+@media 
+only screen and (max-width: 760px),
+(min-device-width: 768px) and (max-device-width: 1024px)  {
+	/* thanks to https://css-tricks.com/responsive-data-tables/ */
+	/* Force table to not be like tables anymore */
+	table.watupro_buttons, table.watupro_buttons td, table.watupro_buttons tr { 
+		display: block;
+	}
+	
+	table.watupro_buttons td { 
+		/* Behave  like a "row" */
+		border: none;
+		position: relative;
+	}
+	
+	table.watupro_buttons td:before { 
+		/* Now like a table header */
+		position: absolute;
+	}
+
